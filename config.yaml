@@ -1,0 +1,55 @@
+models:
+  anthropic:
+    name: "claude-sonnet-4-6"
+    base_url: "https://api.anthropic.com/v1"
+    max_tokens: 16384
+  openai:
+    name: "gpt-5.4-turbo"
+    base_url: "https://api.openai.com/v1"
+    max_tokens: 16384
+  moonshot:
+    name: "moonshot-v1"
+    base_url: "https://api.moonshot.cn/v1"
+    max_tokens: 16384
+
+sampling:
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  repetition_penalty: 1.0
+
+paths:
+  data_dir: "data"
+  data_file: "private.jsonl"
+  output_dir: "dataapp_outputs"
+  manifest_file: "dataset_manifest.jsonl"
+
+execution:
+  parallel_workers: 3
+  batch_size: 50
+  retry_on_failure: true
+  max_retries: 3
+  retry_backoff_seconds: 2
+  use_batch_api:
+    anthropic: true
+    openai: true
+    moonshot: false
+
+validation:
+  sample_size: 45
+  min_format_compliance: 0.95
+  min_multibox_accuracy: 0.90
+  min_agreement_rate: 0.40
+  max_no_box_rate: 0.05
+
+cost_tracking:
+  anthropic_input_per_1k: 0.003
+  anthropic_output_per_1k: 0.015
+  openai_input_per_1k: 0.005
+  openai_output_per_1k: 0.015
+  moonshot_per_1k: 0.0008
+
+logging:
+  level: "INFO"
+  format: "[%(asctime)s] %(name)s - %(levelname)s - %(message)s"
