@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/run_validation.py)",
+      "Bash(tee phase1.log)"
+    ]
+  }
+}

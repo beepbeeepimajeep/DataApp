@@ -1,0 +1,22 @@
+[2026-05-18 13:18:10,745] __main__ - INFO - === DataApp Phase 1: Validation (45 items) ===
+[2026-05-18 13:18:10,842] __main__ - INFO - Loaded 943 items from private.jsonl
+[2026-05-18 13:18:10,843] __main__ - INFO - Type distribution: mcq=300, single_free=305, multi_free=338
+[2026-05-18 13:18:10,843] __main__ - INFO - mcq: taking 15 of 300
+[2026-05-18 13:18:10,843] __main__ - INFO - single_free: taking 15 of 305
+[2026-05-18 13:18:10,843] __main__ - INFO - multi_free: taking 15 of 338
+[2026-05-18 13:18:10,843] __main__ - INFO - Stratified sample size: 45
+[2026-05-18 13:18:10,843] __main__ - INFO - Validation set: 45 items
+Traceback (most recent call last):
+  File "/home/dvaneetv/private/DataApp/scripts/run_validation.py", line 240, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/dvaneetv/private/DataApp/scripts/run_validation.py", line 196, in main
+    orchestrator = DataAppOrchestrator(config)
+  File "/home/dvaneetv/private/DataApp/src/orchestrator.py", line 108, in __init__
+    self.kimi = KimiClient(model="moonshotai/Kimi-K2.6")
+                ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dvaneetv/private/DataApp/src/api_clients.py", line 127, in __init__
+    api_key=os.environ["MOONSHOT_API_KEY"],
+            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 717, in __getitem__
+KeyError: 'MOONSHOT_API_KEY'

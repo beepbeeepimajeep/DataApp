@@ -1,231 +1,180 @@
 """
-API clients for Anthropic, OpenAI, and Moonshot.
-Handles retries, token counting, and cost calculation.
+API clients for GPT-5.4 (TritonAI primary + OpenAI fallback), GPT-OSS-120B (TritonAI free),
+and Claude Sonnet 4.6 (Anthropic). All clients share the same response format.
 """
 
 import os
 import time
-from typing import Optional
 import logging
+from typing import Optional
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 logger = logging.getLogger(__name__)
 
 
-class AnthropicClient:
-    """Anthropic Claude API client."""
+def _error_response(error: str, model: str, elapsed: float, route: str = None) -> dict:
+    """Create error response dict."""
+    resp = {
+        "response": "",
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "hit_token_cap": False,
+        "generation_time_s": elapsed,
+        "model": model,
+        "request_id": None,
+        "error": error,
+    }
+    if route:
+        resp["route"] = route
+    return resp
 
-    def __init__(self, api_key: Optional[str] = None, config: dict = None):
-        """
-        Initialize Anthropic client.
 
-        Args:
-            api_key: API key (defaults to ANTHROPIC_API_KEY env var).
-            config: Config dict with model name, temperature, etc.
-        """
-        self.api_key = api_key or os.getenv("ANTHROPIC_API_KEY")
-        self.config = config or {}
-        self.model = self.config.get("name", "claude-sonnet-4-6")
-        self.max_tokens = self.config.get("max_tokens", 16384)
-        self.temperature = self.config.get("temperature", 0.6)
-        self.top_p = self.config.get("top_p", 0.95)
+class GPT54Client:
+    """GPT-5.4: OpenAI API directly."""
+
+    def __init__(self, tritonai_model: str = "gpt-5.4", openai_model: str = "gpt-5.4"):
+        self.model = openai_model  # For logging
 
         try:
+            from openai import OpenAI
+
+            self.openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
+        except ImportError:
+            raise ImportError("openai package required. pip install openai")
+
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=30))
+    def call(
+        self, messages: list[dict], temperature: float, max_tokens: int, **kwargs
+    ) -> dict:
+        """
+        Query GPT-5.4 directly via OpenAI API.
+
+        Returns:
+            Dict with: response, input_tokens, output_tokens, hit_token_cap,
+            generation_time_s, model, request_id, error, route
+        """
+        start = time.time()
+
+        try:
+            resp = self.openai_client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                temperature=temperature,
+                max_completion_tokens=max_tokens,
+            )
+            return {
+                "response": resp.choices[0].message.content or "",
+                "input_tokens": resp.usage.prompt_tokens,
+                "output_tokens": resp.usage.completion_tokens,
+                "hit_token_cap": resp.choices[0].finish_reason == "length",
+                "generation_time_s": time.time() - start,
+                "model": self.model,
+                "request_id": resp.id,
+                "error": None,
+                "route": "openai",
+            }
+        except Exception as e:
+            return _error_response(str(e), self.model, time.time() - start, "openai")
+
+
+class GPTOSSClient:
+    """GPT-OSS-120B: TritonAI free tier only. No fallback — skip item if TritonAI down."""
+
+    def __init__(self, model: str = "gpt-oss-120b"):
+        self.model = model
+
+        try:
+            from openai import OpenAI
+
+            self.client = OpenAI(
+                base_url="https://tritonai-api.ucsd.edu/v1",
+                api_key=os.environ.get("TRITON_API_KEY", ""),
+            )
+        except ImportError:
+            raise ImportError("openai package required. pip install openai")
+
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=30))
+    def call(
+        self, messages: list[dict], temperature: float, max_tokens: int, **kwargs
+    ) -> dict:
+        """
+        Call GPT-OSS-120B on TritonAI free tier.
+
+        Returns:
+            Dict with: response, input_tokens, output_tokens, hit_token_cap,
+            generation_time_s, model, request_id, error, route
+        """
+        start = time.time()
+        try:
+            resp = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                temperature=temperature,
+                max_tokens=max_tokens,
+            )
+            return {
+                "response": resp.choices[0].message.content or "",
+                "input_tokens": resp.usage.prompt_tokens,
+                "output_tokens": resp.usage.completion_tokens,
+                "hit_token_cap": resp.choices[0].finish_reason == "length",
+                "generation_time_s": time.time() - start,
+                "model": self.model,
+                "request_id": resp.id,
+                "error": None,
+                "route": "tritonai",
+            }
+        except Exception as e:
+            return _error_response(str(e), self.model, time.time() - start, "tritonai")
+
+
+class SonnetClient:
+    """Claude Sonnet 4.6 via Anthropic API."""
+
+    def __init__(self, model: str = "claude-sonnet-4-6"):
+        self.model = model
+        try:
             from anthropic import Anthropic
-            self.client = Anthropic(api_key=self.api_key)
+
+            self.client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY", ""))
         except ImportError:
             raise ImportError("anthropic package required. pip install anthropic")
 
-    def query(
-        self, messages: list[dict], max_retries: int = 3, retry_backoff: float = 2.0
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=30))
+    def call(
+        self, messages: list[dict], temperature: float, max_tokens: int, **kwargs
     ) -> dict:
         """
-        Query Claude API with retries.
+        Query Claude Sonnet 4.6 API with automatic retries.
 
         Returns:
-            Dict with keys: "response", "input_tokens", "output_tokens", "cost_usd"
+            Dict with: response, input_tokens, output_tokens, hit_token_cap,
+            generation_time_s, model, request_id, error, route
         """
-        for attempt in range(max_retries):
-            try:
-                response = self.client.messages.create(
-                    model=self.model,
-                    max_tokens=self.max_tokens,
-                    temperature=self.temperature,
-                    top_p=self.top_p,
-                    messages=messages,
-                )
+        start = time.time()
 
-                text = response.content[0].text
-                input_tokens = response.usage.input_tokens
-                output_tokens = response.usage.output_tokens
-
-                # Cost calculation (Claude Sonnet 4.6)
-                cost_usd = (input_tokens * 0.003 + output_tokens * 0.015) / 1000
-
-                return {
-                    "response": text,
-                    "input_tokens": input_tokens,
-                    "output_tokens": output_tokens,
-                    "cost_usd": cost_usd,
-                }
-            except Exception as e:
-                if attempt < max_retries - 1:
-                    wait = retry_backoff ** attempt
-                    logger.warning(
-                        f"Anthropic query failed (attempt {attempt + 1}): {e}. "
-                        f"Retrying in {wait}s..."
-                    )
-                    time.sleep(wait)
-                else:
-                    logger.error(f"Anthropic query failed after {max_retries} attempts: {e}")
-                    raise
-
-    def estimate_tokens(self, text: str) -> int:
-        """Rough token estimate (Claude uses ~1 token per 4 chars)."""
-        return len(text) // 4
-
-
-class OpenAIClient:
-    """OpenAI GPT API client."""
-
-    def __init__(self, api_key: Optional[str] = None, config: dict = None):
-        """
-        Initialize OpenAI client.
-
-        Args:
-            api_key: API key (defaults to OPENAI_API_KEY env var).
-            config: Config dict with model name, temperature, etc.
-        """
-        self.api_key = api_key or os.getenv("OPENAI_API_KEY")
-        self.config = config or {}
-        self.model = self.config.get("name", "gpt-5.4-turbo")
-        self.max_tokens = self.config.get("max_tokens", 16384)
-        self.temperature = self.config.get("temperature", 0.6)
-        self.top_p = self.config.get("top_p", 0.95)
+        # Anthropic requires system message as separate parameter
+        system = next((m["content"] for m in messages if m["role"] == "system"), "")
+        user_messages = [m for m in messages if m["role"] != "system"]
 
         try:
-            from openai import OpenAI
-            self.client = OpenAI(api_key=self.api_key)
-        except ImportError:
-            raise ImportError("openai package required. pip install openai")
+            resp = self.client.messages.create(
+                model=self.model,
+                system=system,
+                messages=user_messages,
+                temperature=temperature,
+                max_tokens=max_tokens,
+            )
 
-    def query(
-        self, messages: list[dict], max_retries: int = 3, retry_backoff: float = 2.0
-    ) -> dict:
-        """
-        Query OpenAI API with retries.
-
-        Returns:
-            Dict with keys: "response", "input_tokens", "output_tokens", "cost_usd"
-        """
-        for attempt in range(max_retries):
-            try:
-                response = self.client.chat.completions.create(
-                    model=self.model,
-                    max_tokens=self.max_tokens,
-                    temperature=self.temperature,
-                    top_p=self.top_p,
-                    messages=messages,
-                )
-
-                text = response.choices[0].message.content
-                input_tokens = response.usage.prompt_tokens
-                output_tokens = response.usage.completion_tokens
-
-                # Cost calculation (GPT-4 Turbo)
-                cost_usd = (input_tokens * 0.01 + output_tokens * 0.03) / 1000
-
-                return {
-                    "response": text,
-                    "input_tokens": input_tokens,
-                    "output_tokens": output_tokens,
-                    "cost_usd": cost_usd,
-                }
-            except Exception as e:
-                if attempt < max_retries - 1:
-                    wait = retry_backoff ** attempt
-                    logger.warning(
-                        f"OpenAI query failed (attempt {attempt + 1}): {e}. "
-                        f"Retrying in {wait}s..."
-                    )
-                    time.sleep(wait)
-                else:
-                    logger.error(f"OpenAI query failed after {max_retries} attempts: {e}")
-                    raise
-
-    def estimate_tokens(self, text: str) -> int:
-        """Rough token estimate."""
-        return len(text) // 4
-
-
-class MoonshotClient:
-    """Moonshot API client (Kimi)."""
-
-    def __init__(self, api_key: Optional[str] = None, config: dict = None):
-        """
-        Initialize Moonshot client.
-
-        Args:
-            api_key: API key (defaults to MOONSHOT_API_KEY env var).
-            config: Config dict with model name, temperature, etc.
-        """
-        self.api_key = api_key or os.getenv("MOONSHOT_API_KEY")
-        self.config = config or {}
-        self.model = self.config.get("name", "moonshot-v1")
-        self.max_tokens = self.config.get("max_tokens", 16384)
-        self.temperature = self.config.get("temperature", 0.6)
-        self.top_p = self.config.get("top_p", 0.95)
-        self.base_url = self.config.get("base_url", "https://api.moonshot.cn/v1")
-
-        try:
-            from openai import OpenAI
-            self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
-        except ImportError:
-            raise ImportError("openai package required. pip install openai")
-
-    def query(
-        self, messages: list[dict], max_retries: int = 3, retry_backoff: float = 2.0
-    ) -> dict:
-        """
-        Query Moonshot API with retries.
-
-        Returns:
-            Dict with keys: "response", "input_tokens", "output_tokens", "cost_usd"
-        """
-        for attempt in range(max_retries):
-            try:
-                response = self.client.chat.completions.create(
-                    model=self.model,
-                    max_tokens=self.max_tokens,
-                    temperature=self.temperature,
-                    top_p=self.top_p,
-                    messages=messages,
-                )
-
-                text = response.choices[0].message.content
-                input_tokens = response.usage.prompt_tokens
-                output_tokens = response.usage.completion_tokens
-
-                # Cost calculation (Moonshot)
-                cost_usd = (input_tokens + output_tokens) * 0.0008 / 1000
-
-                return {
-                    "response": text,
-                    "input_tokens": input_tokens,
-                    "output_tokens": output_tokens,
-                    "cost_usd": cost_usd,
-                }
-            except Exception as e:
-                if attempt < max_retries - 1:
-                    wait = retry_backoff ** attempt
-                    logger.warning(
-                        f"Moonshot query failed (attempt {attempt + 1}): {e}. "
-                        f"Retrying in {wait}s..."
-                    )
-                    time.sleep(wait)
-                else:
-                    logger.error(f"Moonshot query failed after {max_retries} attempts: {e}")
-                    raise
-
-    def estimate_tokens(self, text: str) -> int:
-        """Rough token estimate."""
-        return len(text) // 4
+            return {
+                "response": resp.content[0].text if resp.content else "",
+                "input_tokens": resp.usage.input_tokens,
+                "output_tokens": resp.usage.output_tokens,
+                "hit_token_cap": resp.stop_reason == "max_tokens",
+                "generation_time_s": time.time() - start,
+                "model": self.model,
+                "request_id": resp.id,
+                "error": None,
+                "route": "anthropic",
+            }
+        except Exception as e:
+            return _error_response(str(e), self.model, time.time() - start, "anthropic")

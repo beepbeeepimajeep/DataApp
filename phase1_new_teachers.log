@@ -1,0 +1,297 @@
+[2026-05-18 14:44:19,841] __main__ - INFO - === DataApp Phase 1: Validation (45 items) ===
+[2026-05-18 14:44:19,848] __main__ - INFO - Loaded 943 items from private.jsonl
+[2026-05-18 14:44:19,848] __main__ - INFO - Type distribution: mcq=300, single_free=305, multi_free=338
+[2026-05-18 14:44:19,849] __main__ - INFO - mcq: taking 15 of 300
+[2026-05-18 14:44:19,849] __main__ - INFO - single_free: taking 15 of 305
+[2026-05-18 14:44:19,849] __main__ - INFO - multi_free: taking 15 of 338
+[2026-05-18 14:44:19,849] __main__ - INFO - Stratified sample size: 45
+[2026-05-18 14:44:19,849] __main__ - INFO - Validation set: 45 items
+[2026-05-18 14:44:34,745] src.orchestrator - INFO - Processing 45 items...
+[2026-05-18 14:44:34,745] src.orchestrator - INFO - Processing item 200 (mcq, max_tokens=2048)...
+[2026-05-18 14:44:34,747] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:44:44,320] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:44:48,337] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:44:48,440] src.orchestrator - INFO -   → 3/3 (consensus: I)
+[2026-05-18 14:44:48,440] src.orchestrator - INFO -   → running cost: $0.02
+[2026-05-18 14:44:48,440] src.orchestrator - INFO - Processing item 38 (mcq, max_tokens=2048)...
+[2026-05-18 14:44:48,442] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:44:56,836] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:44:57,535] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:44:57,744] src.orchestrator - INFO -   → 3/3 (consensus: B)
+[2026-05-18 14:44:57,744] src.orchestrator - INFO -   → running cost: $0.04
+[2026-05-18 14:44:57,744] src.orchestrator - INFO - Processing item 474 (mcq, max_tokens=2048)...
+[2026-05-18 14:44:57,745] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:45:04,236] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:45:09,141] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:45:09,153] src.orchestrator - INFO -   → 1/3 (consensus: E)
+[2026-05-18 14:45:09,153] src.orchestrator - INFO -   → running cost: $0.06
+[2026-05-18 14:45:09,153] src.orchestrator - INFO - Processing item 427 (mcq, max_tokens=2048)...
+[2026-05-18 14:45:09,237] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:45:16,226] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:45:16,243] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:45:16,260] src.orchestrator - INFO -   → 2/3 (consensus: E)
+[2026-05-18 14:45:16,260] src.orchestrator - INFO -   → running cost: $0.08
+[2026-05-18 14:45:16,260] src.orchestrator - INFO - Processing item 391 (mcq, max_tokens=2048)...
+[2026-05-18 14:45:16,261] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:45:27,936] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:45:30,853] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:45:30,948] src.orchestrator - INFO -   → 1/3 (consensus: I)
+[2026-05-18 14:45:30,948] src.orchestrator - INFO -   → running cost: $0.12
+[2026-05-18 14:45:30,948] src.orchestrator - INFO - Processing item 253 (mcq, max_tokens=2048)...
+[2026-05-18 14:45:30,949] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:45:41,842] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:45:44,436] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:45:44,544] src.orchestrator - INFO -   → 2/3 (consensus: E)
+[2026-05-18 14:45:44,544] src.orchestrator - INFO -   → running cost: $0.15
+[2026-05-18 14:45:44,544] src.orchestrator - INFO - Processing item 182 (mcq, max_tokens=2048)...
+[2026-05-18 14:45:44,546] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:45:49,236] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:45:53,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:45:54,442] src.orchestrator - INFO -   → 2/3 (consensus: E)
+[2026-05-18 14:45:54,442] src.orchestrator - INFO -   → running cost: $0.17
+[2026-05-18 14:45:54,442] src.orchestrator - INFO - Processing item 878 (mcq, max_tokens=2048)...
+[2026-05-18 14:45:54,444] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:46:04,036] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:46:05,436] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:46:05,548] src.orchestrator - INFO -   → 3/3 (consensus: I)
+[2026-05-18 14:46:05,548] src.orchestrator - INFO -   → running cost: $0.20
+[2026-05-18 14:46:05,548] src.orchestrator - INFO - Processing item 164 (mcq, max_tokens=2048)...
+[2026-05-18 14:46:05,550] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:46:21,636] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:46:23,915] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:46:24,046] src.orchestrator - INFO -   → 1/3 (consensus: H)
+[2026-05-18 14:46:24,046] src.orchestrator - INFO -   → running cost: $0.24
+[2026-05-18 14:46:24,046] src.orchestrator - INFO - Processing item 695 (mcq, max_tokens=2048)...
+[2026-05-18 14:46:24,048] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:46:30,636] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:46:32,744] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:46:33,847] src.orchestrator - INFO -   → 3/3 (consensus: E)
+[2026-05-18 14:46:33,847] src.orchestrator - INFO -   → running cost: $0.26
+[2026-05-18 14:46:33,847] src.orchestrator - INFO - Processing item 69 (mcq, max_tokens=2048)...
+[2026-05-18 14:46:33,848] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:46:41,136] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:46:46,947] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:46:47,038] src.orchestrator - INFO -   → 2/3 (consensus: G)
+[2026-05-18 14:46:47,038] src.orchestrator - INFO -   → running cost: $0.29
+[2026-05-18 14:46:47,038] src.orchestrator - INFO - Processing item 53 (mcq, max_tokens=2048)...
+[2026-05-18 14:46:47,040] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:46:53,436] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:46:57,714] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:46:57,737] src.orchestrator - INFO -   → 3/3 (consensus: F)
+[2026-05-18 14:46:57,737] src.orchestrator - INFO -   → running cost: $0.31
+[2026-05-18 14:46:57,737] src.orchestrator - INFO - Processing item 173 (mcq, max_tokens=2048)...
+[2026-05-18 14:46:57,739] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:47:05,984] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:09,504] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:09,743] src.orchestrator - INFO -   → 2/3 (consensus: C)
+[2026-05-18 14:47:09,743] src.orchestrator - INFO -   → running cost: $0.34
+[2026-05-18 14:47:09,743] src.orchestrator - INFO - Processing item 366 (mcq, max_tokens=2048)...
+[2026-05-18 14:47:09,745] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:47:17,339] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:22,995] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:23,014] src.orchestrator - INFO -   → 3/3 (consensus: G)
+[2026-05-18 14:47:23,014] src.orchestrator - INFO -   → running cost: $0.37
+[2026-05-18 14:47:23,014] src.orchestrator - INFO - Processing item 402 (mcq, max_tokens=2048)...
+[2026-05-18 14:47:23,016] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:47:31,718] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:32,190] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:32,208] src.orchestrator - INFO -   → 3/3 (consensus: J)
+[2026-05-18 14:47:32,208] src.orchestrator - INFO -   → running cost: $0.39
+[2026-05-18 14:47:32,208] src.orchestrator - INFO - Processing item 790 (single_free, max_tokens=3584)...
+[2026-05-18 14:47:32,210] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:47:34,128] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:34,297] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:34,318] src.orchestrator - INFO -   → 3/3 (consensus: -20x^2+45x-25=0)
+[2026-05-18 14:47:34,318] src.orchestrator - INFO -   → running cost: $0.40
+[2026-05-18 14:47:34,318] src.orchestrator - INFO - Processing item 49 (single_free, max_tokens=3584)...
+[2026-05-18 14:47:34,320] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:47:40,910] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:41,567] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:41,601] src.orchestrator - INFO -   → 2/3 (consensus: 0.0143)
+[2026-05-18 14:47:41,601] src.orchestrator - INFO -   → running cost: $0.41
+[2026-05-18 14:47:41,601] src.orchestrator - INFO - Processing item 892 (single_free, max_tokens=3584)...
+[2026-05-18 14:47:41,605] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:47:43,867] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:43,977] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:44,338] src.orchestrator - INFO -   → 3/3 (consensus: 69.65)
+[2026-05-18 14:47:44,338] src.orchestrator - INFO -   → running cost: $0.42
+[2026-05-18 14:47:44,338] src.orchestrator - INFO - Processing item 282 (single_free, max_tokens=3584)...
+[2026-05-18 14:47:44,340] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:47:46,023] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:46,600] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:46,849] src.orchestrator - INFO -   → 1/3 (consensus: -e^2,\ e^2)
+[2026-05-18 14:47:46,849] src.orchestrator - INFO -   → running cost: $0.42
+[2026-05-18 14:47:46,849] src.orchestrator - INFO - Processing item 849 (single_free, max_tokens=3584)...
+[2026-05-18 14:47:46,850] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:47:47,791] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:49,456] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:49,687] src.orchestrator - INFO -   → 3/3 (consensus: 4(n+1))
+[2026-05-18 14:47:49,687] src.orchestrator - INFO -   → running cost: $0.43
+[2026-05-18 14:47:49,688] src.orchestrator - INFO - Processing item 679 (single_free, max_tokens=3584)...
+[2026-05-18 14:47:49,689] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:47:54,348] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:56,317] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:47:56,330] src.orchestrator - INFO -   → 2/3 (consensus: 11)
+[2026-05-18 14:47:56,330] src.orchestrator - INFO -   → running cost: $0.44
+[2026-05-18 14:47:56,330] src.orchestrator - INFO - Processing item 312 (single_free, max_tokens=3584)...
+[2026-05-18 14:47:56,331] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:14,833] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:15,725] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:15,740] src.orchestrator - INFO -   → 1/3 (consensus: 4)
+[2026-05-18 14:48:15,740] src.orchestrator - INFO -   → running cost: $0.48
+[2026-05-18 14:48:15,740] src.orchestrator - INFO - Processing item 716 (single_free, max_tokens=3584)...
+[2026-05-18 14:48:15,741] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:17,117] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:17,475] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:17,494] src.orchestrator - INFO -   → 2/3 (consensus: \frac{19}{33})
+[2026-05-18 14:48:17,494] src.orchestrator - INFO -   → running cost: $0.49
+[2026-05-18 14:48:17,494] src.orchestrator - INFO - Processing item 936 (single_free, max_tokens=3584)...
+[2026-05-18 14:48:17,495] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:18,927] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:19,764] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:19,804] src.orchestrator - INFO -   → 3/3 (consensus: \frac{275}{16})
+[2026-05-18 14:48:19,804] src.orchestrator - INFO -   → running cost: $0.49
+[2026-05-18 14:48:19,804] src.orchestrator - INFO - Processing item 426 (single_free, max_tokens=3584)...
+[2026-05-18 14:48:19,807] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:21,558] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:22,333] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:22,351] src.orchestrator - INFO -   → 3/3 (consensus: 11)
+[2026-05-18 14:48:22,351] src.orchestrator - INFO -   → running cost: $0.50
+[2026-05-18 14:48:22,351] src.orchestrator - INFO - Processing item 11 (single_free, max_tokens=3584)...
+[2026-05-18 14:48:22,353] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:26,814] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:27,408] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:27,598] src.orchestrator - INFO -   → 1/3 (consensus: 0.939)
+[2026-05-18 14:48:27,598] src.orchestrator - INFO -   → running cost: $0.52
+[2026-05-18 14:48:27,598] src.orchestrator - INFO - Processing item 226 (single_free, max_tokens=3584)...
+[2026-05-18 14:48:27,599] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:28,769] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:31,909] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:32,190] src.orchestrator - INFO -   → 3/3 (consensus: 8)
+[2026-05-18 14:48:32,190] src.orchestrator - INFO -   → running cost: $0.52
+[2026-05-18 14:48:32,190] src.orchestrator - INFO - Processing item 684 (single_free, max_tokens=3584)...
+[2026-05-18 14:48:32,191] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:34,140] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:34,993] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:35,331] src.orchestrator - INFO -   → 2/3 (consensus: -1.55)
+[2026-05-18 14:48:35,331] src.orchestrator - INFO -   → running cost: $0.53
+[2026-05-18 14:48:35,331] src.orchestrator - INFO - Processing item 533 (single_free, max_tokens=3584)...
+[2026-05-18 14:48:35,333] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:40,102] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:42,024] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:42,041] src.orchestrator - INFO -   → 1/3 (consensus: 0.056)
+[2026-05-18 14:48:42,041] src.orchestrator - INFO -   → running cost: $0.54
+[2026-05-18 14:48:42,041] src.orchestrator - INFO - Processing item 221 (single_free, max_tokens=3584)...
+[2026-05-18 14:48:42,042] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:43,587] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:44,121] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:44,137] src.orchestrator - INFO -   → 3/3 (consensus: 2750)
+[2026-05-18 14:48:44,137] src.orchestrator - INFO -   → running cost: $0.55
+[2026-05-18 14:48:44,137] src.orchestrator - INFO - Processing item 318 (multi_free, max_tokens=4608)...
+[2026-05-18 14:48:44,139] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:50,528] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:50,603] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:50,617] src.orchestrator - INFO -   → 1/3 (consensus: 8,\arcsin(\frac{8}{15}))
+[2026-05-18 14:48:50,617] src.orchestrator - INFO -   → running cost: $0.56
+[2026-05-18 14:48:50,617] src.orchestrator - INFO - Processing item 461 (multi_free, max_tokens=4608)...
+[2026-05-18 14:48:50,618] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:53,049] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:55,818] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:55,852] src.orchestrator - INFO -   → 2/3 (consensus: 2,302)
+[2026-05-18 14:48:55,852] src.orchestrator - INFO -   → running cost: $0.57
+[2026-05-18 14:48:55,852] src.orchestrator - INFO - Processing item 137 (multi_free, max_tokens=4608)...
+[2026-05-18 14:48:55,854] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:48:57,672] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:59,924] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:48:59,968] src.orchestrator - INFO -   → 3/3 (consensus: 2/13,2/1)
+[2026-05-18 14:48:59,968] src.orchestrator - INFO -   → running cost: $0.58
+[2026-05-18 14:48:59,968] src.orchestrator - INFO - Processing item 122 (multi_free, max_tokens=4608)...
+[2026-05-18 14:48:59,972] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:02,464] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:02,466] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:02,786] src.orchestrator - INFO -   → 3/3 (consensus: 1174.8,55)
+[2026-05-18 14:49:02,786] src.orchestrator - INFO -   → running cost: $0.58
+[2026-05-18 14:49:02,786] src.orchestrator - INFO - Processing item 516 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:02,787] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:04,991] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:05,144] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:05,321] src.orchestrator - INFO -   → 2/3 (consensus: 7,-11,4,0)
+[2026-05-18 14:49:05,321] src.orchestrator - INFO -   → running cost: $0.59
+[2026-05-18 14:49:05,321] src.orchestrator - INFO - Processing item 133 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:05,322] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:07,725] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:10,206] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:10,296] src.orchestrator - INFO -   → 1/3 (consensus: -\frac{\sqrt3}{2},\frac12,-\sqrt3,2)
+[2026-05-18 14:49:10,296] src.orchestrator - INFO -   → running cost: $0.60
+[2026-05-18 14:49:10,296] src.orchestrator - INFO - Processing item 491 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:10,297] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:16,350] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:17,156] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:17,174] src.orchestrator - INFO -   → 1/3 (consensus: 1255.37,1091.05,1419.69,No,Central Limit Theorem)
+[2026-05-18 14:49:17,174] src.orchestrator - INFO -   → running cost: $0.61
+[2026-05-18 14:49:17,174] src.orchestrator - INFO - Processing item 469 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:17,176] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:23,397] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:25,105] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:25,122] src.orchestrator - INFO -   → 1/3 (consensus: s^2,0.1575A,0.1575s^2,C,81,square feet,14.175,doll)
+[2026-05-18 14:49:25,122] src.orchestrator - INFO -   → running cost: $0.63
+[2026-05-18 14:49:25,122] src.orchestrator - INFO - Processing item 858 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:25,123] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:29,684] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:30,466] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:30,498] src.orchestrator - INFO -   → 1/3 (consensus: 2.30,1.691,Yes)
+[2026-05-18 14:49:30,498] src.orchestrator - INFO -   → running cost: $0.64
+[2026-05-18 14:49:30,498] src.orchestrator - INFO - Processing item 369 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:30,501] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:32,764] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:33,009] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:33,023] src.orchestrator - INFO -   → 2/3 (consensus: \frac34,5,2)
+[2026-05-18 14:49:33,023] src.orchestrator - INFO -   → running cost: $0.65
+[2026-05-18 14:49:33,024] src.orchestrator - INFO - Processing item 52 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:33,025] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:34,655] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:35,004] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:35,045] src.orchestrator - INFO -   → 3/3 (consensus: 231,385)
+[2026-05-18 14:49:35,045] src.orchestrator - INFO -   → running cost: $0.66
+[2026-05-18 14:49:35,045] src.orchestrator - INFO - Processing item 633 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:35,051] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:37,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:37,436] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:37,784] src.orchestrator - INFO -   → 3/3 (consensus: B,D,8)
+[2026-05-18 14:49:37,785] src.orchestrator - INFO -   → running cost: $0.66
+[2026-05-18 14:49:37,785] src.orchestrator - INFO - Processing item 738 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:37,837] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:39,378] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:41,536] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:41,939] src.orchestrator - INFO -   → 3/3 (consensus: A,C,A,A)
+[2026-05-18 14:49:41,939] src.orchestrator - INFO -   → running cost: $0.67
+[2026-05-18 14:49:41,939] src.orchestrator - INFO - Processing item 174 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:41,940] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:43,436] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:44,056] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:44,337] src.orchestrator - INFO -   → 2/3 (consensus: 7,\frac{7}{8})
+[2026-05-18 14:49:44,337] src.orchestrator - INFO -   → running cost: $0.68
+[2026-05-18 14:49:44,337] src.orchestrator - INFO - Processing item 513 (multi_free, max_tokens=4608)...
+[2026-05-18 14:49:44,338] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-18 14:49:47,569] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:47,735] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-18 14:49:47,839] src.orchestrator - INFO -   → 1/3 (consensus: -1.4051,1.4051,1.7507)
+[2026-05-18 14:49:47,839] src.orchestrator - INFO -   → running cost: $0.69
+[2026-05-18 14:49:47,839] __main__ - INFO - Batch summary: {
+  "processed": 45,
+  "failed": 0,
+  "total_cost_usd": 0.6855675000000003
+}
+[2026-05-18 14:49:47,840] __main__ - INFO - Validation manifest entries: 45
+[2026-05-18 14:49:47,840] __main__ - INFO - Format compliance: 45/45 (100.0%)
+[2026-05-18 14:49:47,840] __main__ - INFO - No multi-answer items in sample
+[2026-05-18 14:49:47,840] __main__ - INFO - 3/3 agreement rate: 19/45 (42.2%)
+[2026-05-18 14:49:47,840] __main__ - INFO - 
+=== Phase 1 Validation Results ===
+[2026-05-18 14:49:47,840] __main__ - INFO - Format compliance ≥95%: PASS
+[2026-05-18 14:49:47,840] __main__ - INFO - Multi-answer count accuracy ≥90%: PASS
+[2026-05-18 14:49:47,840] __main__ - INFO - 3/3 agreement ≥40%: PASS
+[2026-05-18 14:49:47,840] __main__ - INFO - 
+✓ All thresholds PASSED.
+[2026-05-18 14:49:47,840] __main__ - INFO - [FROM CLAUDE_DATAAPP] Phase 1 validation complete. Cost: $0.69
+[2026-05-18 14:49:47,840] __main__ - INFO - Waiting for Rain approval before Phase 2.

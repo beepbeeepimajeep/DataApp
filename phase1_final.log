@@ -1,0 +1,11 @@
+[2026-05-18 14:40:09,648] __main__ - INFO - === DataApp Phase 1: Validation (45 items) ===
+[2026-05-18 14:40:09,747] __main__ - INFO - Loaded 943 items from private.jsonl
+[2026-05-18 14:40:09,747] __main__ - INFO - Type distribution: mcq=300, single_free=305, multi_free=338
+[2026-05-18 14:40:09,747] __main__ - INFO - mcq: taking 15 of 300
+[2026-05-18 14:40:09,747] __main__ - INFO - single_free: taking 15 of 305
+[2026-05-18 14:40:09,747] __main__ - INFO - multi_free: taking 15 of 338
+[2026-05-18 14:40:09,748] __main__ - INFO - Stratified sample size: 45
+[2026-05-18 14:40:09,748] __main__ - INFO - Validation set: 45 items
+[2026-05-18 14:40:22,038] src.orchestrator - INFO - Processing 45 items...
+[2026-05-18 14:40:22,039] src.orchestrator - INFO - Processing item 200 (mcq, max_tokens=2048)...
+[2026-05-18 14:40:24,936] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"

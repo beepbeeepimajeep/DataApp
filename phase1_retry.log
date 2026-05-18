@@ -1,0 +1,296 @@
+[2026-05-18 13:42:09,539] __main__ - INFO - === DataApp Phase 1: Validation (45 items) ===
+[2026-05-18 13:42:09,635] __main__ - INFO - Loaded 943 items from private.jsonl
+[2026-05-18 13:42:09,636] __main__ - INFO - Type distribution: mcq=300, single_free=305, multi_free=338
+[2026-05-18 13:42:09,636] __main__ - INFO - mcq: taking 15 of 300
+[2026-05-18 13:42:09,636] __main__ - INFO - single_free: taking 15 of 305
+[2026-05-18 13:42:09,636] __main__ - INFO - multi_free: taking 15 of 338
+[2026-05-18 13:42:09,636] __main__ - INFO - Stratified sample size: 45
+[2026-05-18 13:42:09,636] __main__ - INFO - Validation set: 45 items
+[2026-05-18 13:42:27,945] src.orchestrator - INFO - Processing 45 items...
+[2026-05-18 13:42:27,945] src.orchestrator - INFO - Processing item 200 (mcq, max_tokens=2048)...
+[2026-05-18 13:42:32,636] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:42:32,637] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:42:35,636] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:42:36,236] src.orchestrator - INFO -   → 1/3 (consensus: I)
+[2026-05-18 13:42:36,236] src.orchestrator - INFO -   → running cost: $0.01
+[2026-05-18 13:42:36,236] src.orchestrator - INFO - Processing item 38 (mcq, max_tokens=2048)...
+[2026-05-18 13:42:36,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:42:36,339] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:42:46,062] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:42:46,636] src.orchestrator - INFO -   → 1/3 (consensus: B)
+[2026-05-18 13:42:46,636] src.orchestrator - INFO -   → running cost: $0.02
+[2026-05-18 13:42:46,636] src.orchestrator - INFO - Processing item 474 (mcq, max_tokens=2048)...
+[2026-05-18 13:42:46,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:42:46,854] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:42:53,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:42:53,858] src.orchestrator - INFO -   → 1/3 (consensus: C)
+[2026-05-18 13:42:53,858] src.orchestrator - INFO -   → running cost: $0.03
+[2026-05-18 13:42:53,858] src.orchestrator - INFO - Processing item 427 (mcq, max_tokens=2048)...
+[2026-05-18 13:42:54,136] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:42:54,235] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:43:04,336] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:43:05,136] src.orchestrator - INFO -   → 1/3 (consensus: E)
+[2026-05-18 13:43:05,136] src.orchestrator - INFO -   → running cost: $0.05
+[2026-05-18 13:43:05,137] src.orchestrator - INFO - Processing item 391 (mcq, max_tokens=2048)...
+[2026-05-18 13:43:05,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:43:05,337] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:43:26,336] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:43:27,040] src.orchestrator - INFO -   → 1/3 (consensus: C)
+[2026-05-18 13:43:27,040] src.orchestrator - INFO -   → running cost: $0.07
+[2026-05-18 13:43:27,040] src.orchestrator - INFO - Processing item 253 (mcq, max_tokens=2048)...
+[2026-05-18 13:43:27,236] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:43:27,272] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:43:38,136] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:43:38,702] src.orchestrator - INFO -   → 1/3 (consensus: E)
+[2026-05-18 13:43:38,702] src.orchestrator - INFO -   → running cost: $0.09
+[2026-05-18 13:43:38,702] src.orchestrator - INFO - Processing item 182 (mcq, max_tokens=2048)...
+[2026-05-18 13:43:38,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:43:38,874] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:43:48,136] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:43:48,738] src.orchestrator - INFO -   → 1/3 (consensus: E)
+[2026-05-18 13:43:48,738] src.orchestrator - INFO -   → running cost: $0.10
+[2026-05-18 13:43:48,739] src.orchestrator - INFO - Processing item 878 (mcq, max_tokens=2048)...
+[2026-05-18 13:43:48,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:43:48,935] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:44:00,635] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:44:01,236] src.orchestrator - INFO -   → 1/3 (consensus: I)
+[2026-05-18 13:44:01,236] src.orchestrator - INFO -   → running cost: $0.11
+[2026-05-18 13:44:01,236] src.orchestrator - INFO - Processing item 164 (mcq, max_tokens=2048)...
+[2026-05-18 13:44:01,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:44:01,435] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:44:13,536] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:44:14,136] src.orchestrator - INFO -   → 1/3 (consensus: G)
+[2026-05-18 13:44:14,136] src.orchestrator - INFO -   → running cost: $0.14
+[2026-05-18 13:44:14,136] src.orchestrator - INFO - Processing item 695 (mcq, max_tokens=2048)...
+[2026-05-18 13:44:14,335] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:44:14,435] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:44:22,136] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:44:23,037] src.orchestrator - INFO -   → 1/3 (consensus: E)
+[2026-05-18 13:44:23,037] src.orchestrator - INFO -   → running cost: $0.14
+[2026-05-18 13:44:23,037] src.orchestrator - INFO - Processing item 69 (mcq, max_tokens=2048)...
+[2026-05-18 13:44:23,263] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:44:23,264] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:44:32,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:44:33,436] src.orchestrator - INFO -   → 1/3 (consensus: G)
+[2026-05-18 13:44:33,436] src.orchestrator - INFO -   → running cost: $0.16
+[2026-05-18 13:44:33,437] src.orchestrator - INFO - Processing item 53 (mcq, max_tokens=2048)...
+[2026-05-18 13:44:33,536] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:44:33,636] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:44:42,438] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:44:42,887] src.orchestrator - INFO -   → 1/3 (consensus: F)
+[2026-05-18 13:44:42,887] src.orchestrator - INFO -   → running cost: $0.17
+[2026-05-18 13:44:42,887] src.orchestrator - INFO - Processing item 173 (mcq, max_tokens=2048)...
+[2026-05-18 13:44:43,135] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:44:43,137] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:05,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:45:06,036] src.orchestrator - INFO -   → 1/3 (consensus: C)
+[2026-05-18 13:45:06,036] src.orchestrator - INFO -   → running cost: $0.20
+[2026-05-18 13:45:06,036] src.orchestrator - INFO - Processing item 366 (mcq, max_tokens=2048)...
+[2026-05-18 13:45:06,235] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:06,435] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:14,336] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:45:14,939] src.orchestrator - INFO -   → 1/3 (consensus: G)
+[2026-05-18 13:45:14,939] src.orchestrator - INFO -   → running cost: $0.21
+[2026-05-18 13:45:14,940] src.orchestrator - INFO - Processing item 402 (mcq, max_tokens=2048)...
+[2026-05-18 13:45:15,236] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:15,237] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:25,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:45:27,236] src.orchestrator - INFO -   → 1/3 (consensus: J)
+[2026-05-18 13:45:27,237] src.orchestrator - INFO -   → running cost: $0.22
+[2026-05-18 13:45:27,237] src.orchestrator - INFO - Processing item 790 (single_free, max_tokens=3584)...
+[2026-05-18 13:45:27,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:27,337] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:29,836] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:45:30,539] src.orchestrator - INFO -   → 1/3 (consensus: -20x^2+45x-25=0)
+[2026-05-18 13:45:30,539] src.orchestrator - INFO -   → running cost: $0.23
+[2026-05-18 13:45:30,539] src.orchestrator - INFO - Processing item 49 (single_free, max_tokens=3584)...
+[2026-05-18 13:45:30,739] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:30,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:36,849] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:45:37,539] src.orchestrator - INFO -   → 1/3 (consensus: 0.0143)
+[2026-05-18 13:45:37,539] src.orchestrator - INFO -   → running cost: $0.23
+[2026-05-18 13:45:37,540] src.orchestrator - INFO - Processing item 892 (single_free, max_tokens=3584)...
+[2026-05-18 13:45:37,737] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:37,743] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:39,736] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:45:40,136] src.orchestrator - INFO -   → 1/3 (consensus: 69.65)
+[2026-05-18 13:45:40,136] src.orchestrator - INFO -   → running cost: $0.24
+[2026-05-18 13:45:40,136] src.orchestrator - INFO - Processing item 282 (single_free, max_tokens=3584)...
+[2026-05-18 13:45:40,164] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:40,236] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:44,936] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:45:45,447] src.orchestrator - INFO -   → 1/3 (consensus: e^2)
+[2026-05-18 13:45:45,447] src.orchestrator - INFO -   → running cost: $0.24
+[2026-05-18 13:45:45,447] src.orchestrator - INFO - Processing item 849 (single_free, max_tokens=3584)...
+[2026-05-18 13:45:45,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:45,737] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:47,628] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:45:47,941] src.orchestrator - INFO -   → 1/3 (consensus: 4(n+1))
+[2026-05-18 13:45:47,941] src.orchestrator - INFO -   → running cost: $0.24
+[2026-05-18 13:45:47,941] src.orchestrator - INFO - Processing item 679 (single_free, max_tokens=3584)...
+[2026-05-18 13:45:48,040] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:48,159] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:54,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:45:54,939] src.orchestrator - INFO -   → 1/3 (consensus: 11)
+[2026-05-18 13:45:54,939] src.orchestrator - INFO -   → running cost: $0.25
+[2026-05-18 13:45:54,939] src.orchestrator - INFO - Processing item 312 (single_free, max_tokens=3584)...
+[2026-05-18 13:45:55,135] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:45:55,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:14,536] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:46:14,836] src.orchestrator - INFO -   → 1/3 (consensus: 20)
+[2026-05-18 13:46:14,836] src.orchestrator - INFO -   → running cost: $0.27
+[2026-05-18 13:46:14,836] src.orchestrator - INFO - Processing item 716 (single_free, max_tokens=3584)...
+[2026-05-18 13:46:14,936] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:15,036] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:17,263] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:46:17,447] src.orchestrator - INFO -   → 1/3 (consensus: 0.5758)
+[2026-05-18 13:46:17,447] src.orchestrator - INFO -   → running cost: $0.27
+[2026-05-18 13:46:17,447] src.orchestrator - INFO - Processing item 936 (single_free, max_tokens=3584)...
+[2026-05-18 13:46:17,636] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:17,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:25,536] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:46:26,191] src.orchestrator - INFO -   → 1/3 (consensus: \frac{275}{16})
+[2026-05-18 13:46:26,191] src.orchestrator - INFO -   → running cost: $0.27
+[2026-05-18 13:46:26,191] src.orchestrator - INFO - Processing item 426 (single_free, max_tokens=3584)...
+[2026-05-18 13:46:26,303] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:26,536] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:28,536] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:46:29,135] src.orchestrator - INFO -   → 1/3 (consensus: 11)
+[2026-05-18 13:46:29,135] src.orchestrator - INFO -   → running cost: $0.27
+[2026-05-18 13:46:29,135] src.orchestrator - INFO - Processing item 11 (single_free, max_tokens=3584)...
+[2026-05-18 13:46:29,236] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:29,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:37,636] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:46:38,040] src.orchestrator - INFO -   → 1/3 (consensus: 0.9391)
+[2026-05-18 13:46:38,040] src.orchestrator - INFO -   → running cost: $0.29
+[2026-05-18 13:46:38,041] src.orchestrator - INFO - Processing item 226 (single_free, max_tokens=3584)...
+[2026-05-18 13:46:38,236] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:38,335] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:40,139] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:46:40,539] src.orchestrator - INFO -   → 1/3 (consensus: 8)
+[2026-05-18 13:46:40,539] src.orchestrator - INFO -   → running cost: $0.29
+[2026-05-18 13:46:40,540] src.orchestrator - INFO - Processing item 684 (single_free, max_tokens=3584)...
+[2026-05-18 13:46:40,561] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:40,635] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:43,736] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:46:44,338] src.orchestrator - INFO -   → 1/3 (consensus: -1.555)
+[2026-05-18 13:46:44,338] src.orchestrator - INFO -   → running cost: $0.29
+[2026-05-18 13:46:44,338] src.orchestrator - INFO - Processing item 533 (single_free, max_tokens=3584)...
+[2026-05-18 13:46:44,436] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:44,537] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:52,136] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:46:52,336] src.orchestrator - INFO -   → 1/3 (consensus: 0.0564)
+[2026-05-18 13:46:52,336] src.orchestrator - INFO -   → running cost: $0.30
+[2026-05-18 13:46:52,336] src.orchestrator - INFO - Processing item 221 (single_free, max_tokens=3584)...
+[2026-05-18 13:46:52,566] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:52,569] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:54,147] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:46:54,746] src.orchestrator - INFO -   → 1/3 (consensus: 2750)
+[2026-05-18 13:46:54,746] src.orchestrator - INFO -   → running cost: $0.30
+[2026-05-18 13:46:54,746] src.orchestrator - INFO - Processing item 318 (multi_free, max_tokens=4608)...
+[2026-05-18 13:46:54,780] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:46:54,835] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:02,036] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:02,638] src.orchestrator - INFO -   → 1/3 (consensus: 8, \arctan\!(\frac{8}{\sqrt{161}}))
+[2026-05-18 13:47:02,639] src.orchestrator - INFO -   → running cost: $0.31
+[2026-05-18 13:47:02,639] src.orchestrator - INFO - Processing item 461 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:02,935] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:02,936] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:08,121] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:08,636] src.orchestrator - INFO -   → 1/3 (consensus: 2, 302)
+[2026-05-18 13:47:08,636] src.orchestrator - INFO -   → running cost: $0.32
+[2026-05-18 13:47:08,636] src.orchestrator - INFO - Processing item 137 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:08,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:08,936] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:11,103] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:11,436] src.orchestrator - INFO -   → 1/3 (consensus: 2/13,2/1)
+[2026-05-18 13:47:11,436] src.orchestrator - INFO -   → running cost: $0.32
+[2026-05-18 13:47:11,436] src.orchestrator - INFO - Processing item 122 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:11,458] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:11,535] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:13,336] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:13,836] src.orchestrator - INFO -   → 1/3 (consensus: 1174.8,55)
+[2026-05-18 13:47:13,836] src.orchestrator - INFO -   → running cost: $0.32
+[2026-05-18 13:47:13,837] src.orchestrator - INFO - Processing item 516 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:13,936] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:14,036] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:17,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:18,040] src.orchestrator - INFO -   → 1/3 (consensus: 7, -11, 4, 0)
+[2026-05-18 13:47:18,040] src.orchestrator - INFO -   → running cost: $0.32
+[2026-05-18 13:47:18,040] src.orchestrator - INFO - Processing item 133 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:18,071] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:18,135] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:20,836] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:21,240] src.orchestrator - INFO -   → 1/3 (consensus: -\frac{\sqrt{3}}{2},\,\frac{1}{2},\,-\sqrt{3},\,2)
+[2026-05-18 13:47:21,240] src.orchestrator - INFO -   → running cost: $0.33
+[2026-05-18 13:47:21,240] src.orchestrator - INFO - Processing item 491 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:21,338] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:21,436] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:28,836] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:29,543] src.orchestrator - INFO -   → 1/3 (consensus: 1255.37, 1091.05, 1419.69, No, Central Limit Theor)
+[2026-05-18 13:47:29,543] src.orchestrator - INFO -   → running cost: $0.34
+[2026-05-18 13:47:29,543] src.orchestrator - INFO - Processing item 469 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:29,865] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:29,935] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:38,760] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:39,736] src.orchestrator - INFO -   → 1/3 (consensus: s^2,\ 0.1575A,\ 0.1575s^2,\ C,\ 81,\ A 9-ft square)
+[2026-05-18 13:47:39,737] src.orchestrator - INFO -   → running cost: $0.35
+[2026-05-18 13:47:39,737] src.orchestrator - INFO - Processing item 858 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:39,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:39,936] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:44,642] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:44,842] src.orchestrator - INFO -   → 1/3 (consensus: 2.300, 1.691, Yes)
+[2026-05-18 13:47:44,842] src.orchestrator - INFO -   → running cost: $0.35
+[2026-05-18 13:47:44,842] src.orchestrator - INFO - Processing item 369 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:44,866] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:44,936] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:47,418] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:47,546] src.orchestrator - INFO -   → 1/3 (consensus: 3/4,5,2)
+[2026-05-18 13:47:47,546] src.orchestrator - INFO -   → running cost: $0.36
+[2026-05-18 13:47:47,546] src.orchestrator - INFO - Processing item 52 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:47,664] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:47,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:51,426] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:51,838] src.orchestrator - INFO -   → 1/3 (consensus: 231,385)
+[2026-05-18 13:47:51,838] src.orchestrator - INFO -   → running cost: $0.36
+[2026-05-18 13:47:51,838] src.orchestrator - INFO - Processing item 633 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:51,937] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:51,974] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:56,436] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:47:56,642] src.orchestrator - INFO -   → 1/3 (consensus: B,D,8)
+[2026-05-18 13:47:56,642] src.orchestrator - INFO -   → running cost: $0.36
+[2026-05-18 13:47:56,642] src.orchestrator - INFO - Processing item 738 (multi_free, max_tokens=4608)...
+[2026-05-18 13:47:56,675] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:56,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:47:59,636] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:48:00,038] src.orchestrator - INFO -   → 1/3 (consensus: A,C,A,A)
+[2026-05-18 13:48:00,038] src.orchestrator - INFO -   → running cost: $0.37
+[2026-05-18 13:48:00,038] src.orchestrator - INFO - Processing item 174 (multi_free, max_tokens=4608)...
+[2026-05-18 13:48:00,136] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:48:00,137] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:48:02,436] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:48:03,340] src.orchestrator - INFO -   → 1/3 (consensus: 7, \frac{7}{8})
+[2026-05-18 13:48:03,340] src.orchestrator - INFO -   → running cost: $0.37
+[2026-05-18 13:48:03,340] src.orchestrator - INFO - Processing item 513 (multi_free, max_tokens=4608)...
+[2026-05-18 13:48:03,363] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:48:03,436] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:48:07,736] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:48:08,850] src.orchestrator - INFO -   → 1/3 (consensus: -1.41, 1.41, 1.75)
+[2026-05-18 13:48:08,850] src.orchestrator - INFO -   → running cost: $0.37
+[2026-05-18 13:48:08,850] __main__ - INFO - Batch summary: {
+  "processed": 45,
+  "failed": 0,
+  "total_cost_usd": 0.37326000000000004
+}
+[2026-05-18 13:48:08,851] __main__ - INFO - Validation manifest entries: 45
+[2026-05-18 13:48:08,851] __main__ - INFO - Format compliance: 45/45 (100.0%)
+[2026-05-18 13:48:08,851] __main__ - INFO - No multi-answer items in sample
+[2026-05-18 13:48:08,851] __main__ - INFO - 3/3 agreement rate: 0/45 (0.0%)
+[2026-05-18 13:48:08,851] __main__ - INFO - 
+=== Phase 1 Validation Results ===
+[2026-05-18 13:48:08,851] __main__ - INFO - Format compliance ≥95%: PASS
+[2026-05-18 13:48:08,851] __main__ - INFO - Multi-answer count accuracy ≥90%: PASS
+[2026-05-18 13:48:08,851] __main__ - INFO - 3/3 agreement ≥40%: FAIL
+[2026-05-18 13:48:08,851] __main__ - ERROR - 
+✗ Validation FAILED. Review above.
+[2026-05-18 13:48:08,851] __main__ - ERROR - Fix prompts/extraction/config and re-run Phase 1.

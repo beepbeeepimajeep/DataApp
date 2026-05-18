@@ -13,9 +13,12 @@ from collections import Counter
 # Add parent dir to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from dotenv import load_dotenv
 import yaml
 from src.orchestrator import DataAppOrchestrator
 from src.storage import read_jsonl
+
+load_dotenv()
 
 logging.basicConfig(
     level=logging.INFO,
@@ -33,7 +36,8 @@ def load_config() -> dict:
 
 def load_data(config: dict) -> list[dict]:
     """Load private.jsonl."""
-    data_file = Path(config["paths"]["data_dir"]) / config["paths"]["data_file"]
+    data_dir = Path(config["paths"]["data_dir"])
+    data_file = data_dir / config["paths"]["input_file"]
     if not data_file.exists():
         logger.error(f"Data file not found: {data_file}")
         raise FileNotFoundError(f"private.jsonl not found at {data_file}")
@@ -43,44 +47,43 @@ def load_data(config: dict) -> list[dict]:
     return items
 
 
-def stratified_sample(items: list[dict], sample_size: int = 45) -> list[dict]:
+def stratified_sample(items: list[dict], sample_size: int = 45, seed: int = 42) -> list[dict]:
     """
-    Stratified sample by type (31% MCQ, 32% single-free, 36% multi-free).
+    Stratified sample: 15 MCQ, 15 single-free, 15 multi-free.
 
     Args:
         items: All items.
-        sample_size: Target sample size.
+        sample_size: Target sample size (must be divisible by 3).
+        seed: Random seed for reproducibility.
 
     Returns:
         List of sampled items.
     """
-    by_type = {}
+    import random
+    from src.prompts import detect_question_type
+
+    by_type = {"mcq": [], "single_free": [], "multi_free": []}
     for item in items:
-        item_type = item.get("type", "unknown")
-        if item_type not in by_type:
-            by_type[item_type] = []
+        item_type = detect_question_type(item)
         by_type[item_type].append(item)
 
-    logger.info(f"Type distribution: {[(t, len(v)) for t, v in by_type.items()]}")
+    logger.info(
+        f"Type distribution: "
+        f"mcq={len(by_type['mcq'])}, "
+        f"single_free={len(by_type['single_free'])}, "
+        f"multi_free={len(by_type['multi_free'])}"
+    )
 
+    rng = random.Random(seed)
     sample = []
-    type_counts = {
-        "MCS": int(sample_size * 0.31),  # MCQ single choice
-        "MCM": int(sample_size * 0.05),  # MCQ multiple choice
-        "INT": int(sample_size * 0.08),  # Single-free (integers, intervals)
-        "NV": int(sample_size * 0.14),   # Single-free (numerical values)
-        "EX": int(sample_size * 0.10),   # Single-free (expressions)
-        "EQ": int(sample_size * 0.05),   # Multi-free (equations)
-        "OL": int(sample_size * 0.13),   # Multi-free (ordered lists)
-        "UOL": int(sample_size * 0.15),  # Multi-free (unordered lists)
-    }
+    per_type = sample_size // 3
 
-    for item_type, target_count in type_counts.items():
-        if item_type in by_type:
-            available = by_type[item_type]
-            take = min(target_count, len(available))
-            sample.extend(available[:take])
-            logger.info(f"{item_type}: taking {take} of {len(available)}")
+    for item_type in ["mcq", "single_free", "multi_free"]:
+        available = by_type[item_type]
+        take = min(per_type, len(available))
+        selected = rng.sample(available, take)
+        sample.extend(selected)
+        logger.info(f"{item_type}: taking {take} of {len(available)}")
 
     logger.info(f"Stratified sample size: {len(sample)}")
     return sample
@@ -101,10 +104,10 @@ def check_format_compliance(manifest: list[dict], threshold: float = 0.95) -> bo
         logger.warning("No manifest entries to check")
         return False
 
-    has_boxed = sum(1 for m in manifest if m.get("consensus", "").strip())
-    rate = has_boxed / len(manifest)
+    has_answer = sum(1 for m in manifest if m.get("consensus_answer", "").strip())
+    rate = has_answer / len(manifest)
 
-    logger.info(f"Format compliance: {has_boxed}/{len(manifest)} ({rate:.1%})")
+    logger.info(f"Format compliance: {has_answer}/{len(manifest)} ({rate:.1%})")
     return rate >= threshold
 
 
@@ -115,7 +118,7 @@ def check_multibox_accuracy(
     Check that ≥threshold% of multi-answer items have correct answer count.
 
     Args:
-        items: Original items (for type/gold).
+        items: Original items (for question text with [ANS] count).
         manifest: Manifest entries (for consensus answers).
         threshold: Minimum accuracy rate.
 
@@ -125,7 +128,7 @@ def check_multibox_accuracy(
     # Build id -> item map
     item_map = {item.get("id"): item for item in items}
 
-    multi_items = [m for m in manifest if item_map.get(m["id"], {}).get("type") in ["OL", "UOL", "EQ"]]
+    multi_items = [m for m in manifest if item_map.get(m["id"], {}).get("question_type") == "multi_free"]
     if not multi_items:
         logger.info("No multi-answer items in sample")
         return True
@@ -133,20 +136,23 @@ def check_multibox_accuracy(
     correct = 0
     for entry in multi_items:
         item = item_map.get(entry["id"], {})
-        gold = item.get("gold", "")
+        question = item.get("question", "")
 
-        # Count answer boxes in consensus (naive: count commas + 1)
-        consensus_count = (entry.get("consensus", "").count(",") + 1) if entry.get("consensus") else 0
-        gold_count = gold.count(",") + 1 if gold else 0
+        # Count expected [ANS] placeholders in question
+        expected_count = question.count("[ANS]")
 
-        if consensus_count == gold_count:
+        # Count answer values in consensus (depth-aware comma split)
+        from src.extraction import count_top_level_answers
+        consensus_count = count_top_level_answers(entry.get("consensus_answer", ""))
+
+        if consensus_count == expected_count:
             correct += 1
         else:
             logger.debug(
-                f"ID {entry['id']}: expected {gold_count} answers, got {consensus_count}"
+                f"ID {entry['id']}: expected {expected_count} answers, got {consensus_count}"
             )
 
-    accuracy = correct / len(multi_items)
+    accuracy = correct / len(multi_items) if multi_items else 0
     logger.info(f"Multi-answer accuracy: {correct}/{len(multi_items)} ({accuracy:.1%})")
     return accuracy >= threshold
 
@@ -157,7 +163,7 @@ def check_agreement_rate(manifest: list[dict], threshold: float = 0.40) -> bool:
 
     Args:
         manifest: Manifest entries.
-        threshold: Minimum rate.
+        threshold: Minimum rate (0-1).
 
     Returns:
         True if passed, False otherwise.
@@ -166,7 +172,7 @@ def check_agreement_rate(manifest: list[dict], threshold: float = 0.40) -> bool:
         logger.warning("No manifest entries")
         return False
 
-    full_agreement = sum(1 for m in manifest if m.get("agreement_rate", 0) >= 0.999)
+    full_agreement = sum(1 for m in manifest if m.get("agreement_type") == "3/3")
     rate = full_agreement / len(manifest)
 
     logger.info(f"3/3 agreement rate: {full_agreement}/{len(manifest)} ({rate:.1%})")
@@ -175,32 +181,34 @@ def check_agreement_rate(manifest: list[dict], threshold: float = 0.40) -> bool:
 
 def main():
     """Run validation phase."""
-    logger.info("=== DataApp Phase 1: Validation ===")
+    logger.info("=== DataApp Phase 1: Validation (45 items) ===")
 
     # Load config and data
     config = load_config()
     all_items = load_data(config)
 
-    # Stratified sample
+    # Stratified sample: 15 MCQ, 15 single, 15 multi
     validation_items = stratified_sample(all_items, sample_size=45)
+    validation_ids = {item["id"] for item in validation_items}
     logger.info(f"Validation set: {len(validation_items)} items")
 
-    # Initialize orchestrator
+    # Initialize orchestrator (uses updated config)
     orchestrator = DataAppOrchestrator(config)
 
-    # Get items to process (skip if already done)
-    to_process = orchestrator.get_items_to_process(validation_items, skip_completed=True)
-    logger.info(f"Processing {len(to_process)} new items")
-
-    # Process batch
-    summary = orchestrator.run_batch(to_process)
+    # Process validation items (skip any already completed)
+    summary = orchestrator.run_batch(
+        [i for i in validation_items if i["id"] not in orchestrator.get_completed_ids()],
+        skip_completed=False
+    )
     logger.info(f"Batch summary: {json.dumps(summary, indent=2)}")
 
-    # Load manifest
-    manifest = read_jsonl(orchestrator.manifest_file)
-    logger.info(f"Total manifest entries: {len(manifest)}")
+    # Load and filter manifest to validation items only
+    manifest_path = Path(config["paths"]["output_dir"]) / config["paths"]["manifest_file"]
+    all_manifest = read_jsonl(manifest_path)
+    manifest = [m for m in all_manifest if m["id"] in validation_ids]
+    logger.info(f"Validation manifest entries: {len(manifest)}")
 
-    # Check thresholds
+    # Check thresholds (per PROMPT_STRATEGY.md)
     val_config = config.get("validation", {})
     format_ok = check_format_compliance(
         manifest, val_config.get("min_format_compliance", 0.95)
@@ -212,16 +220,19 @@ def main():
         manifest, val_config.get("min_agreement_rate", 0.40)
     )
 
-    logger.info("\n=== Validation Results ===")
-    logger.info(f"Format compliance: {'PASS' if format_ok else 'FAIL'}")
-    logger.info(f"Multi-answer accuracy: {'PASS' if multibox_ok else 'FAIL'}")
-    logger.info(f"Agreement rate: {'PASS' if agreement_ok else 'FAIL'}")
+    logger.info("\n=== Phase 1 Validation Results ===")
+    logger.info(f"Format compliance ≥95%: {'PASS' if format_ok else 'FAIL'}")
+    logger.info(f"Multi-answer count accuracy ≥90%: {'PASS' if multibox_ok else 'FAIL'}")
+    logger.info(f"3/3 agreement ≥40%: {'PASS' if agreement_ok else 'FAIL'}")
 
     if format_ok and multibox_ok and agreement_ok:
-        logger.info("\n✓ Validation PASSED. Ready for Phase 2.")
+        logger.info(f"\n✓ All thresholds PASSED.")
+        logger.info(f"[FROM CLAUDE_DATAAPP] Phase 1 validation complete. Cost: ${orchestrator.cost_tracker.total_cost_usd():.2f}")
+        logger.info("Waiting for Rain approval before Phase 2.")
         return 0
     else:
-        logger.error("\n✗ Validation FAILED. Debug and re-run before Phase 2.")
+        logger.error(f"\n✗ Validation FAILED. Review above.")
+        logger.error("Fix prompts/extraction/config and re-run Phase 1.")
         return 1
 
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 DataApp Phase 2: Full pipeline (943 items).
-Processes all items with parallel API calls, extraction, and voting.
+Processes all items with parallel API calls, extraction, and consensus voting.
 Resume-capable: skips completed items on restart.
 """
 
@@ -13,10 +13,13 @@ from pathlib import Path
 # Add parent dir to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+from dotenv import load_dotenv
 import yaml
 from tqdm import tqdm
 from src.orchestrator import DataAppOrchestrator
 from src.storage import read_jsonl
+
+load_dotenv()
 
 logging.basicConfig(
     level=logging.INFO,
@@ -34,7 +37,8 @@ def load_config() -> dict:
 
 def load_data(config: dict) -> list[dict]:
     """Load private.jsonl."""
-    data_file = Path(config["paths"]["data_dir"]) / config["paths"]["data_file"]
+    data_dir = Path(config["paths"]["data_dir"])
+    data_file = data_dir / config["paths"]["input_file"]
     if not data_file.exists():
         logger.error(f"Data file not found: {data_file}")
         raise FileNotFoundError(f"private.jsonl not found at {data_file}")
@@ -60,30 +64,25 @@ def main():
     logger.info(f"Already completed: {len(completed)} items")
 
     # Get items to process
-    to_process = orchestrator.get_items_to_process(all_items, skip_completed=True)
+    to_process = [i for i in all_items if i["id"] not in completed]
     logger.info(f"To process: {len(to_process)} items")
+    logger.info(f"Current spend: ${orchestrator.cost_tracker.total_cost_usd():.2f}")
 
     # Process with progress bar
     processed = 0
     failed = 0
-    total_cost = 0.0
-    total_agreement = 0.0
 
-    with tqdm(to_process, desc="Phase 2", unit="q", dynamic_ncols=True) as pbar:
+    with tqdm(to_process, desc="Phase 2", unit="item", dynamic_ncols=True) as pbar:
         for item in pbar:
             item_id = item.get("id")
             try:
-                entry = orchestrator.process_item(item)
+                entry = orchestrator.run_item(item)
                 processed += 1
-                total_cost += entry.get("cost_usd", 0)
-                total_agreement += entry.get("agreement_rate", 0)
-
                 pbar.set_postfix(
                     id=item_id,
                     ok=processed,
                     fail=failed,
-                    cost=f"${total_cost:.2f}",
-                    agree=f"{(total_agreement / max(processed, 1)):.2%}",
+                    cost=f"${orchestrator.cost_tracker.total_cost_usd():.2f}",
                 )
             except Exception as e:
                 logger.error(f"Item {item_id} failed: {e}")
@@ -92,44 +91,40 @@ def main():
                     id=item_id,
                     ok=processed,
                     fail=failed,
-                    cost=f"${total_cost:.2f}",
+                    cost=f"${orchestrator.cost_tracker.total_cost_usd():.2f}",
                 )
 
     # Final summary
     logger.info("\n=== Phase 2 Complete ===")
     logger.info(f"Processed: {processed}")
     logger.info(f"Failed: {failed}")
-    logger.info(f"Total cost: ${total_cost:.2f}")
-    logger.info(f"Avg agreement rate: {(total_agreement / max(processed, 1)):.2%}")
+    logger.info(f"Total cost: ${orchestrator.cost_tracker.total_cost_usd():.2f}")
 
-    # Compute final stats
-    manifest = read_jsonl(orchestrator.manifest_file)
+    # Load manifest for stats
+    manifest_path = Path(config["paths"]["output_dir"]) / config["paths"]["manifest_file"]
+    manifest = read_jsonl(manifest_path)
     logger.info(f"Total items in manifest: {len(manifest)}")
 
+    # Stats by type
     if manifest:
-        costs_by_type = {}
-        agreement_by_type = {}
+        by_type = {}
         for entry in manifest:
-            item_type = entry.get("type", "unknown")
-            if item_type not in costs_by_type:
-                costs_by_type[item_type] = []
-                agreement_by_type[item_type] = []
-            costs_by_type[item_type].append(entry.get("cost_usd", 0))
-            agreement_by_type[item_type].append(entry.get("agreement_rate", 0))
+            qt = entry.get("question_type", "unknown")
+            if qt not in by_type:
+                by_type[qt] = []
+            by_type[qt].append(entry)
 
         logger.info("\nStats by type:")
-        for item_type in sorted(costs_by_type.keys()):
-            avg_cost = sum(costs_by_type[item_type]) / len(costs_by_type[item_type])
-            avg_agree = (
-                sum(agreement_by_type[item_type]) / len(agreement_by_type[item_type])
-            )
-            count = len(costs_by_type[item_type])
+        for qt in sorted(by_type.keys()):
+            items_of_type = by_type[qt]
+            count = len(items_of_type)
+            full_agree = sum(1 for m in items_of_type if m.get("agreement_type") == "3/3")
             logger.info(
-                f"  {item_type}: {count} items, "
-                f"${avg_cost:.4f} avg, {avg_agree:.2%} agreement"
+                f"  {qt}: {count} items, {full_agree}/3 agreement: {full_agree/max(count,1):.1%}"
             )
 
-    logger.info("\n✓ Phase 2 complete. Ready for Phase 3 (analysis).")
+    logger.info(f"\n✓ Phase 2 complete.")
+    logger.info(f"[FROM CLAUDE_DATAAPP] Full run done. Outputs in {config['paths']['output_dir']}")
     return 0 if failed == 0 else 1
 
 

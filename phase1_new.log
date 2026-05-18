@@ -1,0 +1,251 @@
+[2026-05-18 13:23:11,052] __main__ - INFO - === DataApp Phase 1: Validation (45 items) ===
+[2026-05-18 13:23:11,139] __main__ - INFO - Loaded 943 items from private.jsonl
+[2026-05-18 13:23:11,140] __main__ - INFO - Type distribution: mcq=300, single_free=305, multi_free=338
+[2026-05-18 13:23:11,140] __main__ - INFO - mcq: taking 15 of 300
+[2026-05-18 13:23:11,140] __main__ - INFO - single_free: taking 15 of 305
+[2026-05-18 13:23:11,140] __main__ - INFO - multi_free: taking 15 of 338
+[2026-05-18 13:23:11,140] __main__ - INFO - Stratified sample size: 45
+[2026-05-18 13:23:11,140] __main__ - INFO - Validation set: 45 items
+[2026-05-18 13:23:19,637] src.orchestrator - INFO - Processing 45 items...
+[2026-05-18 13:23:19,638] src.orchestrator - INFO - Processing item 200 (mcq, max_tokens=2048)...
+[2026-05-18 13:23:25,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:23:25,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:23:28,436] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:23:29,042] src.orchestrator - ERROR - Item 200 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:23:29,042] src.orchestrator - INFO - Processing item 38 (mcq, max_tokens=2048)...
+[2026-05-18 13:23:29,255] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:23:29,335] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:23:38,436] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:23:38,447] src.orchestrator - ERROR - Item 38 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:23:38,447] src.orchestrator - INFO - Processing item 474 (mcq, max_tokens=2048)...
+[2026-05-18 13:23:38,635] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:23:38,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:23:44,836] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:23:44,849] src.orchestrator - ERROR - Item 474 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:23:44,849] src.orchestrator - INFO - Processing item 427 (mcq, max_tokens=2048)...
+[2026-05-18 13:23:45,035] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:23:45,037] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:23:52,879] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:23:53,045] src.orchestrator - ERROR - Item 427 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:23:53,046] src.orchestrator - INFO - Processing item 391 (mcq, max_tokens=2048)...
+[2026-05-18 13:23:53,267] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:23:53,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:10,436] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:24:10,452] src.orchestrator - ERROR - Item 391 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:24:10,452] src.orchestrator - INFO - Processing item 253 (mcq, max_tokens=2048)...
+[2026-05-18 13:24:10,558] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:10,559] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:20,936] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:24:21,036] src.orchestrator - ERROR - Item 253 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:24:21,036] src.orchestrator - INFO - Processing item 182 (mcq, max_tokens=2048)...
+[2026-05-18 13:24:21,136] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:21,236] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:26,336] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:24:26,349] src.orchestrator - ERROR - Item 182 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:24:26,349] src.orchestrator - INFO - Processing item 878 (mcq, max_tokens=2048)...
+[2026-05-18 13:24:26,504] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:26,636] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:38,036] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:24:38,137] src.orchestrator - ERROR - Item 878 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:24:38,137] src.orchestrator - INFO - Processing item 164 (mcq, max_tokens=2048)...
+[2026-05-18 13:24:38,536] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:38,537] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:49,736] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:24:49,849] src.orchestrator - ERROR - Item 164 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:24:49,849] src.orchestrator - INFO - Processing item 695 (mcq, max_tokens=2048)...
+[2026-05-18 13:24:49,965] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:50,036] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:58,036] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:24:58,245] src.orchestrator - ERROR - Item 695 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:24:58,245] src.orchestrator - INFO - Processing item 69 (mcq, max_tokens=2048)...
+[2026-05-18 13:24:58,635] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:24:58,636] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:07,840] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:25:07,937] src.orchestrator - ERROR - Item 69 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:25:07,937] src.orchestrator - INFO - Processing item 53 (mcq, max_tokens=2048)...
+[2026-05-18 13:25:08,136] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:08,166] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:17,700] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:25:17,837] src.orchestrator - ERROR - Item 53 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:25:17,837] src.orchestrator - INFO - Processing item 173 (mcq, max_tokens=2048)...
+[2026-05-18 13:25:18,035] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:18,036] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:41,036] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:25:41,046] src.orchestrator - ERROR - Item 173 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:25:41,046] src.orchestrator - INFO - Processing item 366 (mcq, max_tokens=2048)...
+[2026-05-18 13:25:41,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:41,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:48,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:25:48,442] src.orchestrator - ERROR - Item 366 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:25:48,442] src.orchestrator - INFO - Processing item 402 (mcq, max_tokens=2048)...
+[2026-05-18 13:25:48,659] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:48,835] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:55,336] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:25:55,549] src.orchestrator - ERROR - Item 402 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:25:55,549] src.orchestrator - INFO - Processing item 790 (single_free, max_tokens=3584)...
+[2026-05-18 13:25:55,735] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:55,737] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:57,836] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:25:57,847] src.orchestrator - ERROR - Item 790 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:25:57,847] src.orchestrator - INFO - Processing item 49 (single_free, max_tokens=3584)...
+[2026-05-18 13:25:57,869] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:25:58,036] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:04,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:26:04,472] src.orchestrator - ERROR - Item 49 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:26:04,472] src.orchestrator - INFO - Processing item 892 (single_free, max_tokens=3584)...
+[2026-05-18 13:26:04,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:04,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:06,635] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:26:06,645] src.orchestrator - ERROR - Item 892 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:26:06,645] src.orchestrator - INFO - Processing item 282 (single_free, max_tokens=3584)...
+[2026-05-18 13:26:06,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:06,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:11,454] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:26:11,546] src.orchestrator - ERROR - Item 282 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:26:11,546] src.orchestrator - INFO - Processing item 849 (single_free, max_tokens=3584)...
+[2026-05-18 13:26:11,636] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:11,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:13,936] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:26:14,049] src.orchestrator - ERROR - Item 849 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:26:14,049] src.orchestrator - INFO - Processing item 679 (single_free, max_tokens=3584)...
+[2026-05-18 13:26:14,235] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:14,236] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:19,736] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:26:20,169] src.orchestrator - ERROR - Item 679 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:26:20,169] src.orchestrator - INFO - Processing item 312 (single_free, max_tokens=3584)...
+[2026-05-18 13:26:20,381] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:20,402] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:53,536] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:26:53,637] src.orchestrator - ERROR - Item 312 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:26:53,638] src.orchestrator - INFO - Processing item 716 (single_free, max_tokens=3584)...
+[2026-05-18 13:26:53,775] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:53,856] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:55,524] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:26:55,545] src.orchestrator - ERROR - Item 716 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:26:55,545] src.orchestrator - INFO - Processing item 936 (single_free, max_tokens=3584)...
+[2026-05-18 13:26:55,577] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:55,735] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:57,841] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:26:57,937] src.orchestrator - ERROR - Item 936 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:26:57,937] src.orchestrator - INFO - Processing item 426 (single_free, max_tokens=3584)...
+[2026-05-18 13:26:58,035] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:26:58,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:00,636] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:00,647] src.orchestrator - ERROR - Item 426 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:00,648] src.orchestrator - INFO - Processing item 11 (single_free, max_tokens=3584)...
+[2026-05-18 13:27:00,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:00,737] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:09,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:09,245] src.orchestrator - ERROR - Item 11 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:09,245] src.orchestrator - INFO - Processing item 226 (single_free, max_tokens=3584)...
+[2026-05-18 13:27:09,536] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:09,578] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:11,736] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:11,746] src.orchestrator - ERROR - Item 226 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:11,747] src.orchestrator - INFO - Processing item 684 (single_free, max_tokens=3584)...
+[2026-05-18 13:27:11,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:11,898] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:14,036] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:14,245] src.orchestrator - ERROR - Item 684 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:14,245] src.orchestrator - INFO - Processing item 533 (single_free, max_tokens=3584)...
+[2026-05-18 13:27:14,336] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:14,337] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:21,056] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:21,474] src.orchestrator - ERROR - Item 533 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:21,474] src.orchestrator - INFO - Processing item 221 (single_free, max_tokens=3584)...
+[2026-05-18 13:27:21,759] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:21,835] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:23,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:23,353] src.orchestrator - ERROR - Item 221 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:23,353] src.orchestrator - INFO - Processing item 318 (multi_free, max_tokens=4608)...
+[2026-05-18 13:27:23,457] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:23,465] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:30,938] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:31,039] src.orchestrator - ERROR - Item 318 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:31,039] src.orchestrator - INFO - Processing item 461 (multi_free, max_tokens=4608)...
+[2026-05-18 13:27:31,135] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:31,155] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:36,536] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:36,547] src.orchestrator - ERROR - Item 461 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:36,547] src.orchestrator - INFO - Processing item 137 (multi_free, max_tokens=4608)...
+[2026-05-18 13:27:36,675] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:36,836] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:39,338] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:39,347] src.orchestrator - ERROR - Item 137 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:39,347] src.orchestrator - INFO - Processing item 122 (multi_free, max_tokens=4608)...
+[2026-05-18 13:27:39,395] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:39,436] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:41,236] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:41,247] src.orchestrator - ERROR - Item 122 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:41,247] src.orchestrator - INFO - Processing item 516 (multi_free, max_tokens=4608)...
+[2026-05-18 13:27:41,436] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:41,437] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:44,147] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:44,246] src.orchestrator - ERROR - Item 516 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:44,247] src.orchestrator - INFO - Processing item 133 (multi_free, max_tokens=4608)...
+[2026-05-18 13:27:44,365] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:44,436] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:47,036] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:47,047] src.orchestrator - ERROR - Item 133 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:47,047] src.orchestrator - INFO - Processing item 491 (multi_free, max_tokens=4608)...
+[2026-05-18 13:27:47,139] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:47,140] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:55,336] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:27:55,544] src.orchestrator - ERROR - Item 491 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:27:55,545] src.orchestrator - INFO - Processing item 469 (multi_free, max_tokens=4608)...
+[2026-05-18 13:27:55,771] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:27:55,785] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:03,136] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:28:03,738] src.orchestrator - ERROR - Item 469 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:28:03,738] src.orchestrator - INFO - Processing item 858 (multi_free, max_tokens=4608)...
+[2026-05-18 13:28:03,936] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:03,958] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:08,836] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:28:08,846] src.orchestrator - ERROR - Item 858 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:28:08,846] src.orchestrator - INFO - Processing item 369 (multi_free, max_tokens=4608)...
+[2026-05-18 13:28:08,945] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:08,963] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:11,536] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:28:11,550] src.orchestrator - ERROR - Item 369 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:28:11,550] src.orchestrator - INFO - Processing item 52 (multi_free, max_tokens=4608)...
+[2026-05-18 13:28:11,735] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:11,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:14,146] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:28:14,156] src.orchestrator - ERROR - Item 52 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:28:14,156] src.orchestrator - INFO - Processing item 633 (multi_free, max_tokens=4608)...
+[2026-05-18 13:28:14,235] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:14,239] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:20,303] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:28:20,347] src.orchestrator - ERROR - Item 633 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:28:20,347] src.orchestrator - INFO - Processing item 738 (multi_free, max_tokens=4608)...
+[2026-05-18 13:28:20,536] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:20,635] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:25,222] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:28:25,270] src.orchestrator - ERROR - Item 738 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:28:25,270] src.orchestrator - INFO - Processing item 174 (multi_free, max_tokens=4608)...
+[2026-05-18 13:28:25,338] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:25,356] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:27,300] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:28:27,952] src.orchestrator - ERROR - Item 174 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:28:27,952] src.orchestrator - INFO - Processing item 513 (multi_free, max_tokens=4608)...
+[2026-05-18 13:28:28,135] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:28,136] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 403 Forbidden"
+[2026-05-18 13:28:32,336] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-18 13:28:32,736] src.orchestrator - ERROR - Item 513 failed: CostTracker.record() takes 5 positional arguments but 6 were given
+[2026-05-18 13:28:32,737] __main__ - INFO - Batch summary: {
+  "processed": 0,
+  "failed": 45,
+  "total_cost_usd": 0.0
+}
+[2026-05-18 13:28:32,737] __main__ - INFO - Validation manifest entries: 0
+[2026-05-18 13:28:32,737] __main__ - WARNING - No manifest entries to check
+[2026-05-18 13:28:32,737] __main__ - INFO - No multi-answer items in sample
+[2026-05-18 13:28:32,737] __main__ - WARNING - No manifest entries
+[2026-05-18 13:28:32,737] __main__ - INFO - 
+=== Phase 1 Validation Results ===
+[2026-05-18 13:28:32,737] __main__ - INFO - Format compliance ≥95%: FAIL
+[2026-05-18 13:28:32,737] __main__ - INFO - Multi-answer count accuracy ≥90%: PASS
+[2026-05-18 13:28:32,737] __main__ - INFO - 3/3 agreement ≥40%: FAIL
+[2026-05-18 13:28:32,737] __main__ - ERROR - 
+✗ Validation FAILED. Review above.
+[2026-05-18 13:28:32,737] __main__ - ERROR - Fix prompts/extraction/config and re-run Phase 1.
