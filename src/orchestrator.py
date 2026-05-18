@@ -11,7 +11,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from .api_clients import SonnetClient, GPT54Client, GPTOSSClient
 from .extraction import DataAppExtractor
-from .prompts import build_messages, detect_question_type, get_max_tokens
+from .prompts import build_messages, detect_question_type
 from .storage import Storage
 from .cost_tracker import CostTracker
 
@@ -184,7 +184,7 @@ class DataAppOrchestrator:
 
         question_type = detect_question_type(item)
         messages = build_messages(question, question_type, options)
-        max_tokens = get_max_tokens(question_type)
+        max_tokens = 16384  # Uniform budget for all question types
 
         # Prompt for logging
         prompt_for_log = messages[-1]["content"]

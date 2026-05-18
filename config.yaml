@@ -29,11 +29,6 @@ execution:
   max_retries: 3
   retry_backoff_seconds: 2
 
-token_budgets:
-  mcq: 2048
-  single_free: 3584
-  multi_free: 4608
-
 validation:
   sample_size: 45
   stratification:
