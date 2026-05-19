@@ -186,12 +186,17 @@ def process_item(
     elapsed = time.time() - start
 
     # Estimate cost: $5 per 1M input, $30 per 1M output
-    # GPT-5.5 reasoning tokens billed as output tokens at $30/1M
+    # NOTE: OpenAI SDK's reasoning_tokens field undercounts actual reasoning by ~4x
+    # (verified via Admin API: 2,422,837 actual tokens vs 960,408 SDK-reported).
+    # Use 2.5x multiplier on SDK output to approximate actual billing.
+    # Ground truth: Costs API. This log is ESTIMATE ONLY.
+    SDK_REASONING_MULTIPLIER = 2.5
     input_cost = (result.get("input_tokens", 0) / 1_000_000) * 5
     output_tokens = result.get("output_tokens", 0)
     reasoning_tokens = result.get("reasoning_tokens", 0)
-    output_cost = ((output_tokens + reasoning_tokens) / 1_000_000) * 30
-    total_cost = input_cost + output_cost
+    sdk_output_cost = ((output_tokens + reasoning_tokens) / 1_000_000) * 30
+    estimated_output_cost = sdk_output_cost * SDK_REASONING_MULTIPLIER
+    total_cost = input_cost + estimated_output_cost
 
     # Save response to markdown
     md_content = _format_gpt55_response_md(result, prompt_for_log)
