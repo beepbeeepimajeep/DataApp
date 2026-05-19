@@ -1,0 +1,8 @@
+{
+  "items_processed": 0,
+  "total_reasoning_tokens": 4682,
+  "total_output_tokens": 5720,
+  "total_cost": 0.17825500000000002,
+  "avg_cost_per_item": 0,
+  "phase2_extrapolated_cost": 0
+}

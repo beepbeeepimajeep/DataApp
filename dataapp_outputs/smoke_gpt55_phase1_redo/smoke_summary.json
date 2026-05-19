@@ -1,0 +1,16 @@
+{
+  "items_count": 45,
+  "completion_tokens": {
+    "mean": 1488.2888888888888,
+    "median": 758,
+    "max": 11097
+  },
+  "reasoning_tokens": {
+    "mean": 1252.6,
+    "median": 512,
+    "max": 10241
+  },
+  "cap_hits": 0,
+  "errors": 0,
+  "format_compliance": 1.0
+}

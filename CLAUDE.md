@@ -2,307 +2,108 @@
 IDENTITY CHECK — READ FIRST EVERY SESSION
 ═══════════════════════════════════════════════════════════════════════════════
 
-You are **CLAUDE_DATAAPP**, operating in the **dataApp repository**.
+You are CLAUDE_DATAAPP, operating in the dataApp repository.
 
 You are NOT:
-- `claude_strategy` (Rain's web chat — handles planning and research)
-- `claude_vscode` in the competition repo (handles run14b, vLLM, GPU inference)
+- claude_strategy (Rain's web chat — planning, strategy, research, audit)
+- claude_vscode in the competition repo (vLLM, run14b, DSMLP, GPU inference)
 
 You ARE:
-- A separate Claude instance in an **ISOLATED workspace**
-- Working in `/home/dvaneetv/private/DataApp/` (NOT `/home/dvaneetv/private/151B_SP26_Competition/`)
-- **Prefix all messages to Rain: `[FROM CLAUDE_DATAAPP]`** so Rain can distinguish this work from competition work
+- A separate Claude instance in an ISOLATED workspace at /home/dvaneetv/private/DataApp/
+- Prefix all messages to Rain: `[FROM CLAUDE_DATAAPP]`
 
-If you find yourself reaching for anything in `/home/dvaneetv/private/151B_SP26_Competition/`,
-DSMLP pods, kubectl, vLLM, or competition repo files — **STOP.** That is a different workspace.
-
-Only shared resource: `private.jsonl` which Rain copies in. All output goes to `dataapp_outputs/`.
+You may READ from /home/dvaneetv/private/151B_SP26_Competition/ to port 
+extraction logic, study judger.py, or check schemas. You may NOT modify 
+it, run code in it, or use its DSMLP/kubectl/vLLM environment.
 
 ═══════════════════════════════════════════════════════════════════════════════
 
-# DataApp v0 — SFT Training Data Generation
+# DataApp — SFT Training Data Generation
 
-**Goal:** Query 3 frontier LLMs on 943 math problems, save reasoning traces, deliver
-SFT training data for Qwen3-4B-Thinking LoRA. This is a **one-shot, $89-budget**
-data collection. Failures cost real money.
+Query frontier LLMs on 943 math problems, save reasoning traces, deliver SFT 
+training data + consensus labels for Qwen3-4B-Thinking LoRA. One-shot, real 
+money, no second chances.
 
-This repo is isolated from the competition repo. DataApp generates synthetic SFT
-training data via parallel queries to 3 frontier LLMs, then delivers consensus
-predictions to Rain for the competition's SFT training pipeline.
+Errors here ship silently into training. Discipline matters more than speed.
 
 ---
 
-## Quick Onboarding
+## CORE PRINCIPLES (READ EVERY SESSION)
 
-Read these **in order** (each locks specific decisions):
+**1. Correctness is the goal. Consensus is a proxy, not the goal.**
 
-1. **CLAUDE.md (this file)** — role, phases, code rules, anti-patterns
-2. **[DATAAPP_PROMPT_STRATEGY_LOCKED.md](DATAAPP_PROMPT_STRATEGY_LOCKED.md)** — locked prompts, sampling params, validation gates (research-backed)
-3. **[DATAAPP_IMPLEMENTATION.md](DATAAPP_IMPLEMENTATION.md)** — module-by-module code patterns
-4. **[DATAAPP_V0_DESIGN_SPEC.md](DATAAPP_V0_DESIGN_SPEC.md)** — output schemas and file structure
+3/3 teacher agreement is evidence of likely correctness, not proof. Three 
+teachers can share a training-data blindspot and unanimously be wrong. A 
+teacher that disagrees with consensus might be the only one right. Never 
+frame decisions as "this preserves consensus" — frame them as "this 
+maximizes label correctness."
 
-If anything in this CLAUDE.md contradicts those docs, **those docs win.**
+**2. Report data, do not recommend decisions.**
 
----
+When Rain asks for analysis, return analysis. Do not append recommendations 
+about pipeline changes (teacher lineup, prompt design, training strategy) 
+unless explicitly asked. Recommendations from incomplete data have caused 
+real damage on this project.
 
-## ⚠️ SIMPLICITY MANDATE (NB NB NB)
+**3. Verify the measurement before trusting the result.**
 
-This is a one-shot, time-constrained data collection pipeline.
+Before drawing any conclusion from agreement statistics, extraction outputs, 
+or token usage, check that the measurement instrument is working. Sanity-
+check 3-5 raw outputs by hand against parsed results first. The 2026-05-19 
+smoke test drove a wrong recommendation because boxed-answer extraction was 
+subtly broken; the entire analysis was contaminated for 12 items.
 
-1. **Keep it simple.** Always err on the conservative, boring, well-trodden path.
-2. **No UI.** No web dashboards, no streamlit/gradio. CLI scripts + logs only. tqdm progress bar is fine.
-3. **No heavy debugging budget.** If a design needs >30min to debug, pick simpler.
-4. **Standard libraries only.** Ask Rain before adding any dep beyond requirements.txt.
-5. **Boring data structures.** Plain dicts, lists, JSON. No abstract base classes, no factories.
-6. **No async unless required.** Threading or sequential for v0. Async only for batch API (v1+).
-7. **Atomic writes are non-negotiable.** Corruption mid-run = lost money.
-8. **When in doubt: do the dumbest thing that could work, and ship it.**
+**4. Independent verification means code-checked, not intuited.**
 
----
+When asked to verify a math claim, "verify" means sympy, brute force, 
+math_verify, or hand-derived with small cases. It does NOT mean "compute an 
+upper bound by intuition and conclude something is impossible." If a 
+verifier returns INCONCLUSIVE, the answer is INCONCLUSIVE — not "I think 
+it's wrong."
 
-## Your Role
+**5. Reuse working code from the sister repo before rewriting.**
 
-You are the execution agent for DataApp v0. Your job:
-- Build and test the data generation pipeline
-- Query 3 LLMs in parallel (Anthropic, OpenAI, Moonshot) with retry logic
-- Extract answers using competition repo's logic (PORTED into this repo, not imported)
-- Track agreement rates and cost per item
-- Deliver validated `dataset_manifest.jsonl` with consensus predictions to Rain
-- **Stay in this workspace.** Do NOT cross into the competition repo.
+The competition repo's judger.py has correct, battle-tested implementations 
+of: brace-matched extract_all_boxed, latex normalization (norm_math_str, 
+norm_ans_str), and 10-method equivalence checking. PORT these — don't 
+rewrite. A regex like \\boxed\{([^}]+)\} fails on nested braces. The 
+canonical implementation is judger.py:extract_all_boxed.
 
----
+**6. When data contradicts strong priors, check the measurement first.**
 
-## Locked Decisions
+If a top-ranked frontier model appears catastrophically wrong on easy 
+problems, the bug is in your pipeline before it's in the model. Default 
+to "I have a measurement bug" before "the model is bad."
 
-**LLMs (3-teacher consensus):**
-- Anthropic: `claude-sonnet-4-6` (NOT Opus, NOT haiku — exactly Sonnet 4.6)
-- OpenAI: `gpt-5.4` (NOT gpt-5.4-turbo, NOT gpt-5.4-mini — exactly gpt-5.4)
-- Moonshot: `kimi-k2.6` (exact model ID — confirm with Moonshot docs if unclear)
+**7. Code that produced a prior result must be readable.**
 
-**Sampling:**
-- temperature=0.6, top_p=0.95, max_tokens=16384
-- All models use same hyperparameters for fair comparison
-- DO NOT change these. They were chosen based on peer-reviewed research (LIMO, LiteCoT, BRIDGE).
-
-**API Strategy:**
-- Phase 1 validation (45 items): real-time API on all 3 models
-- Phase 2 full run (943 items): batch API for Anthropic + OpenAI (50% off), real-time for Moonshot (no batch available)
-- Retry logic: 3 attempts per item, exponential backoff
-
-**Budget (estimated):**
-- Phase 1 validation: ~$10-15
-- Phase 2 full run: ~$70-80 (with batch API)
-- Total: ~$85-95
-
-If actual cost diverges >20% from estimate during Phase 1, ALERT RAIN before proceeding to Phase 2.
-
-**Output Structure:**
-```
-dataapp_outputs/
-  item_<id>/
-    sonnet_response.md          # raw response + metadata
-    sonnet_metadata.json
-    gpt5_4_response.md
-    gpt5_4_metadata.json
-    kimi_response.md
-    kimi_metadata.json
-    extractions.json            # {sonnet: "...", gpt5_4: "...", kimi: "..."}
-  dataset_manifest.jsonl        # one line per item, final consensus
-  cost_log.jsonl                # per-call cost tracking
-```
+When you reference a previous measurement or claim, the script that 
+produced it must exist on disk and be findable. If you cannot point to 
+the script, you cannot defend the claim. State explicitly: "I made this 
+claim earlier but cannot locate the script. I'm reconstructing from 
+memory — verify before trusting."
 
 ---
 
-## Phases
+## ⚠️ SIMPLICITY MANDATE
 
-**Phase 0 (Setup):**
-- Verify API credentials (.env has all 3 keys)
-- Copy private.jsonl to data/
-- Create Python virtual environment
-- Install dependencies from requirements.txt
-- Port extraction logic from competition repo (see DATAAPP_IMPLEMENTATION.md §Module 1)
-- Run extraction tests against Run 09 data — must match 100%
+One-shot, time-constrained, money-on-the-line. Always pick the boring 
+well-trodden path.
 
-**Phase 1 (Validation, n=45):**
-- Stratified 45-item sample (15 MCQ, 15 single-free, 15 multi-free)
-- Real-time API calls
-- Verify thresholds:
-  - Format compliance: ≥95% have extractable answer per teacher
-  - Multi-answer count accuracy: ≥90% match expected count
-  - 3/3 agreement: ≥40%
-  - Median tokens: 3k–8k per teacher
-- If thresholds fail, REPORT TO RAIN, debug, re-run. Do NOT proceed to Phase 2.
-
-**Phase 2 (Full Run, n=943):**
-- All 943 items
-- Batch API for Anthropic/OpenAI, real-time for Moonshot
-- Resume capability: read existing outputs, skip completed
-- tqdm progress in CLI
-
-**Phase 3 (Analysis & Handoff):**
-- Generate dataset_manifest.jsonl with consensus
-- Compute statistics: agreement_rate distribution, cost breakdown, answer type coverage
-- Verify no-box rate; if >5%, investigate before handoff
-- Deliver dataapp_outputs/ to Rain for SFT training
+- CLI scripts + logs only. No UI, no dashboards. tqdm is fine.
+- Plain dicts, lists, JSON. No abstract base classes.
+- Threading or sequential. Async only for batch API.
+- Atomic writes are non-negotiable. Corruption mid-run = lost money.
+- Standard libraries only. Ask Rain before any dep beyond requirements.txt.
+- If a design needs >30min to debug, pick simpler.
 
 ---
 
-## Code Rules
+## ⚠️ IMPLEMENTATION ARM HEALTH (BUS FACTOR DEFENSE)
 
-- **Type hints on function signatures.** Don't over-engineer internal types.
-- **Black formatting.** 88-char line length.
-- **No silent failures.** Every exception logged with context (item_id, model, error).
-- **Config-driven.** All paths, model names, hyperparams in config.yaml.
-- **Modular but flat.** Each responsibility in its own file. No deep class hierarchies.
-- **Resume capability.** Track item IDs, skip completed, append not overwrite.
-- **Atomic writes.** Write temp file, then atomic rename. No partial JSON.
-- **Cost tracking.** Log tokens and USD per API call to cost_log.jsonl.
+The pipeline lives on a pod's local filesystem. Pods cycle. Disks fill. 
+Sessions end. The only durable record is git. This is non-negotiable:
 
----
+**1. Git is the source of truth.**
 
-## Files & Modules
-
-See DATAAPP_IMPLEMENTATION.md for full code patterns. Summary:
-
-**Modules (src/):**
-- `prompts.py` — locked prompts (do not modify content; reference DATAAPP_PROMPT_STRATEGY_LOCKED.md)
-- `api_clients.py` — Anthropic, OpenAI, Moonshot clients with retry
-- `extraction.py` — ported from competition repo (judger.py + utils.py + extract_letter)
-- `orchestrator.py` — parallel execution (threading, not async), resume logic
-- `storage.py` — atomic writes, manifest append
-- `cost_tracker.py` — token counting, USD calculation, threshold alerts
-
-**Scripts (scripts/):**
-- `run_validation.py` — Phase 1 (45 items, real-time)
-- `run_full.py` — Phase 2 (943 items, batch where possible)
-- `analyze_results.py` — Phase 3 (stats, manifest, handoff)
-
-**Config & Secrets:**
-- `.env` — `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `MOONSHOT_API_KEY` (gitignored)
-- `config.yaml` — model names, hyperparams, paths, retry config
-
----
-
-## Environment Setup
-
-```powershell
-# Windows/PowerShell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-
-# requirements.txt should contain ONLY:
-#   anthropic>=0.40.0
-#   openai>=1.50.0
-#   python-dotenv>=1.0.0
-#   pyyaml>=6.0
-#   tenacity>=8.2.0
-#   tqdm>=4.65.0
-
-# Then:
-# Create .env with API keys
-# Copy private.jsonl to data/
-```
-
----
-
-## Quick Start
-
-```powershell
-# Phase 1 validation
-python scripts/run_validation.py
-
-# Phase 1 metrics
-python scripts/analyze_results.py
-
-# Phase 2 (only after Rain approves Phase 1 metrics)
-python scripts/run_full.py
-```
-
----
-
-## Testing Checklist Before Full Run
-
-- [ ] .env has all 3 API keys
-- [ ] private.jsonl copied to data/
-- [ ] Extraction port test passes 100% on Run 09 samples
-- [ ] 45-item validation completed
-- [ ] All Phase 1 thresholds met
-- [ ] Rain has reviewed and approved Phase 1 metrics
-
----
-
-## Handoff to Rain
-
-When Phase 3 completes:
-1. Compute `dataset_manifest.jsonl` with per-item consensus
-2. Zip `dataapp_outputs/` or copy to shared location (Rain specifies)
-3. Report: total cost, agreement rate distribution, no-box rate, timestamp
-4. Rain integrates into SFT training pipeline
-
----
-
-## Critical Don'ts (Non-Negotiable)
-
-- **DO NOT change the prompt strategy.** Use exact prompts from DATAAPP_PROMPT_STRATEGY_LOCKED.md.
-- **DO NOT change sampling parameters.** 16k tokens, T=0.6, top_p=0.95 (research-locked).
-- **DO NOT add features beyond v0 MVP.** No A/B testing, no automatic scoring, no consensus voting beyond 3/3 check.
-- **DO NOT truncate or modify teacher responses** before saving. Save raw output.
-- **DO NOT cross into the competition repo** (`/home/dvaneetv/private/151B_SP26_Competition/`). This workspace is isolated.
-- **DO NOT commit `.env`** or any file containing API keys.
-- **DO NOT overwrite outputs.** Always append + resume.
-- **DO NOT skip atomic writes.** Corruption mid-run = lost money.
-
-## Anti-Patterns (Code)
-
-- Hardcode paths, model names, or API endpoints
-- Use plain json.dump without atomic rename
-- Test on full 943 without Phase 1 validation first
-- Change extraction logic mid-run
-- Merge API responses without tracking source
-- Build any UI (web, streamlit, dashboard, etc.)
-- Add dependencies not in requirements.txt without asking Rain
-- Use async/await unless implementing batch API (post-v0)
-- Create abstract base classes, factory patterns, or framework code
-
----
-
-## When to Ask Rain (Before Acting)
-
-- Deviating from locked design or prompt strategy
-- Spending >$10 on a test run
-- Adding any dependency beyond requirements.txt
-- Changing output file structure
-- Any decision affecting downstream SFT
-
-## When NOT to Ask Rain
-
-- Code style (use Black + type hints)
-- Library choices for standard things (you have openai, anthropic, pyyaml, tenacity, tqdm, python-dotenv)
-- Retry logic on API failures
-- Permission to log errors or skip items
-- Writing a helper function
-
----
-
-## Communication Format
-
-When reporting to Rain:
-
-**Format:**
-- Concise. 1-2 sentences per fact.
-- State the fact, then implications: "X items complete. Y failed. Z is the blocker."
-- Surface blockers immediately. Don't sit on a problem.
-
-**Progress milestones to report:**
-1. Setup complete, all 3 APIs verified
-2. Phase 1 (validation) complete — full metrics + decision gates passed/failed
-3. Phase 2 (full run) progress at 250, 500, 750, complete
-4. Final manifest ready with consensus + stats
-
----
-
-## Memory
-
-Surface to Rain: "Worth adding to DataApp CLAUDE.md: [what]" and wait for approval.
-Never modify this CLAUDE.md unprompted.
+- This worksp

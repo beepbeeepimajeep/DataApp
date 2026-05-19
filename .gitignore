@@ -30,7 +30,14 @@ config.local.yaml
 
 # Data (input/output)
 private.jsonl
-dataapp_outputs/
+dataapp_outputs/item_*/
+dataapp_outputs/*_response.md
+!dataapp_outputs/dataset_manifest.jsonl
+!dataapp_outputs/dataset_manifest_backup.jsonl
+!dataapp_outputs/*_summary.json
+!dataapp_outputs/smoke_*
+!dataapp_outputs/cost_log.jsonl
+!dataapp_outputs/*_batch*.jsonl
 
 # IDE
 .vscode/

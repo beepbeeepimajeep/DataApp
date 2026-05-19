@@ -127,6 +127,72 @@ class GPTOSSClient:
             return _error_response(str(e), self.model, time.time() - start, "tritonai")
 
 
+class GPT55Client:
+    """GPT-5.5 (xhigh reasoning): OpenAI API directly."""
+
+    def __init__(self, model: str = "gpt-5.5"):
+        self.model = model
+
+        try:
+            from openai import OpenAI
+
+            self.openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
+        except ImportError:
+            raise ImportError("openai package required. pip install openai")
+
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=30))
+    def call(
+        self,
+        messages: list[dict],
+        temperature: float,
+        max_tokens: int,
+        reasoning_effort: str = "xhigh",
+        **kwargs
+    ) -> dict:
+        """
+        Query GPT-5.5 via OpenAI API with extended thinking (reasoning_effort).
+
+        Returns:
+            Dict with: response, input_tokens, output_tokens, hit_token_cap,
+            generation_time_s, model, request_id, error, route,
+            reasoning_tokens (if available)
+        """
+        start = time.time()
+
+        try:
+            # GPT-5.5 with reasoning_effort requires temperature=1 (default)
+            # Ignore the passed temperature parameter for this model
+            resp = self.openai_client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                temperature=1.0,  # Required for reasoning_effort
+                max_completion_tokens=max_tokens,
+                reasoning_effort=reasoning_effort,
+            )
+
+            result = {
+                "response": resp.choices[0].message.content or "",
+                "input_tokens": resp.usage.prompt_tokens,
+                "output_tokens": resp.usage.completion_tokens,
+                "hit_token_cap": resp.choices[0].finish_reason == "length",
+                "generation_time_s": time.time() - start,
+                "model": self.model,
+                "request_id": resp.id,
+                "error": None,
+                "route": "openai",
+            }
+
+            # Add reasoning tokens if available (GPT-5.5 extended thinking)
+            if hasattr(resp.usage, "completion_tokens_details") and resp.usage.completion_tokens_details:
+                result["reasoning_tokens"] = getattr(
+                    resp.usage.completion_tokens_details, "reasoning_tokens", 0
+                )
+
+            return result
+        except Exception as e:
+            return _error_response(str(e), self.model, time.time() - start, "openai")
+
+
 class SonnetClient:
     """Claude Sonnet 4.6 via Anthropic API."""
 

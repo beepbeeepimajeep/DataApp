@@ -1,0 +1,11 @@
+{
+  "batch_id": "batch_6a0ba70c78cc819082efb2719f561705",
+  "file_id": "file-45sykqhfn9yyzs7vCvkfMw",
+  "status": "validating",
+  "submitted_at": "2026-05-18T16:55:57.239991",
+  "num_items": 45,
+  "model": "gpt-5.5",
+  "reasoning_effort": "xhigh",
+  "max_completion_tokens": 65536,
+  "cap_hit_alert_enabled": true
+}
