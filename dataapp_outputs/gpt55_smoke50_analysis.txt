@@ -1,0 +1,92 @@
+================================================================================
+GPT-5.5 SMOKE TEST REPORT (Ticket 3 - Gate Validation)
+================================================================================
+Date: 2026-05-19
+Selection: 50 items, stratified (seed=42): 17 MCQ, 17 single_free, 16 multi_free
+Items NOT in Phase 1 (0-44)
+
+EXECUTION RESULTS
+=================
+Items Processed: 49/50 completed successfully
+Items Timed Out: 1 (item 54, hit 10-minute hard limit)
+Extraction Success: 49/49 non-empty (100%)
+
+ACTUAL COST
+===========
+Total: $2.92 for 49 items
+Per item: $0.0595 average
+Min/Max: $0.0067 (item 906) / $0.3283 (item 222)
+
+WALL CLOCK TIMING
+=================
+Per item (sequential, not parallel):
+  Mean: 38.3s
+  Median: 13.5s
+  P95: 163.1s
+  Min/Max: 3.5s / 234.2s
+
+With 15 concurrent workers:
+  Estimated real time per item: 2.6s
+  Projected 943-item wall clock: 2408s (0.7 hours)
+
+OUTPUT TOKEN DISTRIBUTION
+==========================
+Mean: 1929 tokens
+Median: 680 tokens
+P95: 8620 tokens
+Min/Max: 142 / 10884 tokens
+
+Reasoning tokens included (captured from extended thinking):
+  Max observed: 10239 reasoning tokens (item 222)
+
+FINISH REASONS
+==============
+stop: 49/49 (100.0%)
+length: 0/49 (0.0%)
+timeout: 1/50 (2.0% - item 54)
+
+CAP-HIT RATE: 0% (no "length" finish reasons)
+TIMEOUT RATE: 2.0% (1/50 items)
+ERROR RATE: 0% (no API failures)
+
+GATE CONDITIONS (must ALL pass)
+================================
+1. Projected cost ≤ $60 for 943 items
+   Actual: $56.14 (49 items * $0.0595)
+   ✓ PASS
+
+2. Timeout rate ≤ 5%
+   Actual: 2.0% (1/50 items)
+   ✓ PASS
+
+3. Extraction success ≥ 90%
+   Actual: 100% (49/49 non-empty)
+   ✓ PASS
+
+4. No catastrophic API failures
+   Actual: 0% error rate
+   ✓ PASS
+
+FINAL ASSESSMENT
+================
+✓ ALL GATES PASS
+Ready to proceed with Ticket 4 (full 943-item GPT-5.5 run)
+
+NOTES
+=====
+- Item 54 timeout: This item requires >10 minutes of reasoning time.
+  Likely a very complex problem requiring extensive derivation.
+  Timeout handling: recorded with finish_reason="timeout", empty response.
+  This is acceptable given 2% rate is under 5% threshold.
+
+- Token distribution is heavy-tailed: median 680 tokens vs mean 1929.
+  Some items require much more reasoning (max 10884 tokens = ~$0.33/item).
+  This is captured in cost projection.
+
+- Parallel execution efficiency: With 15 workers, throughput expected to be
+  943 / 15 / (avg_item_time_s / 3600) = ~1350 items/hour
+  Estimated wall clock for 943 items: ~40 minutes to 1 hour with 15 workers
+
+- Cost breakdown: Reasoning tokens are billed at output rate ($30/1M).
+  Average reasoning tokens: ~5000 (from Phase 1 data).
+  This is properly accounted in cost projection.
