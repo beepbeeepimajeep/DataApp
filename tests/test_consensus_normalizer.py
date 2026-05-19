@@ -12,7 +12,53 @@ Covers:
 """
 
 import pytest
-from src.consensus_normalizer import answers_match
+from src.consensus_normalizer import answers_match, answers_match_with_type
+
+
+class TestExactMatches:
+    """Exact string matches return 'exact' match_type."""
+
+    def test_exact_single_value(self):
+        """'42' ↔ '42' → (True, 'exact')."""
+        result, match_type = answers_match_with_type("42", "42")
+        assert result is True
+        assert match_type == "exact"
+
+    def test_exact_coordinate_pair(self):
+        """'(12.30, 25.10)' ↔ '(12.30, 25.10)' → (True, 'exact')."""
+        result, match_type = answers_match_with_type("(12.30, 25.10)", "(12.30, 25.10)")
+        assert result is True
+        assert match_type == "exact"
+
+    def test_exact_multi_answer(self):
+        """'1, 2, 3' ↔ '1, 2, 3' → (True, 'exact')."""
+        result, match_type = answers_match_with_type("1, 2, 3", "1, 2, 3")
+        assert result is True
+        assert match_type == "exact"
+
+    def test_exact_with_spaces(self):
+        """'a, b, c' ↔ 'a, b, c' → (True, 'exact')."""
+        result, match_type = answers_match_with_type("a, b, c", "a, b, c")
+        assert result is True
+        assert match_type == "exact"
+
+    def test_exact_expression(self):
+        """'y = 5x^4' ↔ 'y = 5x^4' → (True, 'exact')."""
+        result, match_type = answers_match_with_type("y = 5x^4", "y = 5x^4")
+        assert result is True
+        assert match_type == "exact"
+
+    def test_not_exact_whitespace_diff(self):
+        """'y = 5x^4' ↔ 'y=5x^4' → (True, 'normalized' not 'exact')."""
+        result, match_type = answers_match_with_type("y = 5x^4", "y=5x^4")
+        assert result is True
+        assert match_type == "normalized"  # Different raw strings, matched via normalization
+
+    def test_not_exact_precision_diff(self):
+        """'(12.30, 25.10)' ↔ '(12.3, 25.1)' → (True, 'coord_pair' not 'exact')."""
+        result, match_type = answers_match_with_type("(12.30, 25.10)", "(12.3, 25.1)")
+        assert result is True
+        assert match_type in ("coord_pair", "normalized")  # Different raw strings
 
 
 class TestCoordinatePairs:

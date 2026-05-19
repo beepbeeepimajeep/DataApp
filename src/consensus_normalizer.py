@@ -135,13 +135,18 @@ def answers_match_with_type(a: str, b: str, tolerance: float = 0.01) -> tuple[bo
         (match: bool, match_type: str)
 
     match_type is one of:
-      - "exact": raw strings equal after strip
+      - "exact": raw strings identical (highest confidence, no normalization needed)
       - "normalized": matched after escape/whitespace/LaTeX normalization
-      - "coord_pair": matched via coordinate-pair extraction + tolerance
-      - "set_match": matched as unordered sets (multi-answer)
+      - "coord_pair": matched via coordinate-pair extraction + numerical tolerance
+      - "set_match": matched as unordered sets (multi-answer, order-independent)
       - "numeric": matched as numbers within tolerance
-      - "no_match": did not match
+      - "solo": only one teacher had non-empty answer (no comparison possible)
+      - "no_match": did not match any criterion
     """
+    # Early exit: exact raw string equality (highest confidence)
+    if a == b:
+        return (True, "exact")
+
     try:
         return _answers_match_impl(a, b, tolerance)
     except RecursionError:
