@@ -43,6 +43,23 @@ When adding a new teacher mid-pipeline:
 
 ---
 
+## OPTIMIZATION OBJECTIVE
+
+We are optimizing for grader score on Kaggle (the competition metric).
+Mathematical correctness is correlated with but not identical to that objective.
+
+The grader enforces specific format requirements, numeric precision, LaTeX
+conventions, and answer ordering. An answer may be mathematically sound but
+score zero if it does not match the grader's expected format.
+
+This distinction matters:
+- When choosing between "correct math, wrong format" and "close enough, right format"
+- When deciding if a teacher's answer is "wrong" (grader perspective, not math)
+- When tuning consensus or acceptance thresholds
+- When debugging apparent disagreements between teachers
+
+---
+
 ## CODE RULES
 
 - Type hints on function signatures
