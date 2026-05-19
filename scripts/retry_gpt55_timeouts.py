@@ -223,9 +223,12 @@ def retry_item(
 
     elapsed = time.time() - start
 
-    # Estimate cost
+    # Estimate cost: $5 per 1M input, $30 per 1M output
+    # GPT-5.5 reasoning tokens billed as output tokens at $30/1M
     input_cost = (result.get("input_tokens", 0) / 1_000_000) * 5
-    output_cost = (result.get("output_tokens", 0) / 1_000_000) * 30
+    output_tokens = result.get("output_tokens", 0)
+    reasoning_tokens = result.get("reasoning_tokens", 0)
+    output_cost = ((output_tokens + reasoning_tokens) / 1_000_000) * 30
     total_cost = input_cost + output_cost
 
     # Save response (overwrite existing)
