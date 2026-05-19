@@ -1,0 +1,825 @@
+{
+  "summary": {
+    "total_items": 45,
+    "script_sha": "ff2f196d4af5a05b1a754d4b38dc313ed538f6e8",
+    "timestamp": "2026-05-19T06:51:09.036492",
+    "input_manifest": "/home/dvaneetv/private/DataApp/dataapp_outputs/dataset_manifest.jsonl",
+    "input_smoke_dir": "/home/dvaneetv/private/DataApp/dataapp_outputs/smoke_gpt55_phase1_redo",
+    "agreement_counts": {
+      "4/4": 29,
+      "3/4": 9,
+      "2/4": 6,
+      "1/4": 1
+    },
+    "agreement_breakdown_by_type": {
+      "1/4": [
+        312
+      ],
+      "2/4": [
+        133,
+        282,
+        318,
+        391,
+        469,
+        858
+      ],
+      "3/4": [
+        49,
+        69,
+        164,
+        182,
+        253,
+        427,
+        474,
+        533,
+        892
+      ],
+      "4/4": [
+        11,
+        38,
+        52,
+        53,
+        122,
+        137,
+        173,
+        174,
+        200,
+        221,
+        226,
+        366,
+        369,
+        402,
+        426,
+        461,
+        491,
+        513,
+        516,
+        633,
+        679,
+        684,
+        695,
+        716,
+        738,
+        790,
+        849,
+        878,
+        936
+      ]
+    },
+    "gpt55_broke_unanimity": [
+      892
+    ],
+    "gpt55_differs_from_consensus": [
+      133,
+      174,
+      282,
+      312,
+      318,
+      369,
+      391,
+      461,
+      469,
+      491,
+      513,
+      516,
+      533,
+      679,
+      684,
+      716,
+      858,
+      892
+    ],
+    "phase1_unanimous_gpt55_agrees": [
+      11,
+      38,
+      52,
+      53,
+      122,
+      137,
+      173,
+      200,
+      221,
+      226,
+      366,
+      402,
+      426,
+      633,
+      695,
+      738,
+      790,
+      849,
+      878,
+      936
+    ],
+    "phase1_unanimous_gpt55_disagrees": [
+      174,
+      369,
+      461,
+      491,
+      513,
+      516,
+      679,
+      684,
+      716,
+      892
+    ]
+  },
+  "per_item": [
+    {
+      "id": 11,
+      "question_type": "single_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "0.9391",
+      "sonnet_answer_raw": "0.9391",
+      "gpt5_4_answer_raw": "0.939",
+      "gpt_oss_answer_raw": "0.94 (approximately)",
+      "gpt5_5_answer_raw": "0.9391"
+    },
+    {
+      "id": 38,
+      "question_type": "mcq",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "B",
+      "sonnet_answer_raw": "B",
+      "gpt5_4_answer_raw": "B",
+      "gpt_oss_answer_raw": "B",
+      "gpt5_5_answer_raw": "B"
+    },
+    {
+      "id": 49,
+      "question_type": "single_free",
+      "agreement_type": "3/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt5_5"
+      ],
+      "consensus_answer": "0.0143",
+      "sonnet_answer_raw": "0.0143",
+      "gpt5_4_answer_raw": "0.0143",
+      "gpt_oss_answer_raw": "0.014",
+      "gpt5_5_answer_raw": "0.0143"
+    },
+    {
+      "id": 52,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "231,385",
+      "sonnet_answer_raw": "231,385",
+      "gpt5_4_answer_raw": "231,385",
+      "gpt_oss_answer_raw": "231,385",
+      "gpt5_5_answer_raw": "231,385"
+    },
+    {
+      "id": 53,
+      "question_type": "mcq",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "F",
+      "sonnet_answer_raw": "F",
+      "gpt5_4_answer_raw": "F",
+      "gpt_oss_answer_raw": "F",
+      "gpt5_5_answer_raw": "F"
+    },
+    {
+      "id": 69,
+      "question_type": "mcq",
+      "agreement_type": "3/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "G",
+      "sonnet_answer_raw": "G",
+      "gpt5_4_answer_raw": "None of the listed options;  \\int_0^\\pi f(x)\\,dx=\\frac{\\pi^2-2\\pi}{2}",
+      "gpt_oss_answer_raw": "G",
+      "gpt5_5_answer_raw": "G"
+    },
+    {
+      "id": 122,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "1174.8,55",
+      "sonnet_answer_raw": "1174.8,55",
+      "gpt5_4_answer_raw": "1174.8,55",
+      "gpt_oss_answer_raw": "1174.8,55",
+      "gpt5_5_answer_raw": "1174.8,55"
+    },
+    {
+      "id": 133,
+      "question_type": "multi_free",
+      "agreement_type": "2/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt_oss"
+      ],
+      "consensus_answer": "-\\frac{\\sqrt{3}}{2},\\,\\frac{1}{2},\\,-\\sqrt{3},\\,2",
+      "sonnet_answer_raw": "-\\frac{\\sqrt{3}}{2},\\,\\frac{1}{2},\\,-\\sqrt{3},\\,2",
+      "gpt5_4_answer_raw": "-\\frac{\\sqrt3}{2},\\frac12,-\\sqrt3,2",
+      "gpt_oss_answer_raw": "-\\frac{\\sqrt{3}}{2},\\frac{1}{2},-\\sqrt{3},2",
+      "gpt5_5_answer_raw": "-\\frac{\\sqrt3}{2},\\frac12,-\\sqrt3,2"
+    },
+    {
+      "id": 137,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "2/13,2/1",
+      "sonnet_answer_raw": "2/13,2/1",
+      "gpt5_4_answer_raw": "2/13,2/1",
+      "gpt_oss_answer_raw": "2/13,2/1",
+      "gpt5_5_answer_raw": "2/13,2/1"
+    },
+    {
+      "id": 164,
+      "question_type": "mcq",
+      "agreement_type": "3/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "G",
+      "sonnet_answer_raw": "G",
+      "gpt5_4_answer_raw": "H",
+      "gpt_oss_answer_raw": "G",
+      "gpt5_5_answer_raw": "G"
+    },
+    {
+      "id": 173,
+      "question_type": "mcq",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "C",
+      "sonnet_answer_raw": "C",
+      "gpt5_4_answer_raw": "C",
+      "gpt_oss_answer_raw": "C",
+      "gpt5_5_answer_raw": "C"
+    },
+    {
+      "id": 174,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "7, \\frac{7}{8}",
+      "sonnet_answer_raw": "7, \\frac{7}{8}",
+      "gpt5_4_answer_raw": "7,\\frac{7}{8}",
+      "gpt_oss_answer_raw": "7,\\frac{7}{8}",
+      "gpt5_5_answer_raw": "7,\\frac{7}{8}"
+    },
+    {
+      "id": 182,
+      "question_type": "mcq",
+      "agreement_type": "3/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "E",
+      "sonnet_answer_raw": "E",
+      "gpt5_4_answer_raw": "H",
+      "gpt_oss_answer_raw": "E",
+      "gpt5_5_answer_raw": "E"
+    },
+    {
+      "id": 200,
+      "question_type": "mcq",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "I",
+      "sonnet_answer_raw": "I",
+      "gpt5_4_answer_raw": "I",
+      "gpt_oss_answer_raw": "I",
+      "gpt5_5_answer_raw": "I"
+    },
+    {
+      "id": 221,
+      "question_type": "single_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "2750",
+      "sonnet_answer_raw": "2750",
+      "gpt5_4_answer_raw": "2750",
+      "gpt_oss_answer_raw": "2750",
+      "gpt5_5_answer_raw": "2750"
+    },
+    {
+      "id": 226,
+      "question_type": "single_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "8",
+      "sonnet_answer_raw": "8",
+      "gpt5_4_answer_raw": "8",
+      "gpt_oss_answer_raw": "8",
+      "gpt5_5_answer_raw": "8"
+    },
+    {
+      "id": 253,
+      "question_type": "mcq",
+      "agreement_type": "3/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "E",
+      "sonnet_answer_raw": "E",
+      "gpt5_4_answer_raw": "I",
+      "gpt_oss_answer_raw": "E",
+      "gpt5_5_answer_raw": "E"
+    },
+    {
+      "id": 282,
+      "question_type": "single_free",
+      "agreement_type": "2/4",
+      "which_agreed": [
+        "gpt5_4",
+        "gpt5_5"
+      ],
+      "consensus_answer": "-e^2,\\ e^2",
+      "sonnet_answer_raw": "e^2",
+      "gpt5_4_answer_raw": "-e^2,\\ e^2",
+      "gpt_oss_answer_raw": "e^{2}, -e^{2}",
+      "gpt5_5_answer_raw": "-e^2,\\,e^2"
+    },
+    {
+      "id": 312,
+      "question_type": "single_free",
+      "agreement_type": "1/4",
+      "which_agreed": [
+        "sonnet"
+      ],
+      "consensus_answer": "20",
+      "sonnet_answer_raw": "20",
+      "gpt5_4_answer_raw": "4",
+      "gpt_oss_answer_raw": "7",
+      "gpt5_5_answer_raw": "171"
+    },
+    {
+      "id": 318,
+      "question_type": "multi_free",
+      "agreement_type": "2/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt_oss"
+      ],
+      "consensus_answer": "8, \\arctan\\!(\\frac{8}{\\sqrt{161}})",
+      "sonnet_answer_raw": "8, \\arctan\\!(\\frac{8}{\\sqrt{161}})",
+      "gpt5_4_answer_raw": "8,\\arcsin(\\frac{8}{15})",
+      "gpt_oss_answer_raw": "8,\\arctan\\!(\\frac{8}{\\sqrt{161}})",
+      "gpt5_5_answer_raw": "8,\\arcsin(\\frac{8}{15})"
+    },
+    {
+      "id": 366,
+      "question_type": "mcq",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "G",
+      "sonnet_answer_raw": "G",
+      "gpt5_4_answer_raw": "G",
+      "gpt_oss_answer_raw": "G",
+      "gpt5_5_answer_raw": "G"
+    },
+    {
+      "id": 369,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "3/4,5,2",
+      "sonnet_answer_raw": "3/4,5,2",
+      "gpt5_4_answer_raw": "\\frac34,5,2",
+      "gpt_oss_answer_raw": "\\frac34,5,2",
+      "gpt5_5_answer_raw": "\\frac34,5,2"
+    },
+    {
+      "id": 391,
+      "question_type": "mcq",
+      "agreement_type": "2/4",
+      "which_agreed": [
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "B",
+      "sonnet_answer_raw": "C",
+      "gpt5_4_answer_raw": "I",
+      "gpt_oss_answer_raw": "B",
+      "gpt5_5_answer_raw": "B"
+    },
+    {
+      "id": 402,
+      "question_type": "mcq",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "J",
+      "sonnet_answer_raw": "J",
+      "gpt5_4_answer_raw": "J",
+      "gpt_oss_answer_raw": "J",
+      "gpt5_5_answer_raw": "J"
+    },
+    {
+      "id": 426,
+      "question_type": "single_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "11",
+      "sonnet_answer_raw": "11",
+      "gpt5_4_answer_raw": "11",
+      "gpt_oss_answer_raw": "11",
+      "gpt5_5_answer_raw": "11"
+    },
+    {
+      "id": 427,
+      "question_type": "mcq",
+      "agreement_type": "3/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "E",
+      "sonnet_answer_raw": "E",
+      "gpt5_4_answer_raw": "No listed option",
+      "gpt_oss_answer_raw": "E",
+      "gpt5_5_answer_raw": "E"
+    },
+    {
+      "id": 461,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "2, 302",
+      "sonnet_answer_raw": "2, 302",
+      "gpt5_4_answer_raw": "2,302",
+      "gpt_oss_answer_raw": "2,302",
+      "gpt5_5_answer_raw": "2,302"
+    },
+    {
+      "id": 469,
+      "question_type": "multi_free",
+      "agreement_type": "2/4",
+      "which_agreed": [
+        "gpt5_4",
+        "gpt5_5"
+      ],
+      "consensus_answer": "s^2,0.1575A,0.1575s^2,C,81,square feet,14.175,dollars,19.0575,dollars",
+      "sonnet_answer_raw": "s^2,\\ 0.1575A,\\ 0.1575s^2,\\ C,\\ 81,\\ A 9-ft square deck has area 81 sq ft,\\ 14.175,\\ Cost to stain 90 sq ft is \\14.175,\\ 19.0575,\\ Cost to stain an 11-ft square deck is \\19.0575",
+      "gpt5_4_answer_raw": "s^2,0.1575A,0.1575s^2,C,81,square feet,14.175,dollars,19.0575,dollars",
+      "gpt_oss_answer_raw": "s^2,0.1575 A,0.1575 s^2,C,81,14.175,19.0575",
+      "gpt5_5_answer_raw": "s^2,0.1575A,0.1575s^2,C,81,square feet,14.175,dollars,19.0575,dollars"
+    },
+    {
+      "id": 474,
+      "question_type": "mcq",
+      "agreement_type": "3/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "C",
+      "sonnet_answer_raw": "C",
+      "gpt5_4_answer_raw": "E",
+      "gpt_oss_answer_raw": "C",
+      "gpt5_5_answer_raw": "C"
+    },
+    {
+      "id": 491,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "1255.37, 1091.05, 1419.69, No, Central Limit Theorem",
+      "sonnet_answer_raw": "1255.37, 1091.05, 1419.69, No, Central Limit Theorem",
+      "gpt5_4_answer_raw": "1255.37,1091.05,1419.69,No,Central Limit Theorem",
+      "gpt_oss_answer_raw": "1255.37,1091.05,1419.68,No,Central Limit Theorem",
+      "gpt5_5_answer_raw": "1255.37,1091.05,1419.68,No,Central Limit Theorem"
+    },
+    {
+      "id": 513,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "-1.41, 1.41, 1.75",
+      "sonnet_answer_raw": "-1.41, 1.41, 1.75",
+      "gpt5_4_answer_raw": "-1.4051,1.4051,1.7507",
+      "gpt_oss_answer_raw": "-1.405,1.405,1.75",
+      "gpt5_5_answer_raw": "-1.41,1.41,1.75"
+    },
+    {
+      "id": 516,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "7, -11, 4, 0",
+      "sonnet_answer_raw": "7, -11, 4, 0",
+      "gpt5_4_answer_raw": "7,-11,4,0",
+      "gpt_oss_answer_raw": "7,-11,4,0",
+      "gpt5_5_answer_raw": "7,-11,4,0"
+    },
+    {
+      "id": 533,
+      "question_type": "single_free",
+      "agreement_type": "3/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt5_5"
+      ],
+      "consensus_answer": "0.0564",
+      "sonnet_answer_raw": "0.0564",
+      "gpt5_4_answer_raw": "0.056",
+      "gpt_oss_answer_raw": "0.057 (approximately)",
+      "gpt5_5_answer_raw": "0.0563"
+    },
+    {
+      "id": 633,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "B,D,8",
+      "sonnet_answer_raw": "B,D,8",
+      "gpt5_4_answer_raw": "B,D,8",
+      "gpt_oss_answer_raw": "B,D,8",
+      "gpt5_5_answer_raw": "B,D,8"
+    },
+    {
+      "id": 679,
+      "question_type": "single_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "11",
+      "sonnet_answer_raw": "11",
+      "gpt5_4_answer_raw": "11",
+      "gpt_oss_answer_raw": "11 ft",
+      "gpt5_5_answer_raw": "11 ft"
+    },
+    {
+      "id": 684,
+      "question_type": "single_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "-1.555",
+      "sonnet_answer_raw": "-1.555",
+      "gpt5_4_answer_raw": "-1.55",
+      "gpt_oss_answer_raw": "-1.55",
+      "gpt5_5_answer_raw": "-1.55"
+    },
+    {
+      "id": 695,
+      "question_type": "mcq",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "E",
+      "sonnet_answer_raw": "E",
+      "gpt5_4_answer_raw": "E",
+      "gpt_oss_answer_raw": "E",
+      "gpt5_5_answer_raw": "E"
+    },
+    {
+      "id": 716,
+      "question_type": "single_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "0.5758",
+      "sonnet_answer_raw": "0.5758",
+      "gpt5_4_answer_raw": "\\frac{19}{33}",
+      "gpt_oss_answer_raw": "\\frac{19}{33}",
+      "gpt5_5_answer_raw": "\\frac{19}{33}"
+    },
+    {
+      "id": 738,
+      "question_type": "multi_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "A,C,A,A",
+      "sonnet_answer_raw": "A,C,A,A",
+      "gpt5_4_answer_raw": "A,C,A,A",
+      "gpt_oss_answer_raw": "A,C,A,A",
+      "gpt5_5_answer_raw": "A,C,A,A"
+    },
+    {
+      "id": 790,
+      "question_type": "single_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "-20x^2+45x-25=0",
+      "sonnet_answer_raw": "-20x^2+45x-25=0",
+      "gpt5_4_answer_raw": "-20x^2+45x-25=0",
+      "gpt_oss_answer_raw": "-20x^2+45x-25=0",
+      "gpt5_5_answer_raw": "-20x^2+45x-25=0"
+    },
+    {
+      "id": 849,
+      "question_type": "single_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "4(n+1)",
+      "sonnet_answer_raw": "4(n+1)",
+      "gpt5_4_answer_raw": "4(n+1)",
+      "gpt_oss_answer_raw": "4(n+1)",
+      "gpt5_5_answer_raw": "4(n+1)"
+    },
+    {
+      "id": 858,
+      "question_type": "multi_free",
+      "agreement_type": "2/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4"
+      ],
+      "consensus_answer": "2.300, 1.691, Yes",
+      "sonnet_answer_raw": "2.300, 1.691, Yes",
+      "gpt5_4_answer_raw": "2.30,1.691,Yes",
+      "gpt_oss_answer_raw": "2.30,2.03,Yes",
+      "gpt5_5_answer_raw": "2.300,1.691,Reject H_0; sufficient data"
+    },
+    {
+      "id": 878,
+      "question_type": "mcq",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "I",
+      "sonnet_answer_raw": "I",
+      "gpt5_4_answer_raw": "I",
+      "gpt_oss_answer_raw": "I",
+      "gpt5_5_answer_raw": "I"
+    },
+    {
+      "id": 892,
+      "question_type": "single_free",
+      "agreement_type": "3/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss"
+      ],
+      "consensus_answer": "69.65",
+      "sonnet_answer_raw": "69.65",
+      "gpt5_4_answer_raw": "69.65",
+      "gpt_oss_answer_raw": "69.65",
+      "gpt5_5_answer_raw": "69.65 feet"
+    },
+    {
+      "id": 936,
+      "question_type": "single_free",
+      "agreement_type": "4/4",
+      "which_agreed": [
+        "sonnet",
+        "gpt5_4",
+        "gpt_oss",
+        "gpt5_5"
+      ],
+      "consensus_answer": "\\frac{275}{16}",
+      "sonnet_answer_raw": "\\frac{275}{16}",
+      "gpt5_4_answer_raw": "\\frac{275}{16}",
+      "gpt_oss_answer_raw": "\\frac{275}{16}",
+      "gpt5_5_answer_raw": "\\frac{275}{16}"
+    }
+  ]
+}

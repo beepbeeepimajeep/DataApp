@@ -1,0 +1,30 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+Having won the elections in Linetown, Turbo the Snail has become mayor, and one of the most pressing issues he needs to work on is the road network. Linetown can be represented as a configuration of $2025$ lines
+in the plane, of which no two are parallel and no three are concurrent.
+
+There is one house in Linetown for each pairwise intersection of two lines. The $2025$ lines are used as roads by the townsfolk. In the past, the roads in Linetown used to be two-way, but this often led to residents accidentally cycling back to where they started.
+
+Turbo wants to make each of the $2025$ roads one-way such that it is impossible for any resident to start at a house, follow the roads in the correct directions, and end up back at the original house. In how many ways can Turbo achieve this?
+
+Problem type: single-answer.
+
+There is exactly one final answer. End with: \boxed{answer}
+```
+
+## Reasoning + Response
+
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 0
+- Output tokens: 0
+- Reasoning tokens: 0
+- Hit token cap: False
+- Finish reason: None
+- Generation time: 1779206745.24s
+- Request ID: None
+
+**ERROR:** RetryError[<Future at 0x7f5b686a29d0 state=finished raised RateLimitError>]

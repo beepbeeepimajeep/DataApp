@@ -1,0 +1,48 @@
+{
+  "total_items": 45,
+  "total_cost_usd": 0.6855675000000003,
+  "no_box_rate": 0.0,
+  "error_rate": 0.0,
+  "cap_hit_rate": 0.0,
+  "agreement_distribution": {
+    "3/3": 30,
+    "2/3": 11,
+    "1/3": 4
+  },
+  "cost_by_model": {
+    "gpt-5.4": 0.31230749999999996,
+    "api-gpt-oss-120b": 0.0,
+    "claude-sonnet-4-6": 0.37326000000000004
+  },
+  "type_distribution": {
+    "mcq": 15,
+    "single_free": 15,
+    "multi_free": 15
+  },
+  "token_stats": {
+    "sonnet": {
+      "count": 45,
+      "median": 392,
+      "p95": 1246,
+      "mean": 481.31111111111113
+    },
+    "gpt5_4": {
+      "count": 45,
+      "median": 358,
+      "p95": 1111,
+      "mean": 409.44444444444446
+    },
+    "gpt_oss": {
+      "count": 45,
+      "median": 702,
+      "p95": 2048,
+      "mean": 963.0666666666667
+    }
+  },
+  "reasoning_presence": {
+    "gpt5_4": 45,
+    "gpt_oss": 28,
+    "sonnet": 45
+  },
+  "manifest_file": "/home/dvaneetv/private/DataApp/dataapp_outputs/dataset_manifest.jsonl"
+}

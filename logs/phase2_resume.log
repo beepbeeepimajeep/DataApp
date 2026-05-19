@@ -1,0 +1,51 @@
+[2026-05-19 13:11:45,145] __main__ - INFO - === DataApp Phase 2: Full Pipeline (943 items) ===
+[2026-05-19 13:11:45,241] __main__ - INFO - Loaded 943 items from private.jsonl
+[2026-05-19 13:12:03,937] __main__ - INFO - Already completed: 464 items
+[2026-05-19 13:12:03,937] __main__ - INFO - To process: 479 items
+[2026-05-19 13:12:03,937] __main__ - INFO - Current spend: $6.05
+Phase 2:   0%|          | 0/479 [00:00<?, ?item/s][2026-05-19 13:12:03,944] src.orchestrator - INFO - Processing item 74 (single_free, max_tokens=16384)...
+[2026-05-19 13:12:03,945] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-19 13:12:15,606] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:12:18,736] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:12:19,136] __main__ - ERROR - Item 74 failed: maximum recursion depth exceeded
+Phase 2:   0%|          | 0/479 [00:15<?, ?item/s, cost=$6.07, fail=1, id=74, ok=0]Phase 2:   0%|          | 1/479 [00:15<2:01:03, 15.19s/item, cost=$6.07, fail=1, id=74, ok=0][2026-05-19 13:12:19,139] src.orchestrator - INFO - Processing item 195 (single_free, max_tokens=16384)...
+[2026-05-19 13:12:19,153] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-19 13:12:28,236] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:12:30,536] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:12:30,559] __main__ - ERROR - Item 195 failed: maximum recursion depth exceeded
+Phase 2:   0%|          | 1/479 [00:26<2:01:03, 15.19s/item, cost=$6.11, fail=2, id=195, ok=0]Phase 2:   0%|          | 2/479 [00:26<1:43:09, 12.98s/item, cost=$6.11, fail=2, id=195, ok=0][2026-05-19 13:12:30,560] src.orchestrator - INFO - Processing item 409 (multi_free, max_tokens=16384)...
+[2026-05-19 13:12:30,636] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-19 13:12:43,636] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:12:44,136] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:12:45,052] __main__ - ERROR - Item 409 failed: maximum recursion depth exceeded
+Phase 2:   0%|          | 2/479 [00:41<1:43:09, 12.98s/item, cost=$6.15, fail=3, id=409, ok=0]Phase 2:   1%|          | 3/479 [00:41<1:48:26, 13.67s/item, cost=$6.15, fail=3, id=409, ok=0][2026-05-19 13:12:45,053] src.orchestrator - INFO - Processing item 413 (multi_free, max_tokens=16384)...
+[2026-05-19 13:12:45,145] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-19 13:12:52,168] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:12:56,311] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:12:56,747] __main__ - ERROR - Item 413 failed: maximum recursion depth exceeded
+Phase 2:   1%|          | 3/479 [00:52<1:48:26, 13.67s/item, cost=$6.17, fail=4, id=413, ok=0]Phase 2:   1%|          | 4/479 [00:52<1:42:18, 12.92s/item, cost=$6.17, fail=4, id=413, ok=0][2026-05-19 13:12:56,836] src.orchestrator - INFO - Processing item 437 (single_free, max_tokens=16384)...
+[2026-05-19 13:12:56,838] src.orchestrator - INFO -   → using cached sonnet response
+[2026-05-19 13:13:00,028] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:13:01,036] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:13:01,342] __main__ - ERROR - Item 437 failed: maximum recursion depth exceeded
+Phase 2:   1%|          | 4/479 [00:57<1:42:18, 12.92s/item, cost=$6.18, fail=5, id=437, ok=0]Phase 2:   1%|          | 5/479 [00:57<1:18:07,  9.89s/item, cost=$6.18, fail=5, id=437, ok=0][2026-05-19 13:13:01,343] src.orchestrator - INFO - Processing item 450 (mcq, max_tokens=16384)...
+[2026-05-19 13:13:22,107] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:13:39,280] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:13:51,424] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-19 13:13:51,654] src.orchestrator - INFO -   → 2/3 (consensus: I)
+[2026-05-19 13:13:51,654] src.orchestrator - INFO -   → running cost: $6.26
+Phase 2:   1%|          | 5/479 [01:47<1:18:07,  9.89s/item, cost=$6.26, fail=5, id=450, ok=1]Phase 2:   1%|▏         | 6/479 [01:47<3:06:18, 23.63s/item, cost=$6.26, fail=5, id=450, ok=1][2026-05-19 13:13:51,660] src.orchestrator - INFO - Processing item 451 (multi_free, max_tokens=16384)...
+[2026-05-19 13:13:55,070] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:13:56,161] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:13:57,279] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-19 13:13:57,332] src.orchestrator - INFO -   → 3/3 (consensus: 0.129032258064516,0.193548387096774,0.209677419354)
+[2026-05-19 13:13:57,332] src.orchestrator - INFO -   → running cost: $6.28
+Phase 2:   1%|▏         | 6/479 [01:53<3:06:18, 23.63s/item, cost=$6.28, fail=5, id=451, ok=2]Phase 2:   1%|▏         | 7/479 [01:53<2:19:44, 17.76s/item, cost=$6.28, fail=5, id=451, ok=2][2026-05-19 13:13:57,334] src.orchestrator - INFO - Processing item 452 (single_free, max_tokens=16384)...
+[2026-05-19 13:13:58,391] httpx - INFO - HTTP Request: POST https://tritonai-api.ucsd.edu/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:13:58,885] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-19 13:13:58,993] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2026-05-19 13:13:59,014] src.orchestrator - INFO -   → 3/3 (consensus: 42)
+[2026-05-19 13:13:59,014] src.orchestrator - INFO -   → running cost: $6.28
+Phase 2:   1%|▏         | 7/479 [01:55<2:19:44, 17.76s/item, cost=$6.28, fail=5, id=452, ok=3]Phase 2:   2%|▏         | 8/479 [01:55<1:39:15, 12.64s/item, cost=$6.28, fail=5, id=452, ok=3][2026-05-19 13:13:59,015] src.orchestrator - INFO - Processing item 453 (single_free, max_tokens=16384)...
+[2026-05-19 13:14:16,277] httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+[2026-05-19 13:14:25,062] httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

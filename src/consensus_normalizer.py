@@ -96,7 +96,18 @@ def answers_match(a: str, b: str, tolerance: float = 0.01) -> bool:
     - LaTeX fraction equivalence (including decimal vs fraction)
 
     For multi-answers (comma-separated), compares element-wise.
+
+    Recursion guard: on RecursionError, falls back to literal string comparison.
     """
+    try:
+        return _answers_match_impl(a, b, tolerance)
+    except RecursionError:
+        # Fallback: compare as literal strings (no normalization)
+        return a.strip() == b.strip()
+
+
+def _answers_match_impl(a: str, b: str, tolerance: float = 0.01) -> bool:
+    """Implementation of answers_match with recursion."""
     if not a or not b:
         return a == b
 
@@ -114,7 +125,7 @@ def answers_match(a: str, b: str, tolerance: float = 0.01) -> bool:
         parts_b = _split_top_level_commas(nb)
         if len(parts_a) != len(parts_b):
             return False
-        return all(answers_match(pa, pb, tolerance) for pa, pb in zip(parts_a, parts_b))
+        return all(_answers_match_impl(pa, pb, tolerance) for pa, pb in zip(parts_a, parts_b))
 
     # Try numeric comparison (covers decimals, integers, simple fractions)
     # Also try to evaluate LaTeX fractions as decimals

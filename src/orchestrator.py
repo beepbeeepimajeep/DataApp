@@ -3,6 +3,7 @@ Main orchestration: load items, dispatch to 3 teachers, compute consensus.
 Resume-safe: skips already-completed items.
 """
 
+import sys
 import json
 import logging
 from pathlib import Path
@@ -14,6 +15,9 @@ from .extraction import DataAppExtractor
 from .prompts import build_messages, detect_question_type
 from .storage import Storage
 from .cost_tracker import CostTracker
+
+# Increase recursion limit to handle deep answer structures
+sys.setrecursionlimit(5000)
 
 logger = logging.getLogger(__name__)
 

@@ -1,0 +1,33 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+Let \( A \) be a set of 2025 positive real numbers. For a subset \( T \subseteq A \), define \( M_T \) as the median of \( T \) when all elements of \( T \) are arranged in increasing order, with the convention that \( M_\emptyset = 0 \). Define
+\[
+P(A) = \sum_{\substack{T \subseteq A \\ |T| \text{ odd}}} M_T, \quad Q(A) = \sum_{\substack{T \subseteq A \\ |T| \text{ even}}} M_T.
+\]Find the smallest real number \( C \) such that for any set \( A \) of 2025 positive real numbers, the following inequality holds:
+\[
+P(A) - Q(A) \leq C \cdot \max(A),
+\]where \(\max(A)\) denotes the largest element in \( A \).
+
+Problem type: single-answer.
+
+There is exactly one final answer. End with: \boxed{answer}
+```
+
+## Reasoning + Response
+
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 0
+- Output tokens: 0
+- Reasoning tokens: 0
+- Hit token cap: False
+- Finish reason: timeout
+- Generation time: 600.08s
+- Request ID: None
+
+**ERROR:** Timeout after 600s
+
+**TIMEOUT:** Item exceeded 10-minute hard limit.
