@@ -15,6 +15,7 @@ from .extraction import DataAppExtractor
 from .prompts import build_messages, detect_question_type
 from .storage import Storage
 from .cost_tracker import CostTracker
+from .consensus_normalizer import answers_match, answers_match_with_type
 
 # Increase recursion limit to handle deep answer structures
 sys.setrecursionlimit(5000)

@@ -154,7 +154,7 @@ def answers_match_with_type(a: str, b: str, tolerance: float = 0.01) -> tuple[bo
 def _normalize_aggressively(s: str) -> str:
     """Apply composed normalization pipeline.
 
-    Step A: Whitespace + escape normalization
+    Step A: Whitespace + escape + unit normalization
     Step B: LaTeX structural normalization
     Step C: Normalize to canonical forms
     """
@@ -162,17 +162,35 @@ def _normalize_aggressively(s: str) -> str:
     if not s:
         return ""
 
-    # Step A: Aggressive whitespace + escape normalization
-    # Strip all LaTeX space escapes to single space
-    s = re.sub(r'\\,', ',', s)       # \, → ,
-    s = re.sub(r'\\ ', ' ', s)       # \  → space
-    s = re.sub(r'\\;', ' ', s)       # \; → space
-    s = re.sub(r'\\!', '', s)        # \! → (remove)
+    # Step A: Aggressive whitespace + escape + unit normalization
+    # Strip trailing units (ft, lb, days, dollars, etc.)
+    s = re.sub(
+        r'\s*(ft|lb|lbs|days|dollars|hours|minutes|seconds|mm|cm|m|kg|oz)\s*$',
+        '',
+        s,
+        flags=re.IGNORECASE
+    )
+
+    # Strip all LaTeX space escapes
+    s = re.sub(r'\\,', '', s)        # \, (thin space) → (remove)
+    s = re.sub(r'\\ ', ' ', s)       # \  (backslash-space) → space
+    s = re.sub(r'\\;', ' ', s)       # \; (medium space) → space
+    s = re.sub(r'\\!', '', s)        # \! (negative space) → (remove)
     s = re.sub(r'\\quad', ' ', s)    # \quad → space
     s = re.sub(r'\\qquad', '  ', s)  # \qquad → 2 spaces
-    s = s.replace('~', ' ')          # ~ → space
+    s = s.replace('~', ' ')          # ~ (tie/non-breaking space) → space
+
+    # Strip "approximately" language before LaTeX processing
+    s = re.sub(r'\s*\(?approximately\)?\s*', '', s, flags=re.IGNORECASE)
+    s = re.sub(r'\s*\(approx[.\s]*\)', '', s, flags=re.IGNORECASE)
 
     # Step B: LaTeX structural normalization (before whitespace collapse)
+    # Remove braces around sqrt to avoid nested-brace matching issues
+    # \sqrt{3} → \sqrt3 (allows \frac{\sqrt{3}}{2} → \frac{\sqrt3}{2} → \sqrt3/2)
+    s = re.sub(r'\\sqrt\{(\d+)\}', r'\\sqrt\1', s)
+
+    # Normalize LaTeX fraction shorthand: \frac34 → \frac{3}{4}
+    s = re.sub(r'\\frac\s*(\d)\s*(\d)', r'\\frac{\1}{\2}', s)
     # \frac{a}{b} → a/b
     s = re.sub(
         r'\\frac\s*\{\s*([^}]+)\s*\}\s*\{\s*([^}]+)\s*\}',
