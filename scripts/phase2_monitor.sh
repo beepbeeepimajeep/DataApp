@@ -10,9 +10,19 @@ LOG_FILE="logs/phase2_full.log"
 MANIFEST_FILE="dataapp_outputs/dataset_manifest.jsonl"
 PID_FILE="/tmp/phase2.pid"
 
-# Helper: read PID
+# Helper: read PID, fallback to finding process
 get_pid() {
-    [ -f "$PID_FILE" ] && cat "$PID_FILE" || echo ""
+    local pid_from_file=""
+    [ -f "$PID_FILE" ] && pid_from_file=$(cat "$PID_FILE" 2>/dev/null)
+
+    # If file has PID and it's alive, use it
+    if [ ! -z "$pid_from_file" ] && kill -0 "$pid_from_file" 2>/dev/null; then
+        echo "$pid_from_file"
+        return
+    fi
+
+    # Otherwise search for running run_full.py process
+    pgrep -f "run_full.py" 2>/dev/null | head -1
 }
 
 # Helper: check if process alive
