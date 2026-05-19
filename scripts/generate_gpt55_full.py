@@ -234,6 +234,7 @@ def main():
     parser.add_argument("--limit", type=int, default=None, help="Limit to N items (smoke mode)")
     parser.add_argument("--start-id", type=int, default=None, help="Start at specific item ID")
     parser.add_argument("--workers", type=int, default=15, help="Number of concurrent workers")
+    parser.add_argument("--item-ids-file", type=str, default=None, help="JSON file with list of item IDs to process")
     parser.add_argument("--dry-run", action="store_true", help="Print what would be done, no API calls")
     args = parser.parse_args()
 
@@ -252,6 +253,13 @@ def main():
 
     # Filter to items to process
     to_process = [i for i in all_items if i["id"] not in completed]
+
+    if args.item_ids_file:
+        # Load specific item IDs from file (for smoke tests)
+        with open(args.item_ids_file) as f:
+            item_ids = json.load(f)
+        to_process = [i for i in to_process if i["id"] in item_ids]
+        logger.info(f"Filtered to {len(to_process)} items from {args.item_ids_file}")
 
     if args.start_id:
         to_process = [i for i in to_process if i["id"] >= args.start_id]
