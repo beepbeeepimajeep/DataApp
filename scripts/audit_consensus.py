@@ -157,6 +157,80 @@ def candidate_e_backslash_escapes(a: str, b: str) -> bool:
     return na == nb
 
 
+def candidate_f_composed_pipeline(a: str, b: str, tol: float = 0.01) -> bool:
+    """(f) Composed pipeline: whitespace → escapes → LaTeX → coordinates → compare."""
+    def normalize_composed(s):
+        s = s.strip()
+        # Step 1: Whitespace collapse
+        s = re.sub(r'\s+', ' ', s)
+        # Step 2: Backslash-escape stripping
+        s = re.sub(r'\\,', ',', s)
+        s = re.sub(r'\\ ', '', s)
+        s = re.sub(r'\\;', '', s)
+        s = re.sub(r'\\!', '', s)
+        # Step 3: LaTeX normalization
+        s = re.sub(
+            r'\\frac\s*\{\s*([^}]+)\s*\}\s*\{\s*([^}]+)\s*\}',
+            r'\1/\2',
+            s
+        )
+        s = re.sub(r'\\infty', 'inf', s, flags=re.IGNORECASE)
+        s = re.sub(r'\\displaystyle', '', s)
+        s = re.sub(r'\\text\s*\{\s*([^}]*)\s*\}', r'\1', s)
+        s = re.sub(r'\\mathrm\s*\{\s*([^}]*)\s*\}', r'\1', s)
+        # Collapse internal whitespace again after LaTeX processing
+        s = re.sub(r'\s+', '', s)
+        return s
+
+    def extract_coords(s):
+        """Extract (a, b) or [a, b] coordinates."""
+        s = s.strip()
+        # Try parentheses
+        m = re.match(r'^\(([^,]+),([^)]+)\)$', s)
+        if m:
+            try:
+                x = float(m.group(1).strip())
+                y = float(m.group(2).strip())
+                return (x, y)
+            except ValueError:
+                pass
+        # Try brackets
+        m = re.match(r'^\[([^,]+),([^\]]+)\]$', s)
+        if m:
+            try:
+                x = float(m.group(1).strip())
+                y = float(m.group(2).strip())
+                return (x, y)
+            except ValueError:
+                pass
+        return None
+
+    def within_tol(v1, v2):
+        if v2 == 0:
+            return abs(v1) < tol
+        rel_err = abs(v1 - v2) / max(abs(v1), abs(v2), 1e-10)
+        return rel_err < tol
+
+    # Normalize both
+    na = normalize_composed(a)
+    nb = normalize_composed(b)
+
+    # Step 5a: Exact match after normalization
+    if na == nb:
+        return True
+
+    # Step 5b: Try coordinate extraction
+    ca = extract_coords(na)
+    cb = extract_coords(nb)
+    if ca and cb:
+        xa, ya = ca
+        xb, yb = cb
+        return within_tol(xa, xb) and within_tol(ya, yb)
+
+    # Step 5c: Fallback to normalized string comparison
+    return na == nb
+
+
 def compute_consensus_with_matcher(extractions: dict, matcher_fn) -> dict:
     """Compute agreement using a custom matcher function instead of answers_match."""
     # Exclude empty extractions
@@ -213,6 +287,7 @@ def main():
         ("(c) Coordinate pairs (parens+brackets)", candidate_c_coordinate_pairs_brackets),
         ("(d) LaTeX normalizations", candidate_d_latex_normalizations),
         ("(e) Backslash-escape stripping", candidate_e_backslash_escapes),
+        ("(f) Composed pipeline", candidate_f_composed_pipeline),
     ]
 
     print("=" * 80)
