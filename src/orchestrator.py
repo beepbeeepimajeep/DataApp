@@ -55,13 +55,17 @@ def compute_consensus(extractions: dict) -> dict:
     """
     Compute agreement type using normalized comparison for cross-teacher matching.
 
+    Parametric over N teachers. Agreement type is reported as 'N/M' where M is
+    the number of non-empty teacher extractions and N is the size of the largest
+    agreement group. Backward-compatible with prior 3-teacher use.
+
     Args:
         extractions: {teacher_key: extracted_answer, ...}
 
     Returns:
         {
-            "type": "3/3" | "2/3" | "1/3" | "0/3",
-            "which_agreed": [teacher_keys],
+            "type": "N/M" (e.g. "4/4", "3/4", "2/3", "1/4", "0/0"),
+            "which_agreed": [teacher_keys] (members of largest agreement group),
             "answer": consensus_answer (RAW, from first teacher in largest group)
         }
     """
@@ -71,7 +75,7 @@ def compute_consensus(extractions: dict) -> dict:
     valid = {t: a for t, a in extractions.items() if a}
 
     if not valid:
-        return {"type": "0/3", "which_agreed": [], "answer": ""}
+        return {"type": "0/0", "which_agreed": [], "answer": ""}
 
     teachers = list(valid.keys())
     answers = list(valid.values())
@@ -94,13 +98,10 @@ def compute_consensus(extractions: dict) -> dict:
     # Find largest group
     largest = max(groups, key=len)
     count = len(largest)
+    total = len(valid)
 
-    if count == 3:
-        type_str = "3/3"
-    elif count == 2:
-        type_str = "2/3"
-    else:
-        type_str = "1/3"
+    # Parametric agreement type: N/M where N is agreement count, M is total valid teachers
+    type_str = f"{count}/{total}"
 
     # Use RAW answer from first teacher in largest group
     consensus_answer = valid[largest[0]]
