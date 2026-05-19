@@ -276,6 +276,7 @@ def main():
     parser = argparse.ArgumentParser(description="Retry GPT-5.4 for missing items")
     parser.add_argument("--dry-run", action="store_true", help="Identify items, no API calls")
     parser.add_argument("--max-items", type=int, default=None, help="Limit to N items")
+    parser.add_argument("--item-ids", type=str, default=None, help="Comma-separated item IDs to retry (overrides max-items)")
     args = parser.parse_args()
 
     logger.info("=== GPT-5.4 Retry for Missing Items ===")
@@ -293,8 +294,13 @@ def main():
         logger.info("No items to retry. Exiting.")
         return 0
 
-    # Filter if requested
-    if args.max_items:
+    # Filter by specific IDs if requested
+    if args.item_ids:
+        target_ids = set(int(x.strip()) for x in args.item_ids.split(","))
+        missing = [e for e in missing if e["id"] in target_ids]
+        logger.info(f"Filtered to {len(missing)} items by ID: {sorted(target_ids)}")
+    # Filter by max-items if requested
+    elif args.max_items:
         missing = missing[:args.max_items]
         logger.info(f"Limited to {args.max_items} items")
 
