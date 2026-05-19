@@ -1,12 +1,31 @@
 """
-Normalization layer for cross-teacher answer comparison.
+Consensus comparison for teacher answer agreement.
 
-Used ONLY for consensus computation. Raw extraction stays unchanged for Kaggle.
-Handles formatting differences: whitespace, units, LaTeX variants, numeric tolerance.
+SCOPE BOUNDARY:
+This module's matching logic determines whether teachers SEMANTICALLY
+agree (e.g., (a,b) vs [a,b] with same numerical values are considered
+agreement). This is for correctness labeling (Ticket 5).
+
+IT IS NOT a canonical format normalizer for training data construction
+(Ticket 6). For Kaggle grading, format matters:
+- Order within items matters (set-matched items may have different order)
+- LaTeX vs decimal precision conventions must match gold exactly
+- Parentheses vs brackets vs braces have different Kaggle interpretations
+
+When agreement_via == "set_match" or "coord_pair", items agree on
+VALUES but not on FORMAT. Ticket 6 (SFT data construction) must apply
+canonical format normalization on selected traces, not rely on this
+module for that.
+
+Raw extraction stays unchanged in outputs. This module ONLY affects
+consensus voting, not final answer representation.
 """
 
 import re
 import math
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def _split_top_level_commas(s: str) -> list[str]:
@@ -98,12 +117,38 @@ def answers_match(a: str, b: str, tolerance: float = 0.01) -> bool:
     - LaTeX fraction equivalence (including decimal vs fraction)
 
     Recursion guard: on RecursionError, falls back to literal string comparison.
+
+    For match type tracking, use answers_match_with_type() instead.
+    """
+    try:
+        result, _ = _answers_match_impl(a, b, tolerance)
+        return result
+    except RecursionError:
+        # Fallback: compare as literal strings (no normalization)
+        return a.strip() == b.strip()
+
+
+def answers_match_with_type(a: str, b: str, tolerance: float = 0.01) -> tuple[bool, str]:
+    """Compare answers and return match type for agreement tracking.
+
+    Returns:
+        (match: bool, match_type: str)
+
+    match_type is one of:
+      - "exact": raw strings equal after strip
+      - "normalized": matched after escape/whitespace/LaTeX normalization
+      - "coord_pair": matched via coordinate-pair extraction + tolerance
+      - "set_match": matched as unordered sets (multi-answer)
+      - "numeric": matched as numbers within tolerance
+      - "no_match": did not match
     """
     try:
         return _answers_match_impl(a, b, tolerance)
     except RecursionError:
-        # Fallback: compare as literal strings (no normalization)
-        return a.strip() == b.strip()
+        # Fallback: compare as literal strings
+        if a.strip() == b.strip():
+            return (True, "fallback_literal")
+        return (False, "no_match")
 
 
 def _normalize_aggressively(s: str) -> str:
@@ -199,27 +244,34 @@ def _coordinates_equal(
     return within_tol(x1, x2) and within_tol(y1, y2)
 
 
-def _answers_match_impl(a: str, b: str, tolerance: float = 0.01) -> bool:
-    """Implementation of answers_match with composed pipeline."""
+def _answers_match_impl(
+    a: str, b: str, tolerance: float = 0.01
+) -> tuple[bool, str]:
+    """Implementation of answers_match with composed pipeline.
+
+    Returns:
+        (match: bool, match_type: str)
+    """
     # Apply composed normalization first
     na = _normalize_aggressively(a)
     nb = _normalize_aggressively(b)
 
     # After normalization, check for empty/falsy
     if not na and not nb:
-        return True
+        return (True, "exact")
     if not na or not nb:
-        return False
+        return (False, "no_match")
 
     # Exact match after normalization
     if na == nb:
-        return True
+        return (True, "normalized")
 
     # Try coordinate pair matching (both must be pairs)
     coord_a = _try_extract_coordinate_pair(na)
     coord_b = _try_extract_coordinate_pair(nb)
     if coord_a and coord_b:
-        return _coordinates_equal(coord_a, coord_b, tolerance)
+        if _coordinates_equal(coord_a, coord_b, tolerance):
+            return (True, "coord_pair")
 
     # Multi-answer comparison: handle as sets (order-independent)
     if ',' in na and ',' in nb:
@@ -228,7 +280,7 @@ def _answers_match_impl(a: str, b: str, tolerance: float = 0.01) -> bool:
 
         # Set comparison: same elements regardless of order
         if len(parts_a) != len(parts_b):
-            return False
+            return (False, "no_match")
 
         # Match each element from parts_a to parts_b
         # Using set matching (each element must have a match)
@@ -237,13 +289,14 @@ def _answers_match_impl(a: str, b: str, tolerance: float = 0.01) -> bool:
             found = False
             for i, pb in enumerate(parts_b):
                 if i not in used_b:
-                    if _answers_match_impl(pa, pb, tolerance):
+                    match_result, _ = _answers_match_impl(pa, pb, tolerance)
+                    if match_result:
                         used_b.add(i)
                         found = True
                         break
             if not found:
-                return False
-        return True
+                return (False, "no_match")
+        return (True, "set_match")
 
     # Single element comparison: try numeric
     va = _try_parse_numeric(na)
@@ -255,10 +308,11 @@ def _answers_match_impl(a: str, b: str, tolerance: float = 0.01) -> bool:
         vb = _try_eval_latex_frac(nb)
 
     if va is not None and vb is not None:
-        return _numeric_equal(va, vb, tolerance)
+        if _numeric_equal(va, vb, tolerance):
+            return (True, "numeric")
 
     # No match
-    return False
+    return (False, "no_match")
 
 
 def _try_parse_numeric(s: str) -> float | None:

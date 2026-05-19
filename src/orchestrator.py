@@ -70,37 +70,52 @@ def compute_consensus(extractions: dict) -> dict:
         {
             "type": "N/M" (e.g. "4/4", "3/4", "2/3", "1/4", "0/0"),
             "which_agreed": [teacher_keys] (members of largest agreement group),
-            "answer": consensus_answer (RAW, from first teacher in largest group)
+            "answer": consensus_answer (RAW, from first teacher in largest group),
+            "agreement_via": match type used in largest group (e.g. "exact", "normalized")
         }
     """
-    from .consensus_normalizer import answers_match
-
     # Exclude empty extractions
     valid = {t: a for t, a in extractions.items() if a}
 
     if not valid:
-        return {"type": "0/0", "which_agreed": [], "answer": ""}
+        return {
+            "type": "0/0",
+            "which_agreed": [],
+            "answer": "",
+            "agreement_via": "none",
+        }
 
     teachers = list(valid.keys())
     answers = list(valid.values())
 
-    # Build agreement groups using pairwise normalized matching
+    # Build agreement groups using pairwise normalized matching with type tracking
     groups = []
+    group_match_types = []
     assigned = set()
+
     for i, t in enumerate(teachers):
         if t in assigned:
             continue
         group = [t]
+        match_types = set()
         assigned.add(t)
+
         for j in range(i + 1, len(teachers)):
             if teachers[j] not in assigned:
-                if answers_match(answers[i], answers[j]):
+                match_result, match_type = answers_match_with_type(
+                    answers[i], answers[j]
+                )
+                if match_result:
                     group.append(teachers[j])
+                    match_types.add(match_type)
                     assigned.add(teachers[j])
+
         groups.append(group)
+        group_match_types.append(match_types)
 
     # Find largest group
-    largest = max(groups, key=len)
+    largest_idx = max(range(len(groups)), key=lambda i: len(groups[i]))
+    largest = groups[largest_idx]
     count = len(largest)
     total = len(valid)
 
@@ -110,10 +125,40 @@ def compute_consensus(extractions: dict) -> dict:
     # Use RAW answer from first teacher in largest group
     consensus_answer = valid[largest[0]]
 
+    # Determine agreement_via for the largest group
+    if count == 1:
+        # Solo: only one teacher in group
+        agreement_via = "solo"
+    elif not group_match_types[largest_idx]:
+        # No inter-group matches recorded (shouldn't happen)
+        agreement_via = "exact"
+    else:
+        # Return the most common match type, or join them
+        match_types = group_match_types[largest_idx]
+        if len(match_types) == 1:
+            agreement_via = list(match_types)[0]
+        else:
+            # Multiple match types: prefer in order
+            preference_order = [
+                "exact",
+                "normalized",
+                "coord_pair",
+                "numeric",
+                "set_match",
+            ]
+            for preferred in preference_order:
+                if preferred in match_types:
+                    agreement_via = preferred
+                    break
+            else:
+                # Fallback: join them
+                agreement_via = "+".join(sorted(match_types))
+
     return {
         "type": type_str,
         "which_agreed": largest,
         "answer": consensus_answer,
+        "agreement_via": agreement_via,
     }
 
 
@@ -293,6 +338,7 @@ class DataAppOrchestrator:
             "gpt_oss_answer_raw": extractions.get("gpt_oss", ""),
             "sonnet_answer_raw": extractions.get("sonnet", ""),
             "agreement_type": consensus["type"],
+            "agreement_via": consensus["agreement_via"],
             "which_agreed": consensus["which_agreed"],
             "consensus_answer": consensus["answer"],
             "any_errors": any(results[t].get("error") for t in self.teacher_keys),
