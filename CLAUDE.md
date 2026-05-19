@@ -60,6 +60,90 @@ This distinction matters:
 
 ---
 
+## AUTHORIZATION GATES
+
+claude_dataApp NEVER autonomously launches operations that:
+- Process more than 5 items
+- Make API calls outside a smoke test
+- Resume a paused pipeline
+- Restart a killed process
+
+Every scaled operation requires Rain's EXPLICIT "proceed" in chat. 
+"Skip-and-continue" or "ready to proceed" pattern is FORBIDDEN — 
+claude_dataApp reports, then STOPS, then waits for authorization 
+before the next billable operation.
+
+If claude_dataApp finds a process running unexpectedly, the response 
+is: "I see process X running, status Y, what should I do?" — never 
+"I'll restart it cleanly."
+
+If a long-running process appears stalled, claude_dataApp checks 
+manifest timestamps, log activity, and PID liveness BEFORE concluding 
+"stalled." A process can be active and producing output while not 
+logging visibly for minutes at a time.
+
+KILL ONLY ON AUTHORIZATION. Even apparently-stuck processes get 
+reported, not killed. Lost forensic data is irrecoverable.
+
+---
+
+## COST DISCIPLINE
+
+Local cost_log.jsonl is ESTIMATES, NOT TRUTH. The OpenAI Python SDK 
+undercounts billed tokens by ~2.4x for GPT-5.4 and GPT-5.5 (likely 
+all GPT-5 family). Local cost is for relative comparison and 
+debugging only.
+
+Ground truth = Admin API via scripts/check_spend.py. Verify before 
+and after every operation that spends OpenAI credits.
+
+Before any operation that may spend >$5:
+1. Run check_spend.py — record baseline
+2. Run operation
+3. Run check_spend.py — verify actual cost in expected range
+4. If actual is >20% above projected: STOP and report
+
+Admin API has bucket-boundary quirks:
+- Buckets are UTC-day boundaries, not local
+- If "today" in PDT spans two UTC days, expect 2 buckets to inspect
+- Costs API has reporting lag (sometimes hours)
+- For real-time spend, use Usage API + multiply tokens × known rates
+
+Budget framing rules:
+- "Available" = credit balance shown on dashboard (already net of spent)
+- Do NOT subtract today's spend from credit balance — it's already deducted
+- "Monthly cap" is a separate ceiling, not the budget
+
+---
+
+## TEST BEFORE SCALE
+
+Any operation processing >5 items requires a smoke first that:
+- Exercises the actual code path (not just the API endpoint)
+- Targets a known failure-mode input where one exists
+- Verifies output quality, not just "no crash"
+
+Smoke checklist:
+- 1-item smoke first (under $0.50 cost)
+- 5-item smoke second (mix of question types / known-hard items)
+- ONLY then full scale
+
+Smoke pass criteria:
+- No crashes
+- Actual cost within 30% of projection
+- Output content is sensible (not just non-empty)
+- Recursion/error fallback paths fire when expected on known-bad inputs
+- Agreement/consensus values match what a human inspection would say
+
+"Smoke didn't crash" is NOT pass. Smoke must demonstrate the failure-mode 
+fix actually works in production, not just in isolated unit tests.
+
+Default concurrency is FORBIDDEN. Every scaled operation specifies 
+--workers N explicitly. If --workers flag doesn't exist, build it before 
+running.
+
+---
+
 ## CODE RULES
 
 - Type hints on function signatures
@@ -83,6 +167,15 @@ This distinction matters:
 - Skip prose-restatement when asked to verify a math claim
 - Treat INCONCLUSIVE as "verified wrong"
 - Run analysis inline without committing the script
+- Launch any operation processing >5 items without explicit "proceed" from Rain in chat
+- Kill or restart a running process without first reporting its state
+- Restart a stalled process without authorization
+- Conclude a process is "stalled" without checking manifest timestamps and PID liveness
+- Trust local cost_log as actual spend (it's 2.4x undercount on GPT-5)
+- Subtract today's spend from credit balance when computing remaining budget (credit balance is already net)
+- Use default concurrency on any scaled API operation
+- Mark items as low-agreement without verifying answers_match handled the comparison correctly (numerical tolerance, interval formats)
+- Run a smoke without verifying it exercised the failure-mode it was meant to test
 
 **Code:**
 - Rewrite extraction logic when judger.py has it working
@@ -105,6 +198,12 @@ This distinction matters:
 - Changing output structure
 - Adding/removing a teacher
 - Drawing conclusions that contradict frontier-model priors
+- Launching any operation processing >5 items
+- Resuming a paused pipeline
+- Restarting a killed process
+- Re-running an operation that previously failed
+- Spending decisions based on local cost_log alone
+- Any operation projected to cost >$5
 
 ## DO NOT ASK RAIN ABOUT
 
@@ -140,6 +239,11 @@ not actionable.
 2. Phase 1 complete — full metrics + threshold gates + commit SHA
 3. Phase 2 progress at 250 / 500 / 750 / complete (each milestone committed)
 4. Final manifest ready
+
+**Process status reporting:**
+- When checking a running process, report: PID alive (Y/N), manifest count, manifest mtime, log mtime — not just "ps showed nothing"
+- After every billing operation: report check_spend.py result, not just the local cost_log estimate
+- When a smoke "passes", report what was actually exercised — not just "no errors"
 
 ---
 
@@ -187,6 +291,74 @@ cycle = total loss.
 
 Lesson: git push is part of "done" — not optional. See Implementation 
 Arm Health rules above.
+
+**2026-05-19: $15 burn from default concurrency Phase 2 launch.**
+
+After fixing the answers_match() recursion bug, Phase 2 was relaunched 
+without smoke test and with default concurrency. 5 of 7 items crashed 
+on the same recursion path the fix was supposed to handle (because 
+fresh API outputs hit a different code path). Cost: ~$15 actual, $6.28 
+logged.
+
+Lesson: Every scaled operation gets a smoke that EXERCISES THE FIX, not 
+just verifies "process starts and runs."
+
+**2026-05-19: Unauthorized Phase 2 launch between turns.**
+
+While Rain was reviewing smoke output, claude_dataApp launched Phase 2 
+without authorization. Logs show activity at 13:37 between an authorized 
+smoke and the next Rain prompt. When questioned, claude_dataApp didn't 
+recognize its own running process and tried to "restart fresh."
+
+Lesson: NO operation launches between Rain prompts. Wait for explicit 
+"proceed."
+
+**2026-05-19: Kill-and-restart of running Phase 2.**
+
+claude_dataApp interpreted a Phase 2 process as "stalled after 2-3 items" 
+based on a single `ps` check showing no output. The process was actually 
+running but between log writes. claude_dataApp killed it and tried to 
+restart with `rm logs/phase2_full.log` (destroying forensic data) and 
+default concurrency (no --workers flag).
+
+Lesson: Stalled ≠ slow logging. Before killing, check: PID alive, 
+manifest mtime, log file mtime, manifest count vs N minutes ago. If 
+unclear, REPORT to Rain, don't act.
+
+**2026-05-19: OpenAI SDK reasoning_tokens undercount discovered.**
+
+Cost log undercounted actual billing by 2.4-2.5x for both GPT-5.4 and 
+GPT-5.5 (likely a Chat Completions API field-extraction issue with 
+completion_tokens_details.reasoning_tokens). Spent today reached $77 
+when local log said $22.
+
+Lesson: Local cost_log is for relative comparison only. Admin API via 
+check_spend.py is the only source of truth for spend decisions.
+
+**2026-05-19: Date bucket misinterpretation in Admin API.**
+
+Costs API was queried with rolling 24h windows. Today's spend ($76) 
+appeared in the May 19-20 UTC bucket but claude_dataApp reported it 
+as "$0 today" because it labeled buckets by start_time and the 
+earlier query window cut off before today's UTC midnight.
+
+Lesson: When querying Costs API, query a wider window (7 days minimum) 
+and inspect raw bucket timestamps in UTC. Don't trust date labels 
+derived from local timezone.
+
+**2026-05-19: False-disagreement labeling on coordinate-pair answers.**
+
+Smoke item 74 had three teacher answers all expressing the same 
+interval `(12.30, 25.10)`, `(12.3, 25.1)`, `[12.306, 25.094]` — 
+semantically equivalent. consensus_normalizer.answers_match marked 
+them as 1/3 disagreement. Root cause: answers_match doesn't decompose 
+parenthesized coordinate pairs for element-wise numerical comparison. 
+Treats "(12.30, 25.10)" as opaque string.
+
+Lesson: When agreement_type comes out lower than expected, INSPECT the 
+raw teacher answers and verify the comparison logic handled them. 
+Silent false-disagreement contaminates training data. Add coordinate-pair 
+handling to answers_match in Ticket 5 prep.
 
 ---
 
