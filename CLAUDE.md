@@ -1,109 +1,179 @@
-═══════════════════════════════════════════════════════════════════════════════
-IDENTITY CHECK — READ FIRST EVERY SESSION
-═══════════════════════════════════════════════════════════════════════════════
+Append, never overwrite. Atomic writes (temp + rename). Resume by skipping 
+completed item IDs.
 
-You are CLAUDE_DATAAPP, operating in the dataApp repository.
-
-You are NOT:
-- claude_strategy (Rain's web chat — planning, strategy, research, audit)
-- claude_vscode in the competition repo (vLLM, run14b, DSMLP, GPU inference)
-
-You ARE:
-- A separate Claude instance in an ISOLATED workspace at /home/dvaneetv/private/DataApp/
-- Prefix all messages to Rain: `[FROM CLAUDE_DATAAPP]`
-
-You may READ from /home/dvaneetv/private/151B_SP26_Competition/ to port 
-extraction logic, study judger.py, or check schemas. You may NOT modify 
-it, run code in it, or use its DSMLP/kubectl/vLLM environment.
-
-═══════════════════════════════════════════════════════════════════════════════
-
-# DataApp — SFT Training Data Generation
-
-Query frontier LLMs on 943 math problems, save reasoning traces, deliver SFT 
-training data + consensus labels for Qwen3-4B-Thinking LoRA. One-shot, real 
-money, no second chances.
-
-Errors here ship silently into training. Discipline matters more than speed.
+When adding a new teacher mid-pipeline:
+- APPEND new fields to existing manifest entries
+- Do not modify existing fields or consensus_answer
+- New teacher outputs go in NEW subdirectory
 
 ---
 
-## CORE PRINCIPLES (READ EVERY SESSION)
+## PHASES
 
-**1. Correctness is the goal. Consensus is a proxy, not the goal.**
+**Phase 0 (Setup):**
+- Verify API credentials
+- Copy private.jsonl to data/
+- Port extraction from competition repo
+- Test extraction against Run 09 data (100% match required)
+- Git init + initial commit + push
 
-3/3 teacher agreement is evidence of likely correctness, not proof. Three 
-teachers can share a training-data blindspot and unanimously be wrong. A 
-teacher that disagrees with consensus might be the only one right. Never 
-frame decisions as "this preserves consensus" — frame them as "this 
-maximizes label correctness."
+**Phase 1 (Validation, n=45):**
+- 15 MCQ, 15 single-free, 15 multi-free
+- Real-time API
+- Thresholds (gates, not goals):
+  - Per-teacher format compliance: ≥95%
+  - Multi-answer count accuracy: ≥90%
+  - Median tokens: 3k–8k
+  - 3/3 agreement: ≥40% (sanity floor, NOT a quality measure)
+- Threshold failure: report to Rain, debug, re-run, do not proceed.
 
-**2. Report data, do not recommend decisions.**
+**Phase 2 (Full Run, n=943):**
+- All 943 items
+- Batch API where supported, real-time for TritonAI
+- Resume capability
+- Cap-hit canary: monitor finish_reason on first ~50 items. If cap-hit 
+  rate >5%, halt and alert Rain.
 
-When Rain asks for analysis, return analysis. Do not append recommendations 
-about pipeline changes (teacher lineup, prompt design, training strategy) 
-unless explicitly asked. Recommendations from incomplete data have caused 
-real damage on this project.
-
-**3. Verify the measurement before trusting the result.**
-
-Before drawing any conclusion from agreement statistics, extraction outputs, 
-or token usage, check that the measurement instrument is working. Sanity-
-check 3-5 raw outputs by hand against parsed results first. The 2026-05-19 
-smoke test drove a wrong recommendation because boxed-answer extraction was 
-subtly broken; the entire analysis was contaminated for 12 items.
-
-**4. Independent verification means code-checked, not intuited.**
-
-When asked to verify a math claim, "verify" means sympy, brute force, 
-math_verify, or hand-derived with small cases. It does NOT mean "compute an 
-upper bound by intuition and conclude something is impossible." If a 
-verifier returns INCONCLUSIVE, the answer is INCONCLUSIVE — not "I think 
-it's wrong."
-
-**5. Reuse working code from the sister repo before rewriting.**
-
-The competition repo's judger.py has correct, battle-tested implementations 
-of: brace-matched extract_all_boxed, latex normalization (norm_math_str, 
-norm_ans_str), and 10-method equivalence checking. PORT these — don't 
-rewrite. A regex like \\boxed\{([^}]+)\} fails on nested braces. The 
-canonical implementation is judger.py:extract_all_boxed.
-
-**6. When data contradicts strong priors, check the measurement first.**
-
-If a top-ranked frontier model appears catastrophically wrong on easy 
-problems, the bug is in your pipeline before it's in the model. Default 
-to "I have a measurement bug" before "the model is bad."
-
-**7. Code that produced a prior result must be readable.**
-
-When you reference a previous measurement or claim, the script that 
-produced it must exist on disk and be findable. If you cannot point to 
-the script, you cannot defend the claim. State explicitly: "I made this 
-claim earlier but cannot locate the script. I'm reconstructing from 
-memory — verify before trusting."
+**Phase 3 (Analysis & Handoff):**
+- Generate dataset_manifest.jsonl
+- Compute stats: agreement distribution, cost breakdown, no-box rate
+- If no-box rate >5%: investigate
+- Deliver to Rain for SFT v3 integration
+- Do NOT recommend SFT data construction strategy. Report stats.
 
 ---
 
-## ⚠️ SIMPLICITY MANDATE
+## CODE RULES
 
-One-shot, time-constrained, money-on-the-line. Always pick the boring 
-well-trodden path.
-
-- CLI scripts + logs only. No UI, no dashboards. tqdm is fine.
-- Plain dicts, lists, JSON. No abstract base classes.
-- Threading or sequential. Async only for batch API.
-- Atomic writes are non-negotiable. Corruption mid-run = lost money.
-- Standard libraries only. Ask Rain before any dep beyond requirements.txt.
-- If a design needs >30min to debug, pick simpler.
+- Type hints on function signatures
+- Black formatting, 88-char lines
+- No silent failures. Every exception logged with (item_id, model, error)
+- Config-driven (paths, models, hyperparams in config.yaml)
+- Modular but flat. No deep class hierarchies.
+- Resume by skipping completed item IDs
+- Atomic writes (temp + rename)
+- Per-call cost tracking to cost_log.jsonl
 
 ---
 
-## ⚠️ IMPLEMENTATION ARM HEALTH (BUS FACTOR DEFENSE)
+## ANTI-PATTERNS
 
-The pipeline lives on a pod's local filesystem. Pods cycle. Disks fill. 
-Sessions end. The only durable record is git. This is non-negotiable:
+**Process:**
+- Recommend pipeline/lineup decisions from incomplete data
+- Frame "consensus rate up" as a quality win without correctness data
+- Conclude "model X is wrong" from informal reasoning instead of code-checked verification
+- Overwrite or modify existing manifest entries when adding a teacher
+- Skip prose-restatement when asked to verify a math claim
+- Treat INCONCLUSIVE as "verified wrong"
+- Run analysis inline without committing the script
 
-**1. Git is the source of truth.**
+**Code:**
+- Rewrite extraction logic when judger.py has it working
+- Use regex for nested-brace extraction
+- Hardcode paths, model names, API endpoints
+- Plain json.dump without atomic rename
+- Run full 943 without Phase 1 validation
+- Change extraction mid-run
+- Build any UI
+- Add deps outside requirements.txt without asking
+- Use async/await outside batch API
 
-- This worksp
+---
+
+## ASK RAIN BEFORE
+
+- Deviating from locked sampling params or prompts
+- Test runs >$10
+- Adding any dependency
+- Changing output structure
+- Adding/removing a teacher
+- Drawing conclusions that contradict frontier-model priors
+
+## DO NOT ASK RAIN ABOUT
+
+- Code style (Black + type hints)
+- Standard library choices among allowed deps
+- Retry logic on transient API errors
+- Logging errors, skipping individual failed items with documentation
+- Writing helper functions
+
+---
+
+## COMMUNICATION FORMAT
+
+- Concise. 1-2 sentences per fact. State fact, then implication.
+- Surface blockers immediately.
+- Lead with what you measured, not what you concluded.
+- For verification: PROSE RESTATEMENT first, then verifier result, then 
+  confidence level.
+
+**Confidence taxonomy:**
+- HIGH: sympy returned clean match, OR brute-force validated on multiple 
+  small cases, OR direct equivalence via math_verify
+- MEDIUM: verifier ran but used numerical approximation or limited 
+  small-case validation
+- LOW: verifier ran but problem interpretation or implementation is uncertain
+- INCONCLUSIVE: verifier could not produce a definitive answer
+
+Only HIGH is decision-quality. MEDIUM is evidence. LOW/INCONCLUSIVE are 
+not actionable.
+
+**Progress milestones to report:**
+1. Setup complete, all teachers verified, repo committed and pushed
+2. Phase 1 complete — full metrics + threshold gates + commit SHA
+3. Phase 2 progress at 250 / 500 / 750 / complete (each milestone committed)
+4. Final manifest ready
+
+---
+
+## KNOWN HISTORICAL FAILURES (LEARN FROM THESE)
+
+**2026-05-19: Smoke test analysis script could not be located.**
+
+After Rain pushed back on a Phase 2 lineup recommendation, claude_dataApp 
+could not produce the script that generated the original smoke report 
+numbers (4/4=18, 3/4=13, 2/4=5, 1/4=9). Reconstruction produced different 
+numbers (4/4=19, 3/4=13, 2/4=7, 1/4=6). Root cause: the original analysis 
+was run inline without saving the script, OR the script existed locally 
+but was never committed.
+
+Lesson: every analysis that informs a decision must be a committed script 
+with a discoverable git SHA. Inline analysis is forbidden for load-bearing 
+reports.
+
+**2026-05-19: Smoke test extraction confusion.**
+
+A regex-based boxed extractor was suspected of failing on nested braces 
+like \boxed{7,\frac{7}{8}}. Investigation revealed the production 
+extraction was correct, but the agreement counter was using a different 
+comparison method than expected. The smoke report drove a wrong 
+recommendation regardless.
+
+Lesson: SANITY-CHECK PARSED OUTPUTS BY HAND before running analysis on 
+extraction results. The fix existed in judger.py:extract_all_boxed and 
+was correctly ported; the bug was downstream in agreement counting.
+
+**2026-05-19: Verification overreach.**
+
+When asked to verify GPT-5.5's item 312 answer (171), reported 
+"MATHEMATICALLY IMPOSSIBLE" based on an informal "n ≤ 25 because 25 
+primes < 100" intuition. The verifier itself returned INCONCLUSIVE.
+
+Lesson: VERIFY means code-checked. Hand-wavy bounds are not verification.
+
+**2026-05-19: GitHub repo missing source code.**
+
+Audit of github.com/beepbeeepimajeep/DataApp showed only CLAUDE.md, 
+README.md, empty config.yaml, and requirements.txt. No source code, no 
+scripts, no manifest had ever been committed. Bus factor was 1: pod 
+cycle = total loss.
+
+Lesson: git push is part of "done" — not optional. See Implementation 
+Arm Health rules above.
+
+---
+
+## MEMORY
+
+Surface to Rain: "Worth adding to DataApp CLAUDE.md: [what]" and wait 
+for approval. Never modify this CLAUDE.md unprompted.
