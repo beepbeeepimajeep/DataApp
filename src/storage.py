@@ -173,6 +173,7 @@ class Storage:
             "input_tokens": response_data.get("input_tokens", 0),
             "output_tokens": response_data.get("output_tokens", 0),
             "hit_token_cap": response_data.get("hit_token_cap", False),
+            "finish_reason": response_data.get("finish_reason"),
             "generation_time_s": response_data.get("generation_time_s", 0),
             "request_id": response_data.get("request_id"),
             "timestamp": datetime.now(timezone.utc).isoformat(),

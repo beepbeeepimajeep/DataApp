@@ -263,18 +263,21 @@ class DataAppOrchestrator:
             "input_tokens": results["gpt5_4"].get("input_tokens", 0),
             "output_tokens": results["gpt5_4"].get("output_tokens", 0),
             "hit_token_cap": results["gpt5_4"].get("hit_token_cap", False),
+            "finish_reason": results["gpt5_4"].get("finish_reason"),
             "generation_time_s": results["gpt5_4"].get("generation_time_s", 0),
         }
         gpt_oss_meta = {
             "input_tokens": results["gpt_oss"].get("input_tokens", 0),
             "output_tokens": results["gpt_oss"].get("output_tokens", 0),
             "hit_token_cap": results["gpt_oss"].get("hit_token_cap", False),
+            "finish_reason": results["gpt_oss"].get("finish_reason"),
             "generation_time_s": results["gpt_oss"].get("generation_time_s", 0),
         }
         sonnet_meta = {
             "input_tokens": results["sonnet"].get("input_tokens", 0),
             "output_tokens": results["sonnet"].get("output_tokens", 0),
             "hit_token_cap": results["sonnet"].get("hit_token_cap", False),
+            "finish_reason": results["sonnet"].get("finish_reason"),
             "generation_time_s": results["sonnet"].get("generation_time_s", 0),
         }
 

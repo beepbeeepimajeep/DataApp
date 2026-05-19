@@ -19,6 +19,7 @@ def _error_response(error: str, model: str, elapsed: float, route: str = None) -
         "input_tokens": 0,
         "output_tokens": 0,
         "hit_token_cap": False,
+        "finish_reason": None,
         "generation_time_s": elapsed,
         "model": model,
         "request_id": None,
@@ -59,6 +60,7 @@ class GPT54Client:
             "input_tokens": resp.usage.prompt_tokens,
             "output_tokens": resp.usage.completion_tokens,
             "hit_token_cap": resp.choices[0].finish_reason == "length",
+            "finish_reason": resp.choices[0].finish_reason,
             "generation_time_s": time.time() - start,
             "model": self.model,
             "request_id": resp.id,
@@ -74,7 +76,7 @@ class GPT54Client:
 
         Returns:
             Dict with: response, input_tokens, output_tokens, hit_token_cap,
-            generation_time_s, model, request_id, error, route
+            finish_reason, generation_time_s, model, request_id, error, route
         """
         try:
             return self._call_impl(messages, temperature, max_tokens)
@@ -115,6 +117,7 @@ class GPTOSSClient:
             "input_tokens": resp.usage.prompt_tokens,
             "output_tokens": resp.usage.completion_tokens,
             "hit_token_cap": resp.choices[0].finish_reason == "length",
+            "finish_reason": resp.choices[0].finish_reason,
             "generation_time_s": time.time() - start,
             "model": self.model,
             "request_id": resp.id,
@@ -130,7 +133,7 @@ class GPTOSSClient:
 
         Returns:
             Dict with: response, input_tokens, output_tokens, hit_token_cap,
-            generation_time_s, model, request_id, error, route
+            finish_reason, generation_time_s, model, request_id, error, route
         """
         try:
             return self._call_impl(messages, temperature, max_tokens)
@@ -170,6 +173,7 @@ class GPT55Client:
             "input_tokens": resp.usage.prompt_tokens,
             "output_tokens": resp.usage.completion_tokens,
             "hit_token_cap": resp.choices[0].finish_reason == "length",
+            "finish_reason": resp.choices[0].finish_reason,
             "generation_time_s": time.time() - start,
             "model": self.model,
             "request_id": resp.id,
@@ -198,7 +202,7 @@ class GPT55Client:
 
         Returns:
             Dict with: response, input_tokens, output_tokens, hit_token_cap,
-            generation_time_s, model, request_id, error, route,
+            finish_reason, generation_time_s, model, request_id, error, route,
             reasoning_tokens (if available)
         """
         try:
@@ -238,6 +242,7 @@ class SonnetClient:
             "input_tokens": resp.usage.input_tokens,
             "output_tokens": resp.usage.output_tokens,
             "hit_token_cap": resp.stop_reason == "max_tokens",
+            "finish_reason": resp.stop_reason,
             "generation_time_s": time.time() - start,
             "model": self.model,
             "request_id": resp.id,
@@ -253,7 +258,7 @@ class SonnetClient:
 
         Returns:
             Dict with: response, input_tokens, output_tokens, hit_token_cap,
-            generation_time_s, model, request_id, error, route
+            finish_reason, generation_time_s, model, request_id, error, route
         """
         # Anthropic requires system message as separate parameter
         system = next((m["content"] for m in messages if m["role"] == "system"), "")
