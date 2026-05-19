@@ -88,14 +88,14 @@ def normalize_for_consensus(raw: str) -> str:
 
 
 def answers_match(a: str, b: str, tolerance: float = 0.01) -> bool:
-    """Compare two answers with normalization and numeric tolerance.
+    """Compare two answers with composed normalization and numeric tolerance.
 
     Returns True if answers are equivalent:
     - Exact string match after normalization
+    - Coordinate pairs (a,b) and [a,b] with numerical tolerance
+    - Multi-answers as sets (order-independent)
     - Numeric equivalence within tolerance
     - LaTeX fraction equivalence (including decimal vs fraction)
-
-    For multi-answers (comma-separated), compares element-wise.
 
     Recursion guard: on RecursionError, falls back to literal string comparison.
     """
@@ -106,29 +106,146 @@ def answers_match(a: str, b: str, tolerance: float = 0.01) -> bool:
         return a.strip() == b.strip()
 
 
+def _normalize_aggressively(s: str) -> str:
+    """Apply composed normalization pipeline.
+
+    Step A: Whitespace + escape normalization
+    Step B: LaTeX structural normalization
+    Step C: Normalize to canonical forms
+    """
+    s = s.strip()
+    if not s:
+        return ""
+
+    # Step A: Aggressive whitespace + escape normalization
+    # Strip all LaTeX space escapes to single space
+    s = re.sub(r'\\,', ',', s)       # \, → ,
+    s = re.sub(r'\\ ', ' ', s)       # \  → space
+    s = re.sub(r'\\;', ' ', s)       # \; → space
+    s = re.sub(r'\\!', '', s)        # \! → (remove)
+    s = re.sub(r'\\quad', ' ', s)    # \quad → space
+    s = re.sub(r'\\qquad', '  ', s)  # \qquad → 2 spaces
+    s = s.replace('~', ' ')          # ~ → space
+
+    # Step B: LaTeX structural normalization (before whitespace collapse)
+    # \frac{a}{b} → a/b
+    s = re.sub(
+        r'\\frac\s*\{\s*([^}]+)\s*\}\s*\{\s*([^}]+)\s*\}',
+        r'\1/\2',
+        s
+    )
+    # \dfrac → \frac (for compatibility)
+    s = s.replace('\\dfrac', '\\frac')
+    # \infty variants → inf
+    s = re.sub(r'\\infty', 'inf', s, flags=re.IGNORECASE)
+    s = re.sub(r'\binf(inity)?\b', 'inf', s, flags=re.IGNORECASE)
+    # Strip exponent braces: 5x^{4} → 5x^4
+    s = re.sub(r'\^\{(\d+)\}', r'^\1', s)
+    # Strip \displaystyle, \text{}, \mathrm{}
+    s = re.sub(r'\\displaystyle\s*', '', s)
+    s = re.sub(r'\\text\s*\{\s*([^}]*)\s*\}', r'\1', s)
+    s = re.sub(r'\\mathrm\s*\{\s*([^}]*)\s*\}', r'\1', s)
+
+    # Step C: Final whitespace normalization - collapse ALL whitespace
+    s = re.sub(r'\s+', '', s)
+    return s
+
+
+def _try_extract_coordinate_pair(s: str) -> tuple[float, float] | None:
+    """Extract (a, b) or [a, b] as numeric pair.
+
+    After aggressive normalization, coordinates will be (a,b) or [a,b] with no spaces.
+    """
+    s = s.strip()
+
+    # Try parentheses: (a,b) — no spaces after normalization
+    m = re.match(r'^\(([^,]+),([^)]+)\)$', s)
+    if m:
+        try:
+            x = float(m.group(1))
+            y = float(m.group(2))
+            return (x, y)
+        except (ValueError, AttributeError):
+            pass
+
+    # Try brackets: [a,b] — no spaces after normalization
+    m = re.match(r'^\[([^,]+),([^\]]+)\]$', s)
+    if m:
+        try:
+            x = float(m.group(1))
+            y = float(m.group(2))
+            return (x, y)
+        except (ValueError, AttributeError):
+            pass
+
+    return None
+
+
+def _coordinates_equal(
+    c1: tuple[float, float],
+    c2: tuple[float, float],
+    tolerance: float = 0.01
+) -> bool:
+    """Compare two coordinate pairs with numerical tolerance."""
+    x1, y1 = c1
+    x2, y2 = c2
+
+    def within_tol(v1, v2):
+        if v2 == 0:
+            return abs(v1) < tolerance
+        rel_err = abs(v1 - v2) / max(abs(v1), abs(v2), 1e-10)
+        return rel_err < tolerance
+
+    return within_tol(x1, x2) and within_tol(y1, y2)
+
+
 def _answers_match_impl(a: str, b: str, tolerance: float = 0.01) -> bool:
-    """Implementation of answers_match with recursion."""
-    if not a or not b:
-        return a == b
+    """Implementation of answers_match with composed pipeline."""
+    # Apply composed normalization first
+    na = _normalize_aggressively(a)
+    nb = _normalize_aggressively(b)
 
-    # Normalize both
-    na = normalize_for_consensus(a)
-    nb = normalize_for_consensus(b)
+    # After normalization, check for empty/falsy
+    if not na and not nb:
+        return True
+    if not na or not nb:
+        return False
 
-    # Exact match
+    # Exact match after normalization
     if na == nb:
         return True
 
-    # Multi-answer comparison: split on top-level commas and compare each
-    if ',' in na or ',' in nb:
+    # Try coordinate pair matching (both must be pairs)
+    coord_a = _try_extract_coordinate_pair(na)
+    coord_b = _try_extract_coordinate_pair(nb)
+    if coord_a and coord_b:
+        return _coordinates_equal(coord_a, coord_b, tolerance)
+
+    # Multi-answer comparison: handle as sets (order-independent)
+    if ',' in na and ',' in nb:
         parts_a = _split_top_level_commas(na)
         parts_b = _split_top_level_commas(nb)
+
+        # Set comparison: same elements regardless of order
         if len(parts_a) != len(parts_b):
             return False
-        return all(_answers_match_impl(pa, pb, tolerance) for pa, pb in zip(parts_a, parts_b))
 
-    # Try numeric comparison (covers decimals, integers, simple fractions)
-    # Also try to evaluate LaTeX fractions as decimals
+        # Match each element from parts_a to parts_b
+        # Using set matching (each element must have a match)
+        used_b = set()
+        for pa in parts_a:
+            found = False
+            for i, pb in enumerate(parts_b):
+                if i not in used_b:
+                    if _answers_match_impl(pa, pb, tolerance):
+                        used_b.add(i)
+                        found = True
+                        break
+            if not found:
+                return False
+        return True
+
+    # Single element comparison: try numeric
     va = _try_parse_numeric(na)
     if va is None:
         va = _try_eval_latex_frac(na)
