@@ -9,6 +9,41 @@ import re
 import math
 
 
+def _split_top_level_commas(s: str) -> list[str]:
+    """Split string on top-level commas only.
+
+    Commas inside (), [], {} are not split points.
+    Handles LaTeX braces and parens correctly.
+
+    Examples:
+        'a,b,c' → ['a', 'b', 'c']
+        '(3,4)' → ['(3,4)']
+        '\\frac{1,2}{3}' → ['\\frac{1,2}{3}']
+        '(0,1), (2,3)' → ['(0,1)', '(2,3)']
+    """
+    if not s:
+        return ['']
+
+    parts = []
+    depth = 0
+    current = []
+    for ch in s:
+        if ch in '([{':
+            depth += 1
+            current.append(ch)
+        elif ch in ')]}':
+            depth -= 1
+            current.append(ch)
+        elif ch == ',' and depth == 0:
+            parts.append(''.join(current).strip())
+            current = []
+        else:
+            current.append(ch)
+    if current:
+        parts.append(''.join(current).strip())
+    return parts if parts else ['']
+
+
 def normalize_for_consensus(raw: str) -> str:
     """Normalize extracted answer for cross-teacher comparison only.
 
@@ -73,10 +108,10 @@ def answers_match(a: str, b: str, tolerance: float = 0.01) -> bool:
     if na == nb:
         return True
 
-    # Multi-answer comparison: split and compare each
+    # Multi-answer comparison: split on top-level commas and compare each
     if ',' in na or ',' in nb:
-        parts_a = [p.strip() for p in na.split(',')]
-        parts_b = [p.strip() for p in nb.split(',')]
+        parts_a = _split_top_level_commas(na)
+        parts_b = _split_top_level_commas(nb)
         if len(parts_a) != len(parts_b):
             return False
         return all(answers_match(pa, pb, tolerance) for pa, pb in zip(parts_a, parts_b))
