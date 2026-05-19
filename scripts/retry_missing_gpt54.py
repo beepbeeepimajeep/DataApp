@@ -313,7 +313,9 @@ def main():
     client = GPT54Client()
     extractor = DataAppExtractor(strict_extract=False)
 
-    # Retry each item
+    # Retry each item sequentially (manifest rewrite is read-modify-write,
+    # unsafe under concurrency without locking. Sequential is safe + acceptable
+    # for 171 items @ ~5-10s per item = ~30 min wall-clock)
     results = []
     success_count = 0
     error_count = 0
@@ -362,9 +364,9 @@ def main():
     logger.info(f"Total input tokens: {total_input_tokens:,}")
     logger.info(f"Total output tokens: {total_output_tokens:,}")
 
-    # Estimate cost (GPT-5.4: $3 per 1M input, $6 per 1M output)
-    input_cost = (total_input_tokens / 1_000_000) * 3
-    output_cost = (total_output_tokens / 1_000_000) * 6
+    # Estimate cost (GPT-5.4: $2.50 per 1M input, $15 per 1M output per OpenAI pricing)
+    input_cost = (total_input_tokens / 1_000_000) * 2.50
+    output_cost = (total_output_tokens / 1_000_000) * 15
     total_cost = input_cost + output_cost
     logger.info(f"Estimated cost: ${total_cost:.2f} (input ${input_cost:.2f} + output ${output_cost:.2f})")
     logger.info("="*80 + "\n")
