@@ -43,6 +43,29 @@ class GPT54Client:
             raise ImportError("openai package required. pip install openai")
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=30))
+    def _call_impl(
+        self, messages: list[dict], temperature: float, max_tokens: int
+    ) -> dict:
+        """Internal implementation that raises on failure (for tenacity retry)."""
+        start = time.time()
+        resp = self.openai_client.chat.completions.create(
+            model=self.model,
+            messages=messages,
+            temperature=temperature,
+            max_completion_tokens=max_tokens,
+        )
+        return {
+            "response": resp.choices[0].message.content or "",
+            "input_tokens": resp.usage.prompt_tokens,
+            "output_tokens": resp.usage.completion_tokens,
+            "hit_token_cap": resp.choices[0].finish_reason == "length",
+            "generation_time_s": time.time() - start,
+            "model": self.model,
+            "request_id": resp.id,
+            "error": None,
+            "route": "openai",
+        }
+
     def call(
         self, messages: list[dict], temperature: float, max_tokens: int, **kwargs
     ) -> dict:
@@ -53,28 +76,10 @@ class GPT54Client:
             Dict with: response, input_tokens, output_tokens, hit_token_cap,
             generation_time_s, model, request_id, error, route
         """
-        start = time.time()
-
         try:
-            resp = self.openai_client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                temperature=temperature,
-                max_completion_tokens=max_tokens,
-            )
-            return {
-                "response": resp.choices[0].message.content or "",
-                "input_tokens": resp.usage.prompt_tokens,
-                "output_tokens": resp.usage.completion_tokens,
-                "hit_token_cap": resp.choices[0].finish_reason == "length",
-                "generation_time_s": time.time() - start,
-                "model": self.model,
-                "request_id": resp.id,
-                "error": None,
-                "route": "openai",
-            }
+            return self._call_impl(messages, temperature, max_tokens)
         except Exception as e:
-            return _error_response(str(e), self.model, time.time() - start, "openai")
+            return _error_response(str(e), self.model, time.time(), "openai")
 
 
 class GPTOSSClient:
@@ -94,6 +99,29 @@ class GPTOSSClient:
             raise ImportError("openai package required. pip install openai")
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=30))
+    def _call_impl(
+        self, messages: list[dict], temperature: float, max_tokens: int
+    ) -> dict:
+        """Internal implementation that raises on failure (for tenacity retry)."""
+        start = time.time()
+        resp = self.client.chat.completions.create(
+            model=self.model,
+            messages=messages,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+        return {
+            "response": resp.choices[0].message.content or "",
+            "input_tokens": resp.usage.prompt_tokens,
+            "output_tokens": resp.usage.completion_tokens,
+            "hit_token_cap": resp.choices[0].finish_reason == "length",
+            "generation_time_s": time.time() - start,
+            "model": self.model,
+            "request_id": resp.id,
+            "error": None,
+            "route": "tritonai",
+        }
+
     def call(
         self, messages: list[dict], temperature: float, max_tokens: int, **kwargs
     ) -> dict:
@@ -104,27 +132,10 @@ class GPTOSSClient:
             Dict with: response, input_tokens, output_tokens, hit_token_cap,
             generation_time_s, model, request_id, error, route
         """
-        start = time.time()
         try:
-            resp = self.client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                temperature=temperature,
-                max_tokens=max_tokens,
-            )
-            return {
-                "response": resp.choices[0].message.content or "",
-                "input_tokens": resp.usage.prompt_tokens,
-                "output_tokens": resp.usage.completion_tokens,
-                "hit_token_cap": resp.choices[0].finish_reason == "length",
-                "generation_time_s": time.time() - start,
-                "model": self.model,
-                "request_id": resp.id,
-                "error": None,
-                "route": "tritonai",
-            }
+            return self._call_impl(messages, temperature, max_tokens)
         except Exception as e:
-            return _error_response(str(e), self.model, time.time() - start, "tritonai")
+            return _error_response(str(e), self.model, time.time(), "tritonai")
 
 
 class GPT55Client:
@@ -141,6 +152,39 @@ class GPT55Client:
             raise ImportError("openai package required. pip install openai")
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=30))
+    def _call_impl(
+        self, messages: list[dict], reasoning_effort: str, max_tokens: int
+    ) -> dict:
+        """Internal implementation that raises on failure (for tenacity retry)."""
+        start = time.time()
+        resp = self.openai_client.chat.completions.create(
+            model=self.model,
+            messages=messages,
+            temperature=1.0,  # Required for reasoning_effort
+            max_completion_tokens=max_tokens,
+            reasoning_effort=reasoning_effort,
+        )
+
+        result = {
+            "response": resp.choices[0].message.content or "",
+            "input_tokens": resp.usage.prompt_tokens,
+            "output_tokens": resp.usage.completion_tokens,
+            "hit_token_cap": resp.choices[0].finish_reason == "length",
+            "generation_time_s": time.time() - start,
+            "model": self.model,
+            "request_id": resp.id,
+            "error": None,
+            "route": "openai",
+        }
+
+        # Add reasoning tokens if available (GPT-5.5 extended thinking)
+        if hasattr(resp.usage, "completion_tokens_details") and resp.usage.completion_tokens_details:
+            result["reasoning_tokens"] = getattr(
+                resp.usage.completion_tokens_details, "reasoning_tokens", 0
+            )
+
+        return result
+
     def call(
         self,
         messages: list[dict],
@@ -157,40 +201,10 @@ class GPT55Client:
             generation_time_s, model, request_id, error, route,
             reasoning_tokens (if available)
         """
-        start = time.time()
-
         try:
-            # GPT-5.5 with reasoning_effort requires temperature=1 (default)
-            # Ignore the passed temperature parameter for this model
-            resp = self.openai_client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                temperature=1.0,  # Required for reasoning_effort
-                max_completion_tokens=max_tokens,
-                reasoning_effort=reasoning_effort,
-            )
-
-            result = {
-                "response": resp.choices[0].message.content or "",
-                "input_tokens": resp.usage.prompt_tokens,
-                "output_tokens": resp.usage.completion_tokens,
-                "hit_token_cap": resp.choices[0].finish_reason == "length",
-                "generation_time_s": time.time() - start,
-                "model": self.model,
-                "request_id": resp.id,
-                "error": None,
-                "route": "openai",
-            }
-
-            # Add reasoning tokens if available (GPT-5.5 extended thinking)
-            if hasattr(resp.usage, "completion_tokens_details") and resp.usage.completion_tokens_details:
-                result["reasoning_tokens"] = getattr(
-                    resp.usage.completion_tokens_details, "reasoning_tokens", 0
-                )
-
-            return result
+            return self._call_impl(messages, reasoning_effort, max_tokens)
         except Exception as e:
-            return _error_response(str(e), self.model, time.time() - start, "openai")
+            return _error_response(str(e), self.model, time.time(), "openai")
 
 
 class SonnetClient:
@@ -206,6 +220,31 @@ class SonnetClient:
             raise ImportError("anthropic package required. pip install anthropic")
 
     @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=30))
+    def _call_impl(
+        self, system: str, user_messages: list[dict], temperature: float, max_tokens: int
+    ) -> dict:
+        """Internal implementation that raises on failure (for tenacity retry)."""
+        start = time.time()
+        resp = self.client.messages.create(
+            model=self.model,
+            system=system,
+            messages=user_messages,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+
+        return {
+            "response": resp.content[0].text if resp.content else "",
+            "input_tokens": resp.usage.input_tokens,
+            "output_tokens": resp.usage.output_tokens,
+            "hit_token_cap": resp.stop_reason == "max_tokens",
+            "generation_time_s": time.time() - start,
+            "model": self.model,
+            "request_id": resp.id,
+            "error": None,
+            "route": "anthropic",
+        }
+
     def call(
         self, messages: list[dict], temperature: float, max_tokens: int, **kwargs
     ) -> dict:
@@ -216,31 +255,11 @@ class SonnetClient:
             Dict with: response, input_tokens, output_tokens, hit_token_cap,
             generation_time_s, model, request_id, error, route
         """
-        start = time.time()
-
         # Anthropic requires system message as separate parameter
         system = next((m["content"] for m in messages if m["role"] == "system"), "")
         user_messages = [m for m in messages if m["role"] != "system"]
 
         try:
-            resp = self.client.messages.create(
-                model=self.model,
-                system=system,
-                messages=user_messages,
-                temperature=temperature,
-                max_tokens=max_tokens,
-            )
-
-            return {
-                "response": resp.content[0].text if resp.content else "",
-                "input_tokens": resp.usage.input_tokens,
-                "output_tokens": resp.usage.output_tokens,
-                "hit_token_cap": resp.stop_reason == "max_tokens",
-                "generation_time_s": time.time() - start,
-                "model": self.model,
-                "request_id": resp.id,
-                "error": None,
-                "route": "anthropic",
-            }
+            return self._call_impl(system, user_messages, temperature, max_tokens)
         except Exception as e:
-            return _error_response(str(e), self.model, time.time() - start, "anthropic")
+            return _error_response(str(e), self.model, time.time(), "anthropic")
