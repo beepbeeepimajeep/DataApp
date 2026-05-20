@@ -16,7 +16,7 @@ Rules:
 
 SINGLE_ANSWER_SUFFIX = """Problem type: single-answer.
 
-There is exactly one final answer. End with: \\boxed{answer}"""
+There is exactly one final answer. End with: \\boxed{<your final answer>}"""
 
 MULTI_ANSWER_SUFFIX = """Problem type: multi-answer.
 
@@ -25,7 +25,7 @@ This problem requires multiple values. Before the final line, verify:
 - the order matches the problem's request
 - the final answer uses exactly one \\boxed{...} with comma-separated values
 
-End with: \\boxed{value1,value2,value3}"""
+End with: \\boxed{<comma-separated values in requested order>}"""
 
 MCQ_SUFFIX = """Problem type: multiple choice.
 
