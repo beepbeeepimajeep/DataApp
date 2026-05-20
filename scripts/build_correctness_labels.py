@@ -78,10 +78,15 @@ def compute_labels(
     """
     Compute correctness labels using dual-signal approach.
 
+    Label assignment: HIGH / MEDIUM / PRIORITY / DROP
+    PRIORITY items (teacher strong but student disagrees) are high-value training
+    signals where student is confidently wrong and teachers are confidently right —
+    upweighted 3x in Ticket 6 trace selection.
+
     Returns:
         (labels_list, conflicts_list)
         labels_list: all items with label assignments
-        conflicts_list: DROPPED items where teacher != student
+        conflicts_list: PRIORITY items where teacher != student (high-value training)
     """
     extractor = DataAppExtractor(strict_extract=False)
     labels = []
@@ -122,8 +127,8 @@ def compute_labels(
                 label = "HIGH"
                 rationale = "Teacher strong (>=3/4) AND student strong (>=0.75) AND answers match"
             else:
-                label = "DROP"
-                rationale = "Conflict: teacher and student disagree"
+                label = "PRIORITY"
+                rationale = "Teacher strong, student strong but disagrees — high-value training signal (student confidently wrong)"
                 conflicts.append({
                     "item_id": item_id,
                     "question_type": question_type,
@@ -132,6 +137,7 @@ def compute_labels(
                     "student_answer": student_answer,
                     "student_agreement_rate": student_data.get("agreement_rate", 0),
                     "rationale": rationale,
+                    "label": "PRIORITY",
                 })
         elif teacher_strong and not student_strong:
             label = "MEDIUM"
@@ -215,8 +221,8 @@ def main():
     labels, conflicts, teacher_acc = compute_labels(manifest, run14b, gpt55_dir, output_dir)
 
     # Summary stats
-    label_dist = {"HIGH": 0, "MEDIUM": 0, "DROP": 0}
-    by_type = defaultdict(lambda: {"HIGH": 0, "MEDIUM": 0, "DROP": 0})
+    label_dist = {"HIGH": 0, "MEDIUM": 0, "PRIORITY": 0, "DROP": 0}
+    by_type = defaultdict(lambda: {"HIGH": 0, "MEDIUM": 0, "PRIORITY": 0, "DROP": 0})
 
     for label_entry in labels:
         label = label_entry["label"]
@@ -242,7 +248,7 @@ def main():
     print("="*80)
     print(f"\nLabel Distribution:")
     total = sum(label_dist.values())
-    for label in ["HIGH", "MEDIUM", "DROP"]:
+    for label in ["HIGH", "MEDIUM", "PRIORITY", "DROP"]:
         count = label_dist[label]
         pct = 100 * count / max(total, 1)
         print(f"  {label}: {count:3d} items ({pct:5.1f}%)")
@@ -252,7 +258,7 @@ def main():
         stats = by_type[q_type]
         total_type = sum(stats.values())
         print(f"  {q_type}:")
-        for label in ["HIGH", "MEDIUM", "DROP"]:
+        for label in ["HIGH", "MEDIUM", "PRIORITY", "DROP"]:
             count = stats[label]
             pct = 100 * count / max(total_type, 1)
             print(f"    {label}: {count:3d} ({pct:5.1f}%)")
