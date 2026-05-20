@@ -177,10 +177,14 @@ def process_batch_results(client, batch, output_dir):
             continue
 
         # Batch API pricing: $2.50/M input, $15/M output
-        # Includes reasoning_tokens in output_tokens billing (per OpenAI docs)
-        # cost_log values are batch-rate ESTIMATES — verify via Admin API
+        # KNOWN UNDERCOUNT: empirical testing on 2026-05-20 PDT smoke showed
+        # actual dashboard billing is ~2.3x this estimate. Reasoning tokens
+        # appear to be billed separately from completion_tokens despite
+        # docs language suggesting they're included. Adding them back here
+        # closes part of the gap, but cost_log is STILL ESTIMATE ONLY.
+        # USE Admin API (scripts/check_spend.py) FOR ALL DECISIONS, never cost_log.
         input_cost = (input_tokens / 1_000_000) * 2.50
-        output_cost = (output_tokens / 1_000_000) * 15.00
+        output_cost = ((output_tokens + reasoning_tokens) / 1_000_000) * 15.00
         cost_usd = input_cost + output_cost
 
         # Save response file
