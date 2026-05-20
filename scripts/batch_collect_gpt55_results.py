@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """
-Collect results from completed GPT-5.5 xhigh batch job.
+Collect results from completed or cancelled GPT-5.5 xhigh batch job.
 
 Polls batch status, downloads results when complete, parses and saves
 responses to dataapp_outputs/gpt55_full/ and updates cost log.
+
+Accepts 'completed', 'cancelled', and 'expired' statuses — OpenAI returns
+partial results via output_file_id for all three terminal states. Per OpenAI docs:
+cancelled/expired batches have completed work available via output_file_id, and
+developers are billed only for completed requests.
 
 Usage:
   python3 scripts/batch_collect_gpt55_results.py <batch_id>
@@ -71,14 +76,14 @@ def format_gpt55_response_md(response_data, prompt):
 
 
 def poll_batch_status(client, batch_id, poll_interval=300):
-    """Poll batch status until complete or failed"""
+    """Poll batch status until complete, cancelled, failed, or expired"""
     logger.info(f"Polling batch {batch_id}...")
 
     while True:
         batch = client.batches.retrieve(batch_id)
         logger.info(f"Status: {batch.status}")
 
-        if batch.status in ['completed', 'failed', 'expired']:
+        if batch.status in ['completed', 'failed', 'expired', 'cancelled']:
             return batch
 
         logger.info(f"Waiting {poll_interval}s before next poll...")
@@ -254,8 +259,14 @@ def main():
 
     logger.info(f"Batch final status: {batch.status}")
 
-    if batch.status != 'completed':
-        logger.error(f"Batch did not complete: {batch.status}")
+    # Accept any terminal status that may have output_file_id
+    TERMINAL_STATUSES = ['completed', 'cancelled', 'expired']
+    if batch.status not in TERMINAL_STATUSES:
+        logger.error(f"Batch in unexpected status: {batch.status}")
+        return 1
+
+    if not batch.output_file_id:
+        logger.error(f"Batch {batch.status} but no output_file_id — nothing to collect")
         return 1
 
     # Process results
