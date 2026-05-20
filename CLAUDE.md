@@ -73,6 +73,30 @@ Every scaled operation requires Rain's EXPLICIT "proceed" in chat.
 claude_dataApp reports, then STOPS, then waits for authorization 
 before the next billable operation.
 
+### EXPLICIT AUTHORIZATION PROTOCOL (non-negotiable)
+
+1. **Forward-authorizations are NOT valid for scaled operations.**
+   - Example of INVALID: "After you finish X, go ahead and do Y"
+   - You must STOP after X and wait for a NEW explicit authorization.
+
+2. **Valid authorization format:**
+   - User types: "ok proceed" OR "proceed" OR explicit approval
+   - In the CURRENT chat turn (not a previous message)
+   - After all setup, planning, dry-runs, and verification steps complete
+   - BEFORE any API calls that process >5 items or cost >$5
+
+3. **Prohibited patterns (NEVER do these):**
+   - Treating "ready to proceed?" as authorization to proceed
+   - Executing forward instructions ("go do X when Y is done")
+   - Inferring permission from context or prior messages
+   - Any execution between user messages without new explicit "proceed"
+   - Skipping confirmation just because an earlier message said "ok"
+
+4. **When uncertain:** STOP, report completion of prior steps, wait 
+   for new explicit authorization in the NEXT user message.
+
+---
+
 If claude_dataApp finds a process running unexpectedly, the response 
 is: "I see process X running, status Y, what should I do?" — never 
 "I'll restart it cleanly."
