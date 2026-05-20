@@ -17,6 +17,9 @@ import time
 import argparse
 import json
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_admin_key():
     """Load admin key from .env"""
