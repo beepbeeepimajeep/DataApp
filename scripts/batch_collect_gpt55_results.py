@@ -140,7 +140,7 @@ def process_batch_results(client, batch, output_dir):
             continue
 
         # Check for error in result
-        if 'error' in result:
+        if result.get('error'):
             logger.warning(f"Item {item_id}: {result['error']}")
             errors += 1
             continue
