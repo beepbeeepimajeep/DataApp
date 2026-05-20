@@ -89,6 +89,24 @@ reported, not killed. Lost forensic data is irrecoverable.
 
 ## COST DISCIPLINE
 
+### Budget ceilings (2026-05-20 PDT update)
+
+Hard ceiling: $150 total OpenAI spend for the project.
+(Previously $100; raised 2026-05-20 PDT after morning sync run on
+2026-05-19 produced $73 in unexpected sunk cost. See HISTORICAL
+FAILURES "GPT-5.5-xhigh sync run silent failure".)
+
+Reasoning for $150:
+- $79 already spent (Phase 2 + GPT-5.5-xhigh morning sync)
+- $47 projected for GPT-5.5-xhigh batch retry (4th teacher unblocks
+  Ticket 5 HIGH labels)
+- $24 buffer for unexpected costs (retry items, Ticket 5 verification)
+- Account credit balance is $130; OpenAI deposit covers $150
+  ceiling with $20 margin if last $20 deposit/match is honored.
+
+Authorization to raise this ceiling further requires explicit Rain
+approval AND documented reasoning. Do NOT raise silently.
+
 Local cost_log.jsonl is ESTIMATES, NOT TRUTH. The OpenAI Python SDK 
 undercounts billed tokens by ~2.4x for GPT-5.4 and GPT-5.5 (likely 
 all GPT-5 family). Local cost is for relative comparison and 

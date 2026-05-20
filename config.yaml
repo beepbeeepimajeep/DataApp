@@ -41,7 +41,7 @@ validation:
   max_no_box_rate: 0.05
 
 cost_tracking:
-  alert_thresholds: [10, 25, 50, 75]
+  alert_thresholds: [25, 50, 75, 100, 125, 150]
 
 logging:
   level: "INFO"
