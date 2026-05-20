@@ -112,8 +112,16 @@ undercounts billed tokens by ~2.4x for GPT-5.4 and GPT-5.5 (likely
 all GPT-5 family). Local cost is for relative comparison and 
 debugging only.
 
-Ground truth = Admin API via scripts/check_spend.py. Verify before 
-and after every operation that spends OpenAI credits.
+**Cost ground truth (reconciled):**
+- Primary: Admin API via scripts/check_spend.py (most reliable)
+- Secondary: OpenAI dashboard / platform.openai.com/usage (real-time)
+- When they disagree on very recent activity (within last few hours):
+  Admin API can lag the dashboard by minutes to hours per OpenAI docs
+  ("data may be delayed"). In conflicts, **take the HIGHER number**
+  as more accurate for very recent spend.
+- **NEVER apply multipliers to either source.** Multipliers are for 
+  correcting SDK undercounts only; both Admin API and dashboard 
+  report actual billing.
 
 Before any operation that may spend >$5:
 1. Run check_spend.py — record baseline
@@ -121,11 +129,11 @@ Before any operation that may spend >$5:
 3. Run check_spend.py — verify actual cost in expected range
 4. If actual is >20% above projected: STOP and report
 
-Admin API has bucket-boundary quirks:
+Admin API has reporting & bucket quirks:
 - Buckets are UTC-day boundaries, not local
 - If "today" in PDT spans two UTC days, expect 2 buckets to inspect
-- Costs API has reporting lag (sometimes hours)
-- For real-time spend, use Usage API + multiply tokens × known rates
+- Reporting lag: minutes to hours behind actual transactions per OpenAI
+- For real-time spend during active operations, cross-check dashboard
 
 Budget framing rules:
 - "Available" = credit balance shown on dashboard (already net of spent)
