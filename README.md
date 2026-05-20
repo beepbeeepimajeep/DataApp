@@ -28,12 +28,15 @@ python scripts/run_full.py
 python scripts/analyze_results.py
 ```
 
-## Status
+## Status (2026-05-20 PDT)
 
-- **Phase 0 (Setup):** ✓ Repo initialized, venv created
-- **Phase 1 (Validation):** ⏳ Not started
-- **Phase 2 (Full Run):** ⏳ Waiting for Phase 1
-- **Phase 3 (Analysis):** ⏳ Waiting for Phase 2
+- **Phase 0 (Setup):** ✓ Complete
+- **Phase 1 (Validation):** ✓ Complete
+- **Phase 2 (Full Run, 3-teacher):** ✓ Complete — 943 items, 0 errors, 65.9% 3/3 agreement
+- **Phase 3 (Analysis):** ✓ Manifest at dataapp_outputs/dataset_manifest.jsonl
+
+Active work: Ticket 5/6 (correctness labels + SFT data construction).
+GPT-5.5-xhigh batch retry in progress (4th teacher signal).
 
 ## Architecture
 

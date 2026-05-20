@@ -53,7 +53,7 @@ def main():
     """Run full pipeline."""
     parser = argparse.ArgumentParser(description="DataApp Phase 2 full pipeline")
     parser.add_argument("--item-ids", type=str, help="Comma-separated item IDs to process (e.g., 74,195,500)")
-    parser.add_argument("--workers", type=int, default=2, help="Reserved for compatibility (not used)")
+    parser.add_argument("--workers", type=int, default=2, help="Number of parallel teacher API calls per item (currently fixed at 3 in orchestrator)")
     args = parser.parse_args()
 
     logger.info("=== DataApp Phase 2: Full Pipeline (943 items) ===")

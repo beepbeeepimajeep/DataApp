@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 PRICING = {
     "claude-sonnet-4-6": {"input": 3.00, "output": 15.00},
     "gpt-5.4": {"input": 2.50, "output": 15.00},
+    "gpt-5.5": {"input": 5.00, "output": 30.00},
     "api-gpt-oss-120b": {"input": 0.0, "output": 0.0},  # free tier on TritonAI
 }
 

@@ -6,3 +6,4 @@ tenacity>=8.2.0
 tqdm>=4.65.0
 sympy>=1.12
 numpy>=1.20
+requests>=2.31.0

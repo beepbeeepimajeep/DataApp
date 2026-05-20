@@ -2,6 +2,10 @@
 """
 Recompute consensus on Phase 1 data using normalized comparison.
 
+DEPRECATED 2026-05-20: superseded by scripts/regrade_manifest.py.
+regrade_manifest.py has --dry-run, agreement_via tracking, and reads
+from manifest directly (not extractions.json). Use that instead.
+
 Does NOT re-run API calls. Reads existing extractions and recomputes agreement.
 """
 

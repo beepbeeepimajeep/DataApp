@@ -1,6 +1,7 @@
 """
-API clients for GPT-5.4 (TritonAI primary + OpenAI fallback), GPT-OSS-120B (TritonAI free),
-and Claude Sonnet 4.6 (Anthropic). All clients share the same response format.
+API clients for GPT-5.4 (OpenAI direct), GPT-OSS-120B (TritonAI free tier),
+Claude Sonnet 4.6 (Anthropic), and GPT-5.5 xhigh (OpenAI direct).
+All clients share the same response format.
 """
 
 import os

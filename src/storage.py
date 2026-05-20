@@ -154,7 +154,7 @@ class Storage:
 
         Args:
             item_id: Item ID
-            teacher_key: "sonnet", "gpt5_4", or "kimi"
+            teacher_key: "sonnet", "gpt5_4", or "gpt_oss"
             response_data: Dict with response, tokens, model, etc.
             prompt: The prompt sent to the teacher
         """

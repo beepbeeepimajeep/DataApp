@@ -11,13 +11,13 @@ models:
     temperature: 0.6
     max_tokens: 16384
     top_p: 0.95
-  kimi:
-    provider: baseten
-    model: moonshotai/Kimi-K2.6
+  gpt_oss:
+    provider: tritonai
+    model: api-gpt-oss-120b
     temperature: 0.6
     max_tokens: 16384
     top_p: 0.95
-    base_url: https://inference.baseten.co/v1
+    base_url: https://tritonai-api.ucsd.edu/v1
 
 paths:
   data_dir: "."
