@@ -410,6 +410,28 @@ raw teacher answers and verify the comparison logic handled them.
 Silent false-disagreement contaminates training data. Add coordinate-pair 
 handling to answers_match in Ticket 5 prep.
 
+**2026-05-19: GPT-5.5-xhigh sync run silent failure (morning).**
+
+`scripts/generate_gpt55_full.py` was launched with 15-worker concurrency 
+and 600s per-request timeout on 943 items. Result: 321 succeeded, 622 
+failed silently (0 output_tokens, no error raised). Cost: $73.42 sunk.
+
+Root cause: reasoning rate-limit pool saturation under 15 concurrent 
+xhigh requests causes requests to hang server-side past the 600s client 
+timeout, return empty completions (output_tokens=0), but still get 
+billed at the model's standard rate. The dead-item "\\boxed{answer}" 
+string was a script markdown stub in format_gpt55_response_md(), NOT 
+the model copying the prompt (later confirmed by smoke batch after 
+prompts.py angle-bracket fix).
+
+Decision: Use OpenAI Batch API instead. Benefits: 50% off pricing, 
+separate rate limits, proper failure visibility via error_file_id, 
+automatic retries. Downside: async (up to 24h), but acceptable for 
+backfill use case.
+
+Lesson: NEVER re-run generate_gpt55_full.py. Use batch API for all 
+GPT-5.5-xhigh at scale.
+
 ---
 
 ## MEMORY

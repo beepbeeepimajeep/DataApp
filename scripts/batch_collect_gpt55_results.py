@@ -176,12 +176,12 @@ def process_batch_results(client, batch, output_dir):
             errors += 1
             continue
 
-        # Calculate cost (with 2.5x multiplier)
-        SDK_REASONING_MULTIPLIER = 2.5
-        input_cost = (input_tokens / 1_000_000) * 5
-        sdk_output_cost = ((output_tokens + reasoning_tokens) / 1_000_000) * 30
-        estimated_output_cost = sdk_output_cost * SDK_REASONING_MULTIPLIER
-        cost_usd = input_cost + estimated_output_cost
+        # Batch API pricing: $2.50/M input, $15/M output
+        # Includes reasoning_tokens in output_tokens billing (per OpenAI docs)
+        # cost_log values are batch-rate ESTIMATES — verify via Admin API
+        input_cost = (input_tokens / 1_000_000) * 2.50
+        output_cost = (output_tokens / 1_000_000) * 15.00
+        cost_usd = input_cost + output_cost
 
         # Save response file
         response_path = response_dir / f"item_{int(item_id):04d}_gpt5_5_response.md"

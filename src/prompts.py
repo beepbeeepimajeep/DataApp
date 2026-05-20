@@ -32,15 +32,6 @@ MCQ_SUFFIX = """Problem type: multiple choice.
 Solve the problem and identify the correct option letter. End with: \\boxed{Letter}"""
 
 
-def get_max_tokens(question_type: str) -> int:
-    """
-    Get differentiated token budget by question type.
-    MCQ needs minimal reasoning (pick letter).
-    Multi-free needs more (verify count + order).
-    """
-    return {"mcq": 2048, "single_free": 3584, "multi_free": 4608}[question_type]
-
-
 def detect_question_type(item: dict) -> str:
     """
     Determine question type from item structure.
