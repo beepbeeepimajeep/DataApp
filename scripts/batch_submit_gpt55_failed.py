@@ -125,6 +125,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Write JSONL only, no upload")
     parser.add_argument("--max-items", type=int, default=None, help="Limit to N items")
     parser.add_argument("--item-ids-file", type=str, default=None, help="JSON file with item IDs to retry")
+    parser.add_argument("--output-info-suffix", type=str, default=None, help="Suffix for batch_info filename (e.g., 'phase1' → gpt55_phase1_batch_info.json)")
     args = parser.parse_args()
 
     logger.info("=== GPT-5.5 xhigh Batch Submit ===")
@@ -208,7 +209,10 @@ def main():
         "submitted_at": datetime.now().isoformat(),
     }
 
-    batch_info_path = output_dir / "gpt55_batch_info.json"
+    # Per-phase filename support — pass --output-info-suffix=phase1 to write
+    # gpt55_phase1_batch_info.json. Defaults to gpt55_batch_info.json.
+    suffix = f"_{args.output_info_suffix}" if args.output_info_suffix else ""
+    batch_info_path = output_dir / f"gpt55{suffix}_batch_info.json"
     with open(batch_info_path, "w") as f:
         json.dump(batch_info, f, indent=2)
     logger.info(f"Batch info saved: {batch_info_path}")
