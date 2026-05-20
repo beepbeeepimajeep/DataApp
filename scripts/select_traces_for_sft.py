@@ -146,13 +146,18 @@ def select_trace(
     """
     Select best trace for item using question-type-specific rules.
 
+    Picks the first teacher in priority order who (a) has reasoning, (b) has
+    \\boxed{}, AND (c) whose extracted answer matches the consensus label_answer.
+    This prevents training the student on a trace from a teacher who got the
+    answer wrong.
+
     Returns:
         {
             "id": int,
             "question": str,
             "question_type": str,
             "label_answer": str,
-            "label_confidence": "HIGH" | "MEDIUM",
+            "label_confidence": "HIGH" | "MEDIUM" | "PRIORITY",
             "trace_source": "sonnet" | "gpt5_4" | "gpt_oss" | None,
             "trace": str,
             "trace_truncated": bool,
@@ -168,7 +173,7 @@ def select_trace(
         return None
 
     label_answer = label_entry["label_answer"]
-    label_confidence = label_entry["label"]  # HIGH or MEDIUM
+    label_confidence = label_entry["label"]  # HIGH, MEDIUM, or PRIORITY (PRIORITY items upweighted 3x in training)
 
     # Get item directory
     item_dir = output_dir / f"item_{int(item_id):04d}"
@@ -205,6 +210,17 @@ def select_trace(
         # Check criteria: has reasoning AND has boxed
         if not (data["has_reasoning"] and data["has_boxed"]):
             continue
+
+        # Verify this teacher's boxed answer actually matches consensus.
+        # Without this check, items where the priority teacher got the answer
+        # wrong would train the student on a wrong reasoning trace.
+        from src.extraction import DataAppExtractor
+        from src.consensus_normalizer import answers_match
+        if 'extractor' not in locals():
+            extractor = DataAppExtractor(strict_extract=False)
+        teacher_extracted = extractor.extract(data["section"])
+        if not answers_match(teacher_extracted, label_answer):
+            continue  # this teacher got it wrong; try next teacher
 
         # For single/multi_free, require min output tokens
         if question_type != "mcq" and data["tokens"] < 200:
