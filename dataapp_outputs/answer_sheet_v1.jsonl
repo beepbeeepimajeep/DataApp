@@ -1,0 +1,943 @@
+{"item_id": "0000", "best_answer": "4,16", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0001", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0002", "best_answer": "-1.46,1.645,A", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0003", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0004", "best_answer": "-\\frac{7}{\\sqrt{149}},\\frac{10}{\\sqrt{149}},-\\frac{7}{10}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0005", "best_answer": "541.30,63.25,135.325,4.2167,32.09", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0006", "best_answer": "148.02", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0007", "best_answer": "328", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0008", "best_answer": "420 mL", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0009", "best_answer": "\\frac{L-8x}{6F}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0010", "best_answer": "E", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0011", "best_answer": "0.939", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0012", "best_answer": "2c+4p=70,11", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0013", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0014", "best_answer": "\\frac{\\ln(35)}{\\ln(3)}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0015", "best_answer": "8,NONE", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0016", "best_answer": "501", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0017", "best_answer": "C", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0018", "best_answer": "H", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0019", "best_answer": "E", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0020", "best_answer": "228,229,250", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0021", "best_answer": "L(t) = 0.2915t + 56.9333, = 67.43", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0022", "best_answer": "G", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0023", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0024", "best_answer": "1", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0025", "best_answer": "\\frac{8}{63},\\frac{2}{21},\\frac{11}{63},\\frac{17}{63},\\frac{13}{63},\\frac{8}{63},8,14,25,42,55,63", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0026", "best_answer": "I", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0027", "best_answer": "1/3,2/3,7/6,11/6", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0028", "best_answer": "2,70,1,768,2,140", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0029", "best_answer": "38.2\\%", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0030", "best_answer": "2944,664", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0031", "best_answer": "-3,42", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0032", "best_answer": "\\sqrt{101},-1,-\\frac{7}{2}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0033", "best_answer": "F", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0034", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0035", "best_answer": "down,\\ln p", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0036", "best_answer": "40x^{10}y^9", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0037", "best_answer": "Tommy,Chucky,February 7", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0038", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0039", "best_answer": "475", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0040", "best_answer": "D=800-50d", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0041", "best_answer": "4048", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0042", "best_answer": "No,Yes,A", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0043", "best_answer": "\\frac{3}{8},14,28", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0044", "best_answer": "True,True,True,False", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0045", "best_answer": "F", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0046", "best_answer": "1.645, 1.72, 1.96, -1.96, 1.72, B, A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0047", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0048", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0049", "best_answer": "0.0143", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0050", "best_answer": "140A+150B=5930,\\ 3A+4B=142", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0051", "best_answer": "25452_8", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0052", "best_answer": "231,385", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0053", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0054", "best_answer": "1", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0055", "best_answer": "y=5x^4", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0056", "best_answer": "D,D,A", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0057", "best_answer": "4", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0058", "best_answer": "31", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0059", "best_answer": "49", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0060", "best_answer": "C,A", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0061", "best_answer": "0.76c,0,150,0.69c+10.5,150", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0062", "best_answer": "-15,192,0", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0063", "best_answer": "18.96, 15.84", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0064", "best_answer": "P(t)=850-350\\cos(\\frac{\\pi t}{6})", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0065", "best_answer": "-\\frac{6}{7},\\frac{2}{7}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0066", "best_answer": "2354", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0067", "best_answer": "7.6(1.09)^t,13.9,5.4", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0068", "best_answer": "-2.857,\\ 6.986,\\ -1.082,\\ 3.707,\\ -3.707,\\ A,\\ -12.646,\\ 6.932", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0069", "best_answer": "G", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0070", "best_answer": "\\frac{5}{56}", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0071", "best_answer": "\\frac{29}{25},18", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0072", "best_answer": "-0.8352,-0.9187,0.3950,-2.3258,Quadrant IV", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0073", "best_answer": "E", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0074", "best_answer": "[12.306, 25.094]", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0075", "best_answer": "x > 21250", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0076", "best_answer": "-4,-11,3,33,-32,9,-14,-13", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0077", "best_answer": "C,D,A", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0078", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0079", "best_answer": "\\frac{25}{7}", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0080", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0081", "best_answer": "79.41", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0082", "best_answer": "1.323, 1.677, No, there is not sufficient evidence to support the claim", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0083", "best_answer": "355", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0084", "best_answer": "-4,5,-11", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0085", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0086", "best_answer": "16", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0087", "best_answer": "OBSERVATION,OBSERVATION,EXPERIMENT", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0088", "best_answer": "C", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0089", "best_answer": "\\frac{326}{7}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0090", "best_answer": "7n+1", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0091", "best_answer": "J", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0092", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0093", "best_answer": "sWith", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0094", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0095", "best_answer": "\\frac{16}{3}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0096", "best_answer": "158\\%", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0097", "best_answer": "0,4,4", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0098", "best_answer": "A", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0099", "best_answer": "-6,12,-6", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0100", "best_answer": "\\frac{180}{7}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0101", "best_answer": "C,C,A,C", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0102", "best_answer": "I", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0103", "best_answer": "8\\sqrt{2}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0104", "best_answer": "\\frac{2387\\pi}{1800}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0105", "best_answer": "24,9.11", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0106", "best_answer": "\\frac{13}{6}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0107", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0108", "best_answer": "72,12x", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0109", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0110", "best_answer": "A,3,9", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0111", "best_answer": "8x^3", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0112", "best_answer": "600", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0113", "best_answer": "\\frac{25-2(x+4)^2}{25}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0114", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0115", "best_answer": "11x-1200,11,109,(y+1200)/11,1958", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0116", "best_answer": "30,6", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0117", "best_answer": "B", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0118", "best_answer": "\\frac{18}{5}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0119", "best_answer": "A,C,B,D", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0120", "best_answer": "8", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0121", "best_answer": "35", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0122", "best_answer": "1174.8,55", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0123", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0124", "best_answer": "H", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0125", "best_answer": "G", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0126", "best_answer": "138000", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0127", "best_answer": "10.7", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0128", "best_answer": "\\frac{y-3}{y+3}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0129", "best_answer": "5/\\sin(t),\\ \\sqrt{7},\\ -3\\cos(t),\\ 2\\sqrt{2}\\tan(t)", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0130", "best_answer": "r^{42}", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0131", "best_answer": "0.108", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0132", "best_answer": "10.8", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0133", "best_answer": "-\\frac{\\sqrt3}{2},\\frac12,-\\sqrt3,2", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0134", "best_answer": "1,5,12,20,26,30,31,27.625", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0135", "best_answer": "\\frac{3}{5}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0136", "best_answer": "A,C", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0137", "best_answer": "2/13,2/1", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0138", "best_answer": "7236.81", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0139", "best_answer": "201,\\frac{1}{n(n+1)}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0140", "best_answer": "2744", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0141", "best_answer": "A", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0142", "best_answer": "7,8,9,10,11", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0143", "best_answer": "(0,-8),(0,6),(3,3\\sqrt3)", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0144", "best_answer": "C", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0145", "best_answer": "\\frac{x}{5280},4.73,25000", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0146", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0147", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0148", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0149", "best_answer": "6.85", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0150", "best_answer": "A", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0151", "best_answer": "36", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0152", "best_answer": "J", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0153", "best_answer": "B", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0154", "best_answer": "\\18.75", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0155", "best_answer": "12.17 ft", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0156", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0157", "best_answer": "-7\\cos(0.1t)+50\\sin(0.1t),\\ 46.31", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0158", "best_answer": "A,C", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0159", "best_answer": "0.07,0.007,0.0007", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0160", "best_answer": "\\frac{22+x}{y},Identity Property of Multiplication", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0161", "best_answer": "\\dbinom{2024}{1012}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0162", "best_answer": "B", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0163", "best_answer": "9,-5,4", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0164", "best_answer": "G", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0165", "best_answer": "I", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0166", "best_answer": "175(\\frac14)^n", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0167", "best_answer": "Negative,Negative,Positive,Negative", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0168", "best_answer": "A,C,B,B", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0169", "best_answer": "400\\%", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0170", "best_answer": "F", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0171", "best_answer": "20", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0172", "best_answer": "\\frac{1320}{3721}", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0173", "best_answer": "C", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0174", "best_answer": "7,\\frac{7}{8}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0175", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0176", "best_answer": "\\frac{p-6k-m}{8}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0177", "best_answer": "E", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0178", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0179", "best_answer": "29,3,21,1,21,4,19,4,23,3", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0180", "best_answer": "\\frac{1}{2}m-\\frac{7}{2}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0181", "best_answer": "A", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0182", "best_answer": "E", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0183", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0184", "best_answer": "J", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0185", "best_answer": "T,F,T,F,T", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0186", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0187", "best_answer": "1.0734, 0.0474, 0.7673, 0.7611, 38, 36, 2, 44, 43", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0188", "best_answer": "60,60,60", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0189", "best_answer": "850a+1200r=35000", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0190", "best_answer": "-\\frac{21}{8}", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0191", "best_answer": "D,A,C,B,E", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0192", "best_answer": "1.06,(1.88, infty),0.1446,A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0193", "best_answer": "A, C, D", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0194", "best_answer": "600, July, 1908, 890, March, 1907", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0195", "best_answer": "(-2.47,\\ -0.73)", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0196", "best_answer": "14.7447,10.3244,35", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0197", "best_answer": "3,4", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0198", "best_answer": "24", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0199", "best_answer": "27", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0200", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0201", "best_answer": "(5t+8)(5t+8)", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0202", "best_answer": "\\frac{54}{35}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0203", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0204", "best_answer": "E", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0205", "best_answer": "\\frac{3}{4},\\frac{11}{20}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0206", "best_answer": "4", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0207", "best_answer": "\\frac{14}{5}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0208", "best_answer": "\\frac{81}{5},\\frac{720}{49\\pi}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0209", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0210", "best_answer": "-\\frac{16\\sqrt{33}+49\\sqrt{3}}{15},\\,\\frac{2x}{1+x^2}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0211", "best_answer": "I", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0212", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0213", "best_answer": "\\frac{2}{9}", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0214", "best_answer": "11,F,10,T", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0215", "best_answer": "752", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0216", "best_answer": "60", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0217", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0218", "best_answer": "\\arcsin(\\frac{7}{10})", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0219", "best_answer": "27", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0220", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0221", "best_answer": "2750", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0222", "best_answer": "C", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0223", "best_answer": "A", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0224", "best_answer": "2643", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0225", "best_answer": "0.6253, 4, 2.776, A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0226", "best_answer": "8", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0227", "best_answer": "A,C", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0228", "best_answer": "v^7", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0229", "best_answer": "n-1", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0230", "best_answer": "x = \\frac{\\ln(0.32)}{\\ln(1.6)} = -2.424", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0231", "best_answer": "y = \\frac{147}{31} + \\frac{16}{31}x", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0232", "best_answer": "40,37,3", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0233", "best_answer": "1.96, -1.96, -5.18, B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0234", "best_answer": "29x^{7}+6x^{5}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0235", "best_answer": "B", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0236", "best_answer": "6e,-6", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0237", "best_answer": "50\\%", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0238", "best_answer": "-61,61,62", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0239", "best_answer": "35, 3.45", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0240", "best_answer": "12,4.9,3.3", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0241", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0242", "best_answer": "241.22, 239.5, 233, 162.89, 12.76, 5.29\\%", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0243", "best_answer": "0.8925,0.2150", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0244", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0245", "best_answer": "980", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0246", "best_answer": "25,23,17,23,19", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0247", "best_answer": "\\frac{2409}{65},\\frac{2474}{1+\\frac{2409}{65}e^{-0.53t}},2473.84", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0248", "best_answer": "180", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0249", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0250", "best_answer": "cohomological", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0251", "best_answer": "172.7\\%", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0252", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0253", "best_answer": "E", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0254", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0255", "best_answer": "A", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0256", "best_answer": "-30,30", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0257", "best_answer": "2.52,3.00,A", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0258", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0259", "best_answer": "B", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0260", "best_answer": "-22,8", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0261", "best_answer": "4", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0262", "best_answer": "850-50t,1480-140t,7", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0263", "best_answer": "E", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0264", "best_answer": "256\\pi t^2", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0265", "best_answer": "A,D", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0266", "best_answer": "G", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0267", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0268", "best_answer": "4450,14", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0269", "best_answer": "1.79,0.32,B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0270", "best_answer": "1.26", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0271", "best_answer": "-4,0,4", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0272", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0273", "best_answer": "-\\cos^2(x),1,2\\cos^2(x)", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0274", "best_answer": "G", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0275", "best_answer": "2025 \\cdot 10^{2024}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0276", "best_answer": "(\\frac{1373}{2744},0),none", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0277", "best_answer": "\\38{,}800.00", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0278", "best_answer": "38", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0279", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0280", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0281", "best_answer": "-0.4618,0.8870,-0.5206,-2.1654", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0282", "best_answer": "e^2", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0283", "best_answer": "114", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0284", "best_answer": "E", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0285", "best_answer": "147", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0286", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0287", "best_answer": "212,136", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0288", "best_answer": "96(0.9)^n,\\ 27.113,\\ 44", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0289", "best_answer": "4,9", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0290", "best_answer": "C", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0291", "best_answer": "2304", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0292", "best_answer": "-2-\\sqrt{3}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0293", "best_answer": "P(t)=2025t-4300", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0294", "best_answer": "43.2,7.2,6", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0295", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0296", "best_answer": "45,180,270", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0297", "best_answer": "0.24,(-infty, -1.88)U(1.88, infty),0.8104,C", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0298", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0299", "best_answer": "18805.7,no", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0300", "best_answer": "6500", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0301", "best_answer": "0.878,57.2", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0302", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0303", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0304", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0305", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0306", "best_answer": "H", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0307", "best_answer": "4/3", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0308", "best_answer": "12", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0309", "best_answer": "83000", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0310", "best_answer": "4k+6,\\ 5k-11,\\ 5y+4", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0311", "best_answer": "1585", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0312", "best_answer": "20", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0313", "best_answer": "-\\frac{2\\sqrt{14}}{15}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0314", "best_answer": "7,-8,-4", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0315", "best_answer": "B,B,A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0316", "best_answer": "A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0317", "best_answer": "D", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0318", "best_answer": "8, \\arctan\\!(\\frac{8}{\\sqrt{161}})", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0319", "best_answer": "False,True,True,False", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0320", "best_answer": "The oxygen level returns to normal, 3.73", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0321", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0322", "best_answer": "40 ft,25 ft,1000 ft^2", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0323", "best_answer": "[10,12),[-8,-6),[10,18),[-16,-6)", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0324", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0325", "best_answer": "[0, 280],[0, 14]", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0326", "best_answer": "0.67,0.36,0.06", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0327", "best_answer": "7.6", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0328", "best_answer": "B,D,A,C", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0329", "best_answer": "J", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0330", "best_answer": "27, 2613.92", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0331", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0332", "best_answer": "778,624", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0333", "best_answer": "54,62", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0334", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0335", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0336", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0337", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0338", "best_answer": "y-axis,origin", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0339", "best_answer": "G", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0340", "best_answer": "A, C, E, F, H", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0341", "best_answer": "x+125,\\ x^{11/6}+5x^{3/2}+5x^{1/3}+25", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0342", "best_answer": "negative, positive, negative, positive, positive", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0343", "best_answer": "D,A,C,B,E", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0344", "best_answer": "-5", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0345", "best_answer": "-\\frac{5}{6},\\frac{5}{6}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0346", "best_answer": "0.7,0.07,0.007", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0347", "best_answer": "F", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0348", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0349", "best_answer": "-\\frac{2}{15}", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0350", "best_answer": "11100,11001,1100111,1101110,101001101,101010100", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0351", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0352", "best_answer": "68", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0353", "best_answer": "8, C, 5  and  7, D", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0354", "best_answer": "mg, g, tonnes, kg, g", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0355", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0356", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0357", "best_answer": "320, 0.06569", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0358", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0359", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0360", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0361", "best_answer": "180-7x", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0362", "best_answer": "(6x-5y)(6x+5y)", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0363", "best_answer": "10000(0.89)^t,\\ 4970,\\ 19.7534", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0364", "best_answer": "Y,N,Y,N", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0365", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0366", "best_answer": "G", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0367", "best_answer": "60.3^\\circ,46.3^\\circ,53.3^\\circ", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0368", "best_answer": "C,D,D,E", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0369", "best_answer": "\\frac34,5,2", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0370", "best_answer": "y=-5,\\ 10", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0371", "best_answer": "7.41", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0372", "best_answer": "0.51", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0373", "best_answer": "50.98,\\mu,56.86", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0374", "best_answer": "4000", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0375", "best_answer": "\\3.72", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0376", "best_answer": "1275", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0377", "best_answer": "B", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0378", "best_answer": "0.000142, 0.0000221, 0.000120, 0.1553, 15.53\\%", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0379", "best_answer": "480", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0380", "best_answer": "0.075, 0.239, 32000, 16710, 38000, 0.00248, 52000", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0381", "best_answer": "2040", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0382", "best_answer": "\\frac{187}{18},\\frac{55}{9}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0383", "best_answer": "80", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0384", "best_answer": "\\frac{\\ln(\\frac{11}{32})-3}{5}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0385", "best_answer": "A,A,A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0386", "best_answer": "4", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0387", "best_answer": "-230", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0388", "best_answer": "4.11\\%,3.52\\%,2.94\\%,1.17\\%,0\\%", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0389", "best_answer": "F", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0390", "best_answer": "\\frac{3}{25},-\\frac{15}{14}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0391", "best_answer": "B", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0392", "best_answer": "81", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0393", "best_answer": "\\frac{1}{10}arccos(\\frac{x-6}{16}), -10, 22", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0394", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0395", "best_answer": "\\frac{85}{3},-\\frac{95}{4},-\\frac{10}{7}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0396", "best_answer": "(-inf,5),(-3,5]", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0397", "best_answer": "256\\pi,\\frac{2048\\pi}{3}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0398", "best_answer": "A", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0399", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0400", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0401", "best_answer": "\\frac{450\u00b0}{\\pi},\\ 240\u00b0,\\ \\frac{165\u00b0}{\\pi},\\ -135\u00b0", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0402", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0403", "best_answer": "J", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0404", "best_answer": "52\\%", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0405", "best_answer": "F", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0406", "best_answer": "-7", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0407", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0408", "best_answer": "5816/9999, 3017/99990, 574/999, 653/9990, 428/999", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0409", "best_answer": "(-2.86, 7.08), (-0.10, 4.32)", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0410", "best_answer": "45\u00b0, 4  seconds", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0411", "best_answer": "\\frac{392\\pi}{45}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0412", "best_answer": "\\frac{4\\sqrt{78}-35}{72}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0413", "best_answer": "0.893, (1.855, infty), 0.20, A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0414", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0415", "best_answer": "\\sqrt{A/6},\\ A,\\ (A/6)^{3/2},\\ A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0416", "best_answer": "11,16", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0417", "best_answer": "1.0056,0.9675,28,29.1,1.0393", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0418", "best_answer": "2.958, 1.75, 0.0015, B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0419", "best_answer": "n^2", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0420", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0421", "best_answer": "-\\frac{9\\sqrt5}{20},-\\frac{\\sqrt5}{20}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0422", "best_answer": "(N+1)(4N^2+2N+1)", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0423", "best_answer": "-\\frac{1}{2}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0424", "best_answer": "parameter,parameter,statistic,statistic", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0425", "best_answer": "7", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0426", "best_answer": "11", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0427", "best_answer": "E", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0428", "best_answer": "43,55", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0429", "best_answer": "A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0430", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0431", "best_answer": "5,42", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0432", "best_answer": "1.2036, 2.1294, 4.3452, 5.2710", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0433", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0434", "best_answer": "A", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0435", "best_answer": "0.446, 0.537, A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0436", "best_answer": "20", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0437", "best_answer": "(76.37, 79.63)", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0438", "best_answer": "5,9,1,10,2,0,10,x^3y^7,1", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0439", "best_answer": "-\\frac{4}{13}", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0440", "best_answer": "G", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0441", "best_answer": "260", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0442", "best_answer": "H", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0443", "best_answer": "G", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0444", "best_answer": "113,35,112,61,148,43", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0445", "best_answer": "G", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0446", "best_answer": "1.872, 0.972", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0447", "best_answer": "x \\leq 4", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0448", "best_answer": "x^3-4x^2-6x+30,\\ x^2-9x+20", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0449", "best_answer": "3.585, 0.0008, B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0450", "best_answer": "I", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0451", "best_answer": "0.129032258064516,0.193548387096774,0.209677419354839,14,0.177419354838710,0.064516129032258", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0452", "best_answer": "42", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0453", "best_answer": "1350", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0454", "best_answer": "1.5, 0.9375", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0455", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0456", "best_answer": "-7.71, A, B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0457", "best_answer": "G", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0458", "best_answer": "3", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0459", "best_answer": "\\sin^2(A),\\frac{\\cos(A)}{\\sin(A)},\\sec^2(A),\\frac{1}{\\tan(A)},\\frac{1}{\\sin(A)}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0460", "best_answer": "F,F,T,T,T,T,F", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0461", "best_answer": "2, 302", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0462", "best_answer": "-7,8", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0463", "best_answer": "J", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0464", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0465", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0466", "best_answer": "26.9", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0467", "best_answer": "C=0.0267w+0.03, A, A, 5.0", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0468", "best_answer": "0.671, 0.882", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0469", "best_answer": "s^2,\\ 0.1575A,\\ 0.1575s^2,\\ C,\\ 81,\\ A 9-ft square deck has area 81 sq ft,\\ 14.175,\\ Cost to stain 90 sq ft is \\14.175,\\ 19.0575,\\ Cost to stain an 11-ft square deck is \\19.0575", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0470", "best_answer": "1.96, 2.201, 2.326, 2.718, 2.576, 3.106", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0471", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0472", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0473", "best_answer": "[-7,-3]", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0474", "best_answer": "C", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0475", "best_answer": "1", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0476", "best_answer": "G", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0477", "best_answer": "A,C", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0478", "best_answer": "-\\frac{3}{10}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0479", "best_answer": "40.36, 43.64, 40.01, 43.99", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0480", "best_answer": "2.5,2.5", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0481", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0482", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0483", "best_answer": "A", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0484", "best_answer": "C", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0485", "best_answer": "135", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0486", "best_answer": "B", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0487", "best_answer": "-21.1, -0.9637", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0488", "best_answer": "4050", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0489", "best_answer": "385", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0490", "best_answer": "23  BTUs per square foot, 410  square feet", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0491", "best_answer": "1255.37, 1091.05, 1419.69, No, Central Limit Theorem", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0492", "best_answer": "A,A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0493", "best_answer": "14.67, B, 0.0687, 0.1083", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0494", "best_answer": "7, 0.062", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0495", "best_answer": "100, 100, 200, 0.255, 5.99, B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0496", "best_answer": "9.594^\\circ", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0497", "best_answer": "1.1106, 88.8065, 88.8065, 0.9004", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0498", "best_answer": "probably a small number like 7, 8, 9, 10, or something reasonable.\n\nWait, let me re-read the problem. \"A list of positive integers.\" The mean is 8, median is 13, mode is 15, range is 27.\n\nHmm, mean=8 < median=13 < mode=15. This is unusual (usually mean < median < mode for left-skewed data, but here the mode is the highest of the three).\n\nRange = 27. Max - min = 27.\n\nLet me reconsider: maybe min doesn't have to be 1. The minimum just needs to be a positive integer. And max = min + 27.\n\nFor the mean to be 8, we need many small values. The smallest positive integer is 1.\n\nBut wait \u2014 what if the list has many small values AND the mode is 15? The mode being 15 means 15 appears more than any other single value. But we could have, say, 15 appearing 3 times and every other value appearing at most 2 times.\n\nLet me reconsider n=7:\nsum=56, median=4th element=13.\nMode=15 (\u22652 times), range=27 (max-min=27).\n\nIf 15 appears 2 times, they must be in positions 5,6,7 (since 15>13).\nMax must be \u2265 15. If max=15, range=27 \u2192 min=15-27=-12 (not positive). So max>15.\nMax \u2265 28 (since min \u2265 1 and range=27).\n\nWait, actually max doesn't have to be 28. If min=1, max=28. If min=2, max=29. Etc.\n\nBut for minimum sum (mean=8 is small), we want min=1, max=28.\n\nFor n=7: a,b,c,13,d,e,f with a=1, some value=28.\n15 appears 2 times. 28 appears once.\nIf d=15, e=15, f=28: sum = 1+b+c+13+15+15+28 = 72+b+c = 56 \u2192 b+c = -16. Impossible.\n\nIf e=15, f=15... but then max=15, range=27 \u2192 min=-12. Not positive.\n\nSo for n=7, impossible.\n\nFor n=8: sum=64.\nMedian=avg(a4,a5)=13.\nMin=1, max=28, mode=15 (appears \u22652 times).\n15s in positions 6,7,8 (or some subset), 28 in position 8.\n\n1,b,c,d,e,15,15,28 where d+e=26, d\u2264e\u226415.\nd+e=26, e\u226415 \u2192 d\u226511.\nSum = 1+b+c+26+30+28 = 85+b+c = 64 \u2192 b+c = -21. Impossible.\n\nFor n=9: sum=72.\n1,b,c,d,13,e,15,15,28 (mode=15 appears 2 times; 28 is max).\nBut wait, need 15 to", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0499", "best_answer": "36.9, 0.3225, 32.25, 2.149", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0500", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0501", "best_answer": "F", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0502", "best_answer": "\\frac{8}{11}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0503", "best_answer": "y=-43000x+833000,446000,2019", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0504", "best_answer": "-\\frac{3}{2},-\\frac{3\\sqrt{3}}{2}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0505", "best_answer": "1,3,6,-5,-4,2", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0506", "best_answer": "J", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0507", "best_answer": "I", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0508", "best_answer": "\\frac{n(n-1)}{2}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0509", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0510", "best_answer": "2/3", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0511", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0512", "best_answer": "64p^2+64p+16", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0513", "best_answer": "-1.41, 1.41, 1.75", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0514", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0515", "best_answer": "-8, 1, 12, 19", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0516", "best_answer": "7,-11,4,0", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0517", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0518", "best_answer": "E", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0519", "best_answer": "426.2, 5090, 98.33", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0520", "best_answer": "44", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0521", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0522", "best_answer": "-0.472,\\ 0.472", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0523", "best_answer": "2097150", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0524", "best_answer": "I", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0525", "best_answer": "H", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0526", "best_answer": "y=128x^4+16x^2+4", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0527", "best_answer": "8, 700, x, 25000, 286", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0528", "best_answer": "43185, 2069", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0529", "best_answer": "\\frac{429}{20}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0530", "best_answer": "8/9,7/9,5", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0531", "best_answer": "C,D,F,H", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0532", "best_answer": "I", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0533", "best_answer": "0.0564", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0534", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0535", "best_answer": "-4,\\,-6", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0536", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0537", "best_answer": "42", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0538", "best_answer": "E", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0539", "best_answer": "4,5", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0540", "best_answer": "A,B,C", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0541", "best_answer": "5", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0542", "best_answer": "285, 8389.25, 91.59, A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0543", "best_answer": "\\1.43,\\0.54", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0544", "best_answer": "A", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0545", "best_answer": "400000", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0546", "best_answer": "92,126,146,72,172", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0547", "best_answer": "H", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0548", "best_answer": "x + 0.20x = 144, \\120.00", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0549", "best_answer": "J", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0550", "best_answer": "J", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0551", "best_answer": "\\sqrt{28}", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0552", "best_answer": "36312, 33140", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0553", "best_answer": "24, 1.6", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0554", "best_answer": "A", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0555", "best_answer": "1.11, 0.1335", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0556", "best_answer": "D", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0557", "best_answer": "5", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0558", "best_answer": "f(x)=\\frac{13}{2}x-25", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0559", "best_answer": "-280", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0560", "best_answer": "C, A, A", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0561", "best_answer": "E", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0562", "best_answer": "H", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0563", "best_answer": "20\\%", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0564", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0565", "best_answer": "-7.006,-7.06,-7.6", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0566", "best_answer": "3", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0567", "best_answer": "A,A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0568", "best_answer": "-10, 3", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0569", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0570", "best_answer": "H", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0571", "best_answer": "E", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0572", "best_answer": "8,-6,6,8", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0573", "best_answer": "\\frac{17}{72}", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0574", "best_answer": "CE", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0575", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0576", "best_answer": "\\frac{5}{2},\\frac{1}{2}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0577", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0578", "best_answer": "7.62, 9.00, 95.44", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0579", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0580", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0581", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0582", "best_answer": "1035", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0583", "best_answer": "119", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0584", "best_answer": "7z,6w", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0585", "best_answer": "-0.2235, 2.262, -2.262, No", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0586", "best_answer": "2.0, -2.0, 0.2, -0.1", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0587", "best_answer": "B,C,D,E,F,J \\quad|\\quad C \\quad|\\quad A,B,C \\quad|\\quad A,B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0588", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0589", "best_answer": "D", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0590", "best_answer": "D", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0591", "best_answer": "2\\cos(1),\\ 2\\sin(1),\\ 2\\sin(2),\\ 2\\cos(2),\\ \\sqrt{10},\\ \\arctan(3),\\ \\sqrt{17},\\ \\arctan(4)", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0592", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0593", "best_answer": "19.4", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0594", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0595", "best_answer": "A,D,E,G,probability", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0596", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0597", "best_answer": "B", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0598", "best_answer": "G", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0599", "best_answer": "1.81", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0600", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0601", "best_answer": "3s-1,2s+1", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0602", "best_answer": "-70.8, 0.719, 53.6", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0603", "best_answer": "C,A,B", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0604", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0605", "best_answer": "45.6", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0606", "best_answer": "E", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0607", "best_answer": "0,0,4,0,0,14,6,6,20,-6,-6,0,-4,-4,10,-4,-4,-12", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0608", "best_answer": "B,A,A,1981", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0609", "best_answer": "30\\sqrt{85} miles", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0610", "best_answer": "4\\pi", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0611", "best_answer": "1.3560", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0612", "best_answer": "68,81", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0613", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0614", "best_answer": "I", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0615", "best_answer": "14,9", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0616", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0617", "best_answer": "left, 7, up, 6", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0618", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0619", "best_answer": "-3.125, 0.002, A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0620", "best_answer": "\\frac{4}{\\sqrt7},\\frac{16}{7},2.167,B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0621", "best_answer": "153-k", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0622", "best_answer": "3.855, 2.567, Yes", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0623", "best_answer": "True,False,False,False,True,True", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0624", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0625", "best_answer": "5(x+2)(x+3)", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0626", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0627", "best_answer": "\\frac{32\\pi}{3}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0628", "best_answer": "76, 75.7, 75.67, 75.673", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0629", "best_answer": "515", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0630", "best_answer": "71.981, 564.365", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0631", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0632", "best_answer": "23", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0633", "best_answer": "B,D,8", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0634", "best_answer": "109", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0635", "best_answer": "37.6,\\ 0.746,\\ -25.4", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0636", "best_answer": "9901", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0637", "best_answer": "A,B,F,C,D,E", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0638", "best_answer": "0.151,(-infty, -1.751)U(1.751, infty),0.880,D", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0639", "best_answer": "3.325", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0640", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0641", "best_answer": "6.4,46.08", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0642", "best_answer": "6,\\frac{\\pi}{3},13", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0643", "best_answer": "True, False, False, True, False", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0644", "best_answer": "A", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0645", "best_answer": "129n-11500", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0646", "best_answer": "A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0647", "best_answer": "J", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0648", "best_answer": "W=11.51+0.83x,\\30.60", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0649", "best_answer": "1048575", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0650", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0651", "best_answer": "73  million,\\ 73e^{0.45} = 114.49  million", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0652", "best_answer": "142", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0653", "best_answer": "A=60\\cdot4^{(4-t)/7},\\quad 60\\cdot4^{4/7}=132.5 mg,\\quad 60\\cdot4^{-2/7}=40.4 mg", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0654", "best_answer": "\\sqrt{19},2,2,2", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0655", "best_answer": "S=0.85L", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0656", "best_answer": "6x^2-23x+15", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0657", "best_answer": "172.517, 187.483, 172.873, 187.127, 0, 5.1672, -10.334, 10.334", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0658", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0659", "best_answer": "29.94", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0660", "best_answer": "E", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0661", "best_answer": "r=4+h/1000,\\ w=2880/(4+h/1000)^2", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0662", "best_answer": "23", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0663", "best_answer": "F", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0664", "best_answer": "\\frac{83}{100},\\frac{83}{99}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0665", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0666", "best_answer": "76e^{0.4268t},\\ 42.68", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0667", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0668", "best_answer": "G", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0669", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0670", "best_answer": "D", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0671", "best_answer": "1.71,113.2", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0672", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0673", "best_answer": "1166400", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0674", "best_answer": "8x+7", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0675", "best_answer": "B", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0676", "best_answer": "D,A,A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0677", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0678", "best_answer": "13960", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0679", "best_answer": "11 ft", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0680", "best_answer": "0.035, 0.0525, 0.0775, A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0681", "best_answer": "28900,170,135,205", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0682", "best_answer": "G", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0683", "best_answer": "-0.65", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0684", "best_answer": "-1.55", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0685", "best_answer": "C and D", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0686", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0687", "best_answer": "24500", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0688", "best_answer": "2055375", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0689", "best_answer": "45,43", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0690", "best_answer": "H", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0691", "best_answer": "(19.67, 26.99)", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0692", "best_answer": "1.24", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0693", "best_answer": "30,\\frac{15}{2},\\frac{11}{2}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0694", "best_answer": "C(x)=6750+9x,\\ R(x)=36x,\\ P(x)=27x-6750,\\ 250", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0695", "best_answer": "E", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0696", "best_answer": "x+8,-81", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0697", "best_answer": "60", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0698", "best_answer": "-50.92", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0699", "best_answer": "6,3", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0700", "best_answer": "F", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0701", "best_answer": "22", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0702", "best_answer": "-u^4-4u^3+3u^2-6u-8", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0703", "best_answer": "B", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0704", "best_answer": "3.65,1.645,B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0705", "best_answer": "True,False,False,True", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0706", "best_answer": "2047.28", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0707", "best_answer": "5200,2600", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0708", "best_answer": "-\\frac{9}{2},\\frac{9}{2},-\\frac{81}{4}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0709", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0710", "best_answer": "x = 2\\pi - \\arccos\\!(\\frac{1}{8}) - 3,\\quad x = 2\\pi + \\arccos\\!(\\frac{1}{8}) - 3", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0711", "best_answer": "D", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0712", "best_answer": "D,D,A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0713", "best_answer": "-3,not real", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0714", "best_answer": "\\84.00", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0715", "best_answer": "5, 7, 9, 13,\\ 8.5,\\ 6, 7, 8, 9, 10, 11,\\ 8.5", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0716", "best_answer": "\\frac{19}{33}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0717", "best_answer": "7992", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0718", "best_answer": "65761800, 72704000, median", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0719", "best_answer": "E", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0720", "best_answer": "D", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0721", "best_answer": "D,A,A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0722", "best_answer": "2051325", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0723", "best_answer": "-\\frac{\\sqrt3}{2},-\\frac{\\sqrt2}{2}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0724", "best_answer": "2", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0725", "best_answer": "41.302, 13.277, A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0726", "best_answer": "7,48", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0727", "best_answer": "A", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0728", "best_answer": "80000", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0729", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0730", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0731", "best_answer": "J", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0732", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0733", "best_answer": "68,247,97,17", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0734", "best_answer": "4830,4.83", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0735", "best_answer": "28, 42.5, 55, -29, 82, 27, A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0736", "best_answer": "sqrt(30)/2", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0737", "best_answer": "2140", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0738", "best_answer": "A,C,A,A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0739", "best_answer": "\\frac{Q}{1-Z}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0740", "best_answer": "\\frac{5184}{81\\cos^2 t - 64\\sin^2 t}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0741", "best_answer": "H", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0742", "best_answer": "241.0", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0743", "best_answer": "430", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0744", "best_answer": "26.875, 32.1875", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0745", "best_answer": "2\\sin(C)\\cos(C),\\ -\\cos(C),\\ \\frac{2\\tan(C)}{1-\\tan^2(C)},\\ \\sin(A)\\cos(B)-\\cos(A)\\sin(B),\\ \\sin(C),\\ \\cos(A)\\cos(B)+\\sin(A)\\sin(B),\\ \\frac{\\sin(x)}{1+\\cos(x)},\\ \\cos^2(C)-\\sin^2(C)", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0746", "best_answer": "17417,30856,808694,103863,876259,924095,21108", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0747", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0748", "best_answer": "222.51, 186.49, 79.43, 66.57, 50.05, 41.95, 31.01, 25.99, 20.789, 3, 11.345, B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0749", "best_answer": "5{,}5{,}5{,}5{,}5,\\ is,\\ 14/9{,}19/14{,}24/19{,}29/24{,}34/29,\\ is not,\\ 5n+9,\\ (-1)^{n+1}(5n+9)", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0750", "best_answer": "36.98\\%,\\ln(0.95),C,E", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0751", "best_answer": "31", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0752", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0753", "best_answer": "A, 0.246, A  and  B, 16.6", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0754", "best_answer": "60x^2+65x", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0755", "best_answer": "F", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0756", "best_answer": "109.27 ft,520.16 ft", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0757", "best_answer": "C", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0758", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0759", "best_answer": "C. normal distribution", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0760", "best_answer": "I", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0761", "best_answer": "5f(n-1)+4", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0762", "best_answer": "110x^2+42x", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0763", "best_answer": "4+9, 8\\div3", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0764", "best_answer": "\\frac{(a+b)(a-b)^4}{c^5}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0765", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0766", "best_answer": "4.3750,7.3333,11.4286", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0767", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0768", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0769", "best_answer": "1620", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0770", "best_answer": "3,4,1,3,2,1,2,2,0.5,2", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0771", "best_answer": "2", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0772", "best_answer": "H", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0773", "best_answer": "\\frac{3a-14}{3}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0774", "best_answer": "24, 28, 33, 39, 42", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0775", "best_answer": "y=6\\sin(x-7)-6", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0776", "best_answer": "A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0777", "best_answer": "8", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0778", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0779", "best_answer": "F", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0780", "best_answer": "3t^{14}+6t^{12}+9t^{10}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0781", "best_answer": "sqrt(15)/8", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0782", "best_answer": "-1517", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0783", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0784", "best_answer": "\\frac{17}{60}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0785", "best_answer": "False,True,False,False", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0786", "best_answer": "indeed C and there's a subtlety I'm missing.\n\nActually, wait. Let me reconsider the problem. The problem says $X$ consists of \"a sequence of ones immediately followed by a sequence of zeros (either sequence may be empty).\" \n\nIf the sequence of ones is empty and the sequence of zeros is non-empty, we get a number like $000...0$, which is not a valid positive integer (it's 0 or has leading zeros). So we need $a \\geq 1$.\n\nIf the sequence of zeros is empty and the sequence of ones is non-empty, we get $R_a$. For this to be divisible by $505000$, we need $2^3 \\cdot", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0787", "best_answer": "148{,}165{,}614, \\ 42, \\ 47", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0788", "best_answer": "A", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0789", "best_answer": "8,8,-8,-8", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0790", "best_answer": "-20x^2+45x-25=0", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0791", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0792", "best_answer": "t = \\frac{\\ln(V/T)}{\\ln(h/g)}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0793", "best_answer": "1.353,(1.476, inf),0.0880,D", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0794", "best_answer": "4.47,4", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0795", "best_answer": "450,2,6", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0796", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0797", "best_answer": "C", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0798", "best_answer": "245275949/62500, EXTRANEOUS", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0799", "best_answer": "8096", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0800", "best_answer": "140", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0801", "best_answer": "G", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0802", "best_answer": "26/7", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0803", "best_answer": "124", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0804", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0805", "best_answer": "A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0806", "best_answer": "-\\frac{\\sqrt{869}}{45},-\\frac{34}{45},\\frac{\\sqrt{869}}{34},\\frac{34\\sqrt{869}}{869},-\\frac{45}{34},-\\frac{45\\sqrt{869}}{869}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0807", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0808", "best_answer": "D", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0809", "best_answer": "1540", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0810", "best_answer": "F", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0811", "best_answer": "1.336 \\times 10^{-19}", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0812", "best_answer": "\\frac{512}{\\sin^6(2t)} = r^{12}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0813", "best_answer": "A,C", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0814", "best_answer": "5, 4.7256, 0.9451, 1.224, 30, 23.1567, 0.7719, 35, 27.8822", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0815", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0816", "best_answer": "8.7, 10.53", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0817", "best_answer": "\\frac{88}{21}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0818", "best_answer": "6b+5a,ab", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0819", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0820", "best_answer": "15", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0821", "best_answer": "C,A,A,A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0822", "best_answer": "200", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0823", "best_answer": "230", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0824", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0825", "best_answer": "D", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0826", "best_answer": "1800", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0827", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0828", "best_answer": "99.63, 110.37", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0829", "best_answer": "8464", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0830", "best_answer": "\\frac{44\\pi}{15}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0831", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0832", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0833", "best_answer": "-19/3, 3/4, 48/6, 40/3", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0834", "best_answer": "\\frac{\\pi}{4},\\frac{3\\pi}{2},-\\frac{19\\pi}{6}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0835", "best_answer": "126", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0836", "best_answer": "2025", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0837", "best_answer": "D", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0838", "best_answer": "(23.66, 28.34)", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0839", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0840", "best_answer": "F", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0841", "best_answer": "\\sin(40+8\\sqrt{x}),5+\\sqrt{\\sin(8x)}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0842", "best_answer": "65.47, 1.552, 6.051, 1.833, B", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0843", "best_answer": "2y,10", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0844", "best_answer": "J", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0845", "best_answer": "5", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0846", "best_answer": "3,1,2,3,-2", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0847", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0848", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0849", "best_answer": "4(n+1)", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0850", "best_answer": "C", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0851", "best_answer": "B  and  C", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0852", "best_answer": "414.72", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0853", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0854", "best_answer": "-\\frac{47}{8},-\\frac{47}{6}", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0855", "best_answer": "20000,2000", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0856", "best_answer": "H", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0857", "best_answer": "A, 0.8974, 0.9146, A, 0.9024, 0.9212", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0858", "best_answer": "2.300, 1.691, Yes", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0859", "best_answer": "1,2,2,4", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0860", "best_answer": "22", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0861", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0862", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0863", "best_answer": "\\frac{1}{t^{69}}", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0864", "best_answer": "\\frac{35}{3},25", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0865", "best_answer": "\\frac{7}{x}-8", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0866", "best_answer": "H", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0867", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0868", "best_answer": "E", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0869", "best_answer": "20.5,\\ \\frac{x+y+xy}{2}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0870", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0871", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0872", "best_answer": "infinity, 0", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0873", "best_answer": "G", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0874", "best_answer": "J", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0875", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0876", "best_answer": "C", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0877", "best_answer": "F", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0878", "best_answer": "I", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0879", "best_answer": "H", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0880", "best_answer": "\\frac{35}{37},\\frac{35}{12}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0881", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0882", "best_answer": "1200,3600", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0883", "best_answer": "656", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0884", "best_answer": "g(x)=(x-59)^2+74", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0885", "best_answer": "18, 139.875, 18, B", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0886", "best_answer": "A,C", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0887", "best_answer": "I", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0888", "best_answer": "I", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0889", "best_answer": "5,4y", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0890", "best_answer": "A,A,C,6", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0891", "best_answer": "A", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0892", "best_answer": "69.65", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0893", "best_answer": "A,C", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0894", "best_answer": "0.023, 1.484, 2.013, -0.109, 0.301, -0.118, 0.294, 10", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0895", "best_answer": "g(x)=35\\sqrt{14}(\\frac{2}{7})^{x/20}", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0896", "best_answer": "False,True,False,False,True,True,False,True", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0897", "best_answer": "84.875", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0898", "best_answer": "48", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0899", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0900", "best_answer": "1200,3600", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0901", "best_answer": "H", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0902", "best_answer": "9,6", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0903", "best_answer": "A,C", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0904", "best_answer": "A", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0905", "best_answer": "B,C", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0906", "best_answer": "x=2,\\ x=5", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0907", "best_answer": "152", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0908", "best_answer": "100(0.83)^t,\\ 39.390", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0909", "best_answer": "1520", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0910", "best_answer": "1134,16", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0911", "best_answer": "I", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0912", "best_answer": "6013", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0913", "best_answer": "G", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0914", "best_answer": "0.1901,0.2474", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0915", "best_answer": "-2", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0916", "best_answer": "3\\sqrt{2},6\\sqrt{2},18", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0917", "best_answer": "189.8, 246.4, 43", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0918", "best_answer": "C", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0919", "best_answer": "\\frac{3875}{12012}", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0920", "best_answer": "178", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0921", "best_answer": "D", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0922", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0923", "best_answer": "y=-6.2x+297.6,\\ 93,\\ 48", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0924", "best_answer": "n=55+0.2t,2010", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0925", "best_answer": "276", "answer_source": "consensus", "tier": "R3", "confidence": "high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0926", "best_answer": "-3t^2-6t+2", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0927", "best_answer": "False, True, True, True, False, False", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0928", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0929", "best_answer": "6.086,(-0.72,3.12),A", "answer_source": "consensus", "tier": "U", "confidence": "uncertain", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0930", "best_answer": "E", "answer_source": "consensus", "tier": "R2", "confidence": "very_high", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0931", "best_answer": "3,-3", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0932", "best_answer": "26", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0933", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0934", "best_answer": "J", "answer_source": "consensus", "tier": "R4", "confidence": "moderate", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0935", "best_answer": "H", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "SECONDARY_PRIORITY", "sft_weight": 2}
+{"item_id": "0936", "best_answer": "\\frac{275}{16}", "answer_source": "consensus", "tier": "W1", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0937", "best_answer": "640", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0938", "best_answer": "\\49.88", "answer_source": "consensus", "tier": "W2", "confidence": "high_wrong", "sft_label": "PRIORITY", "sft_weight": 3}
+{"item_id": "0939", "best_answer": "E", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0940", "best_answer": "B", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
+{"item_id": "0941", "best_answer": "A,C,A,A,B,C", "answer_source": "consensus", "tier": "W3", "confidence": "probably_wrong", "sft_label": "FORMAT_FIX", "sft_weight": 1}
+{"item_id": "0942", "best_answer": "36", "answer_source": "consensus", "tier": "R1", "confidence": "bulletproof", "sft_label": "DEFAULT", "sft_weight": 1}
