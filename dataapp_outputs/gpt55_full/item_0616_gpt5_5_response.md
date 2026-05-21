@@ -1,37 +1,55 @@
-# GPT-5.5 xhigh Response
+We need the general solution of the differential equation \(y''+y=\sin 2x\).
 
-## Prompt
-```
-The general solution of the equation $y''+y= sin 2 x$ is
+The homogeneous equation is
 
-Options:
-A. $y= C_1 sin x + C_2 cos x - \frac{cos 2x}{4}$
-B. $y= C_1 x sin x + C_2 cos x - frac{x cos 2x}{2}$
-C. $y= C_1 sin x + C_2 cos x + frac{x cos 2x}{2}$
-D. $y= C_1 sin x + C_2 cos x - \frac{sin 2x}{6}$
-E. $y= C_1 sin x + C_2 cos x - \frac{sin 2x}{4}$
-F. $y= C_1 sin x + C_2 cos x - \frac{sin 2x}{8}$
-G. $y= C_1 sin x + C_2 cos x -frac{cos 2x}{3}$
-H. $y= C_1 sin x + C_2 cos x - \frac{sin 2x}{2}$
-I. $y= C_1 sin x + C_2 cos x - \frac{sin 2x}{5}$
-J. $y= C_1 sin x + C_2 cos x - frac{sin 2x}{3}$
+\[
+y''+y=0
+\]
 
-Problem type: multiple choice.
+with solution
 
-Solve the problem and identify the correct option letter. End with: \boxed{Letter}
-```
+\[
+y_h=C_1\sin x+C_2\cos x.
+\]
 
-## Reasoning + Response
+For a particular solution, try
 
+\[
+y_p=A\sin 2x+B\cos 2x.
+\]
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206851.24s
-- Request ID: None
+Then
 
-**ERROR:** RetryError[<Future at 0x7f5b68445ed0 state=finished raised RateLimitError>]
+\[
+y_p''=-4A\sin 2x-4B\cos 2x,
+\]
+
+so
+
+\[
+y_p''+y_p=-3A\sin 2x-3B\cos 2x.
+\]
+
+Match with \(\sin 2x\):
+
+\[
+-3A=1 \implies A=-\frac13,\qquad -3B=0 \implies B=0.
+\]
+
+Thus
+
+\[
+y_p=-\frac{\sin 2x}{3}.
+\]
+
+So the general solution is
+
+\[
+y=C_1\sin x+C_2\cos x-\frac{\sin 2x}{3}.
+\]
+
+This corresponds to option J.
+
+\[
+\boxed{J}
+\]

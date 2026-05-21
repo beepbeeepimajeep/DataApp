@@ -1,25 +1,19 @@
-# GPT-5.5 xhigh Response
+We need the linear function through the points \((250,1600)\) and \((650,4200)\).
 
-## Prompt
-```
-Find an equation for the linear function which has $f(250)=1600$ and $f(650)=4200$ $f(x)=$ [ANS]
+Slope:
+\[
+m=\frac{4200-1600}{650-250}=\frac{2600}{400}=\frac{13}{2}
+\]
 
-Problem type: single-answer.
+Use \(f(x)=mx+b\) with \((250,1600)\):
+\[
+1600=\frac{13}{2}(250)+b=1625+b
+\]
+\[
+b=-25
+\]
 
-There is exactly one final answer. End with: \boxed{answer}
-```
-
-## Reasoning + Response
-
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206807.88s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b68533a50 state=finished raised RateLimitError>]
+So the function is:
+\[
+\boxed{f(x)=\frac{13}{2}x-25}
+\]

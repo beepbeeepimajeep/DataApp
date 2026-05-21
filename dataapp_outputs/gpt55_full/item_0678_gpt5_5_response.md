@@ -1,25 +1,20 @@
-# GPT-5.5 xhigh Response
+We need to predict the 2007 enrollment using a linear model through the two given data points.
 
-## Prompt
-```
-Teaneck High had an enrollment of 11510 in 1986 and an enrollment of 12910 in year 1998. What is the predicted enrollment of Teaneck High in 2007 if we assume a linear model? Predicted Enrollment=[ANS]
+Slope:
+\[
+\frac{12910-11510}{1998-1986}=\frac{1400}{12}=\frac{350}{3}
+\]
 
-Problem type: single-answer.
+From 1998 to 2007 is \(9\) years, so the increase is:
+\[
+9\cdot \frac{350}{3}=1050
+\]
 
-There is exactly one final answer. End with: \boxed{answer}
-```
+Predicted enrollment:
+\[
+12910+1050=13960
+\]
 
-## Reasoning + Response
-
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206895.24s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b68110250 state=finished raised RateLimitError>]
+\[
+\boxed{13960}
+\]

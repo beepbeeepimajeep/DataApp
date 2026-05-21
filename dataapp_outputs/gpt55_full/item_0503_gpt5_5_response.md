@@ -1,33 +1,53 @@
-# GPT-5.5 xhigh Response
+We need the linear model, the 2009 fund balance, and the year the fund becomes empty.
 
-## Prompt
-```
-A company set aside a certain amount of money in the year 2000. The company spent exactly the same amount from that fund each year on perks for its employees. In $2003$, there was still ${\$704{,}000}$ left in the fund. In $2007$, there was ${\$532{,}000}$ left. Let $x$ be the number of years since 2000, and let $y$ be the amount of money left in the fund that year. Use a linear equation to model the amount of money left in the fund after so many years.
-The linear model’s slope-intercept equation is [ANS].
-In the year $2009$, there was $[ANS] left in the fund.
-In the year [ANS], the fund will be empty.
+The points are \((3,704000)\) and \((7,532000)\).
 
-Problem type: multi-answer.
+\[
+m=\frac{532000-704000}{7-3}=\frac{-172000}{4}=-43000
+\]
 
-This problem requires multiple values. Before the final line, verify:
-- you have produced exactly the required number of answers
-- the order matches the problem's request
-- the final answer uses exactly one \boxed{...} with comma-separated values
+So
 
-End with: \boxed{value1,value2,value3}
-```
+\[
+y=-43000x+b
+\]
 
-## Reasoning + Response
+Using \((3,704000)\):
 
+\[
+704000=-43000(3)+b
+\]
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206763.44s
-- Request ID: None
+\[
+b=833000
+\]
 
-**ERROR:** RetryError[<Future at 0x7f5b6837d8d0 state=finished raised RateLimitError>]
+Thus the model is
+
+\[
+y=-43000x+833000
+\]
+
+For 2009, \(x=9\):
+
+\[
+y=-43000(9)+833000=446000
+\]
+
+For the fund to be empty:
+
+\[
+0=-43000x+833000
+\]
+
+\[
+x=\frac{833000}{43000}=19+\frac{16}{43}
+\]
+
+That is during the calendar year \(2000+19=2019\).
+
+Verification: There are exactly 3 answers, in order: equation, 2009 amount, empty year.
+
+\[
+\boxed{y=-43000x+833000,\ \$446000,\ 2019}
+\]

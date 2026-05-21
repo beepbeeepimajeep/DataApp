@@ -1,25 +1,17 @@
-# GPT-5.5 xhigh Response
+We need the arc length for a circle with radius \(8\) and central angle \(196^\circ\).
 
-## Prompt
-```
-In a circle of radius 8, the length of the arc that subtends a central angle of 196 degrees is [ANS].
+Convert the angle to radians:
 
-Problem type: single-answer.
+\[
+196^\circ=\frac{196\pi}{180}=\frac{49\pi}{45}
+\]
 
-There is exactly one final answer. End with: \boxed{answer}
-```
+Arc length formula:
 
-## Reasoning + Response
+\[
+s=r\theta=8\cdot \frac{49\pi}{45}=\frac{392\pi}{45}
+\]
 
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206685.14s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b686717d0 state=finished raised RateLimitError>]
+\[
+\boxed{\frac{392\pi}{45}}
+\]

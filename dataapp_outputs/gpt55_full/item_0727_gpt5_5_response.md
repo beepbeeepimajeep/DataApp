@@ -1,37 +1,55 @@
-# GPT-5.5 xhigh Response
+We need maximize the sum under the constraint on the cosines.
 
-## Prompt
-```
-Determine the greatest possible value of $\sum_{i=1}^{10} \cos(3x_i)$ for real numbers $x_1,x_2,\dots,x_{10}$ satisfying $\sum_{i=1}^{10} \cos(x_i) = 0$.
+Let \(y_i=\cos x_i\). Then \(y_i\in[-1,1]\) and \(\sum y_i=0\). Also,
 
-Options:
-A. \frac{480}{49}
-B. \frac{480}{56}
-C. \frac{480}{51}
-D. \frac{480}{48}
-E. \frac{480}{47}
-F. \frac{480}{52}
-G. \frac{480}{55}
-H. \frac{480}{53}
-I. \frac{480}{50}
-J. \frac{480}{54}
+\[
+\cos(3x_i)=4\cos^3 x_i-3\cos x_i=4y_i^3-3y_i.
+\]
 
-Problem type: multiple choice.
+Since \(\sum y_i=0\), the expression becomes
 
-Solve the problem and identify the correct option letter. End with: \boxed{Letter}
-```
+\[
+\sum_{i=1}^{10}\cos(3x_i)=4\sum_{i=1}^{10}y_i^3.
+\]
 
-## Reasoning + Response
+So we maximize \(\sum y_i^3\).
 
+Let the positive \(y_i\)'s have total sum \(M\). Then the negative \(y_i\)'s have total sum \(-M\). Write \(M=m+r\), where \(m=\lfloor M\rfloor\) and \(0\le r<1\).
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206929.11s
-- Request ID: None
+For fixed \(M\), the positive cube sum is maximized by taking \(m\) values equal to \(1\) and one value equal to \(r\), giving at most
 
-**ERROR:** RetryError[<Future at 0x7f5b685718d0 state=finished raised RateLimitError>]
+\[
+m+r^3.
+\]
+
+The negative cube sum is maximized by spreading the negative total evenly among as many remaining variables as possible.
+
+If \(r=0\), checking integer possibilities \(m=0,1,2,3,4,5\),
+
+\[
+\sum y_i^3 \le m-\frac{m^3}{(10-m)^2}.
+\]
+
+These values are
+
+\[
+0,\quad \frac{80}{81},\quad \frac{15}{8},\quad \frac{120}{49},\quad \frac{20}{9},\quad 0.
+\]
+
+The maximum is
+
+\[
+\frac{120}{49}.
+\]
+
+Thus the original maximum is
+
+\[
+4\cdot \frac{120}{49}=\frac{480}{49}.
+\]
+
+This is achieved by taking three \(y_i=1\) and seven \(y_i=-\frac37\). Therefore the correct option is A.
+
+\[
+\boxed{A}
+\]

@@ -1,31 +1,33 @@
-# GPT-5.5 xhigh Response
+We need the domain of \(f\circ g\), meaning \(f(g(x))\).
 
-## Prompt
-```
-Let $f(x)=\sqrt{56-x}$ and $g(x)=x^2-x$. Then the domain of $f\circ g$ is equal to $[a,b]$ for $a=$ [ANS]
-and $b=$ [ANS]
+\[
+f(g(x))=\sqrt{56-(x^2-x)}=\sqrt{56-x^2+x}
+\]
 
-Problem type: multi-answer.
+For the square root to be defined,
 
-This problem requires multiple values. Before the final line, verify:
-- you have produced exactly the required number of answers
-- the order matches the problem's request
-- the final answer uses exactly one \boxed{...} with comma-separated values
+\[
+56-x^2+x\ge 0
+\]
 
-End with: \boxed{value1,value2,value3}
-```
+\[
+x^2-x-56\le 0
+\]
 
-## Reasoning + Response
+\[
+(x-8)(x+7)\le 0
+\]
 
+So,
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206722.94s
-- Request ID: None
+\[
+-7\le x\le 8
+\]
 
-**ERROR:** RetryError[<Future at 0x7f5b6851bcd0 state=finished raised RateLimitError>]
+Thus the domain is \([-7,8]\), so \(a=-7\) and \(b=8\).
+
+Verification: exactly two answers are needed, in the order \(a,b\), and the final answer is one boxed comma-separated list.
+
+\[
+\boxed{-7,8}
+\]

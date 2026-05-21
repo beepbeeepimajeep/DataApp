@@ -1,25 +1,24 @@
-# GPT-5.5 xhigh Response
+We need an exponential function passing through \((10,70)\) and \((30,20)\).
 
-## Prompt
-```
-Find a formula for the exponential function which satisfies the given conditions: g(10)=70 \quad\mbox{and}\quad g(30)=20. $g(x)=$ [ANS]
+Let  
+\(g(x)=70\cdot b^{x-10}\).
 
-Problem type: single-answer.
+Using \(g(30)=20\):
 
-There is exactly one final answer. End with: \boxed{answer}
-```
+\[
+20=70b^{20}
+\]
 
-## Reasoning + Response
+\[
+b^{20}=\frac{2}{7}
+\]
 
+\[
+b=\left(\frac{2}{7}\right)^{1/20}
+\]
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779207047.24s
-- Request ID: None
+Thus,
 
-**ERROR:** RetryError[<Future at 0x7f5b4874c1d0 state=finished raised RateLimitError>]
+\[
+\boxed{g(x)=70\left(\frac{2}{7}\right)^{\frac{x-10}{20}}}
+\]

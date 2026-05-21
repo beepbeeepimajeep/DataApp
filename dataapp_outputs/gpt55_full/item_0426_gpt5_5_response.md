@@ -1,25 +1,24 @@
-# GPT-5.5 xhigh Response
+We need the number of cows.
 
-## Prompt
-```
-In a group of healthy cows and chickens, the number of legs is 22 more than twice the number of heads. The number of the cows in the group is [ANS].
+Let \(c\) be the number of cows and \(k\) be the number of chickens.
 
-Problem type: single-answer.
+Heads: \(c+k\)  
+Legs: \(4c+2k\)
 
-There is exactly one final answer. End with: \boxed{answer}
-```
+Given:
+\[
+4c+2k=2(c+k)+22
+\]
 
-## Reasoning + Response
+Simplify:
+\[
+4c+2k=2c+2k+22
+\]
+\[
+2c=22
+\]
+\[
+c=11
+\]
 
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206696.39s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b685336d0 state=finished raised RateLimitError>]
+\boxed{11}

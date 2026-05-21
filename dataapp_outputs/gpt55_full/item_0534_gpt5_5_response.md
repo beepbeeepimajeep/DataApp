@@ -1,57 +1,33 @@
-# GPT-5.5 xhigh Response
+We need find \(a,b,c\) from the given general solution.
 
-## Prompt
-```
-Given that the general solution of the differential equation $\mathrm{y^{\prime\prime}+a y^{\prime}+b y=c e^{x}}$ is $\mathrm{y=~ ( \, C_{1}+C_{2} x \, ) ~ \ e^{-x}+e^{x}}$ , what are the values of $\mathrm{a, ~ b, ~ c}$ in order?
+The homogeneous solution is
+\[
+(C_1+C_2x)e^{-x},
+\]
+which means the characteristic equation has repeated root \(r=-1\). Therefore,
+\[
+r^2+ar+b=(r+1)^2=r^2+2r+1.
+\]
+So
+\[
+a=2,\qquad b=1.
+\]
 
-Options:
-A. $$
-1 \,, \; \; 0 \,, \; \; 2
-$$
-B. $$
-1 \,, \; \; 0 \,, \; \; 1
-$$
-C. $$
-2 \,, \; \; 0 \,, \; \; 3
-$$
-D. $$
-2 \,, \; \; 1 \,, \; \; 3
-$$
-E. $$
-1 \,, \; \; 0 \,, \; \; 3
-$$
-F. $$
-2 \,, \; \; 0 \,, \; \; 2
-$$
-G. $$
-2 \,, \; \; 1 \,, \; \; 4
-$$
-H. $$
-2 \,, \; \; 1 \,, \; \; 2
-$$
-I. $$
-1 \,, \; \; 1 \,, \; \; 1
-$$
-J. $$
-2 \,, \; \; 0 \,, \; \; 1
-$$
+The particular solution is \(y_p=e^x\). Substitute into the differential equation:
+\[
+y_p'=e^x,\qquad y_p''=e^x.
+\]
+Thus,
+\[
+y_p''+ay_p'+by_p=e^x+2e^x+1e^x=4e^x.
+\]
+So
+\[
+c=4.
+\]
 
-Problem type: multiple choice.
+Hence \((a,b,c)=(2,1,4)\), which is option G.
 
-Solve the problem and identify the correct option letter. End with: \boxed{Letter}
-```
-
-## Reasoning + Response
-
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206787.84s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b685bd4d0 state=finished raised RateLimitError>]
+\[
+\boxed{G}
+\]

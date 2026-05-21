@@ -1,25 +1,11 @@
-# GPT-5.5 xhigh Response
+We need profit as revenue minus operating cost.
 
-## Prompt
-```
-A flight costs \$11,500 to operate, regardless of the number of passengers. Each ticket costs \$129. Express profit, $P$, as a linear function of the number of passengers, $n$, on the flight. $P=$ [ANS] (do not enter commas in your formula)
+Revenue from \(n\) passengers: \(129n\)  
+Cost: \(11500\)
 
-Problem type: single-answer.
+So,
+\[
+P=129n-11500
+\]
 
-There is exactly one final answer. End with: \boxed{answer}
-```
-
-## Reasoning + Response
-
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206871.68s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b681126d0 state=finished raised RateLimitError>]
+\boxed{P=129n-11500}

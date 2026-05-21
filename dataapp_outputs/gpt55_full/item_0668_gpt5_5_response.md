@@ -1,37 +1,34 @@
-# GPT-5.5 xhigh Response
+We need the largest power of 2 dividing the difference, i.e. its 2-adic valuation.
 
-## Prompt
-```
-Compute the largest integer $n$ such that $2005^{2^{100}} - 2003^{2^{100}}$ is divisible by $2^n$ .
+Using LTE for odd integers \(a,b\) and even \(m\):
 
-Options:
-A. 106
-B. 105
-C. 109
-D. 108
-E. 100
-F. 107
-G. 103
-H. 101
-I. 102
-J. 104
+\[
+v_2(a^m-b^m)=v_2(a-b)+v_2(a+b)+v_2(m)-1.
+\]
 
-Problem type: multiple choice.
+Here \(a=2005\), \(b=2003\), and \(m=2^{100}\).
 
-Solve the problem and identify the correct option letter. End with: \boxed{Letter}
-```
+\[
+v_2(2005-2003)=v_2(2)=1
+\]
 
-## Reasoning + Response
+\[
+2005+2003=4008=8\cdot 501 \implies v_2(4008)=3
+\]
 
+\[
+v_2(2^{100})=100
+\]
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206886.79s
-- Request ID: None
+So
 
-**ERROR:** RetryError[<Future at 0x7f5b683dfe50 state=finished raised RateLimitError>]
+\[
+v_2\left(2005^{2^{100}}-2003^{2^{100}}\right)
+=1+3+100-1=103.
+\]
+
+Thus the correct option is G.
+
+\[
+\boxed{G}
+\]

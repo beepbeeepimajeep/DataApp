@@ -1,35 +1,19 @@
-# GPT-5.5 xhigh Response
+We need the coefficient of \(x^3y^{13}\) in \(\left(\frac12 x+y\right)^{17}\).
 
-## Prompt
-```
-What is the coefficient of $x^3y^{13}$ in $\left(\frac 12x + y\right)^{17}$ ?
+Each term in the expansion has total degree \(17\). But
 
-Options:
-A. 34
-B. 136
-C. 17
-D. 170
-E. 68
-F. 340
-G. 0
-H. 85
+\[
+x^3y^{13}
+\]
 
-Problem type: multiple choice.
+has total degree
 
-Solve the problem and identify the correct option letter. End with: \boxed{Letter}
-```
+\[
+3+13=16.
+\]
 
-## Reasoning + Response
+So this term does not appear in the expansion, and its coefficient is \(0\).
 
+Correct option: G
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206866.08s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b682b2b50 state=finished raised RateLimitError>]
+\boxed{G}

@@ -1,31 +1,9 @@
-# GPT-5.5 xhigh Response
+We need add each pair in order.
 
-## Prompt
-```
-Add as indicated: a) $-4+(-6)=$ [ANS]
-b) $-6+9=$ [ANS]
+a) \(-4+(-6)=-10\)
 
-Problem type: multi-answer.
+b) \(-6+9=3\)
 
-This problem requires multiple values. Before the final line, verify:
-- you have produced exactly the required number of answers
-- the order matches the problem's request
-- the final answer uses exactly one \boxed{...} with comma-separated values
+Verification: There are exactly 2 answers, and they are in the requested order: a, then b.
 
-End with: \boxed{value1,value2,value3}
-```
-
-## Reasoning + Response
-
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206810.44s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b68379350 state=finished raised RateLimitError>]
+\(\boxed{-10, 3}\)

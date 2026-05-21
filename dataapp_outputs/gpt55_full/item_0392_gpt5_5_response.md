@@ -1,26 +1,11 @@
-# GPT-5.5 xhigh Response
+We need to simplify the expression using sign rules.
 
-## Prompt
-```
-Use rules to find the sum
-$37-(-31)-(-13)$ [ANS]
+Subtracting a negative means add:
 
-Problem type: single-answer.
+\(37-(-31)-(-13)=37+31+13\)
 
-There is exactly one final answer. End with: \boxed{answer}
-```
+\(37+31=68\)
 
-## Reasoning + Response
+\(68+13=81\)
 
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206664.14s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b684dfcd0 state=finished raised RateLimitError>]
+\(\boxed{81}\)

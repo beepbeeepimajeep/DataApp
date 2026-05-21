@@ -1,25 +1,35 @@
-# GPT-5.5 xhigh Response
+Let the first two integers be \(a\) and \(b\). We need the third integer.
 
-## Prompt
-```
-In a sequence of five integers the third integer is the sum of the previous two, the fourth integer is the sum of the previous three and the fifth integer is the sum of the previous four. If the sum of the five integers is 176 then the third integer is [ANS].
+The third integer is
 
-Problem type: single-answer.
+\[
+a+b
+\]
 
-There is exactly one final answer. End with: \boxed{answer}
-```
+Let \(s=a+b\). Then the five integers are:
 
-## Reasoning + Response
+\[
+a,\ b,\ s,\ 2s,\ 4s
+\]
 
+Their sum is:
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779207021.99s
-- Request ID: None
+\[
+s+s+2s+4s=8s
+\]
 
-**ERROR:** RetryError[<Future at 0x7f5b682e5150 state=finished raised RateLimitError>]
+Given the sum is \(176\),
+
+\[
+8s=176
+\]
+
+\[
+s=22
+\]
+
+So the third integer is \(22\).
+
+\[
+\boxed{22}
+\]

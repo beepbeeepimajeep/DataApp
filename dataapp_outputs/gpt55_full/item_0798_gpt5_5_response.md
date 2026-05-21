@@ -1,31 +1,55 @@
-# GPT-5.5 xhigh Response
+We need the possible value of \(t\), then whether it is REAL or EXTRANEOUS.
 
-## Prompt
-```
-Solve for $t$: \sqrt{t-151}-\sqrt{t+117}=125
-The only possible root is $t=$ [ANS]. It is a(n) [ANS] root. (Fill in the second blank with REAL or EXTRANEOUS)
+\[
+\sqrt{t-151}-\sqrt{t+117}=125
+\]
 
-Problem type: multi-answer.
+Rearrange:
 
-This problem requires multiple values. Before the final line, verify:
-- you have produced exactly the required number of answers
-- the order matches the problem's request
-- the final answer uses exactly one \boxed{...} with comma-separated values
+\[
+\sqrt{t+117}=\sqrt{t-151}-125
+\]
 
-End with: \boxed{value1,value2,value3}
-```
+Square both sides:
 
-## Reasoning + Response
+\[
+t+117=t-151-250\sqrt{t-151}+15625
+\]
 
+\[
+117=15474-250\sqrt{t-151}
+\]
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206977.54s
-- Request ID: None
+\[
+250\sqrt{t-151}=15357
+\]
 
-**ERROR:** RetryError[<Future at 0x7f5b487bdfd0 state=finished raised RateLimitError>]
+\[
+\sqrt{t-151}=\frac{15357}{250}
+\]
+
+\[
+t-151=\left(\frac{15357}{250}\right)^2
+\]
+
+\[
+t=\frac{245274949}{62500}
+\]
+
+Check in the original equation:
+
+\[
+\sqrt{t-151}=\frac{15357}{250},\qquad \sqrt{t+117}=\frac{15893}{250}
+\]
+
+\[
+\frac{15357}{250}-\frac{15893}{250}=-\frac{536}{250}\neq 125
+\]
+
+So the possible root is extraneous.
+
+Verification: exactly two answers are required, in order \(t\), then root type.
+
+\[
+\boxed{\frac{245274949}{62500},\text{ EXTRANEOUS}}
+\]

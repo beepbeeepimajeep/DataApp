@@ -1,37 +1,54 @@
-# GPT-5.5 xhigh Response
+We need count positive integers \(n\le 2010\) such that \(\phi(n)\mid n\).
 
-## Prompt
-```
-How many positive integers $n\le 2010$ satisfy $\phi (n)|n$ , where $ \phi (n)$ is the number of integers less than or equal to $n$ relatively prime to $n$ ?
+Let
+\[
+n=\prod_{p\in S}p^{a_p}.
+\]
+Then
+\[
+\phi(n)=\prod_{p\in S}p^{a_p-1}(p-1),
+\]
+so \(\phi(n)\mid n\) iff
+\[
+\prod_{p\in S}(p-1)\mid \prod_{p\in S}p.
+\]
 
-Options:
-A. 41
-B. 44
-C. 48
-D. 40
-E. 39
-F. 47
-G. 43
-H. 42
-I. 46
-J. 45
+If \(S\) contains an odd prime, then \(p-1\) is even, so \(2\in S\). But each odd prime contributes a factor of \(2\) on the left, while the right side has only one factor of \(2\). Hence there can be at most one odd prime.
 
-Problem type: multiple choice.
+Thus the possible prime supports are:
+- empty support: \(n=1\),
+- \(\{2\}\): \(n=2^a\),
+- \(\{2,q\}\): need \(q-1\mid 2q\). Since \(\gcd(q-1,q)=1\), we get \(q-1\mid 2\), so \(q=3\).
 
-Solve the problem and identify the correct option letter. End with: \boxed{Letter}
-```
+So all such \(n\) are:
+\[
+1,\quad 2^a,\quad 2^a3^b \quad (a,b\ge 1).
+\]
 
-## Reasoning + Response
+Count them up to \(2010\):
 
+- \(1\): \(1\) number.
+- \(2^a\le 2010\): \(a=1,\dots,10\), so \(10\) numbers.
+- \(2^a3^b\le 2010\):
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206867.28s
-- Request ID: None
+\[
+\begin{array}{c|c}
+b & \text{max }a\\
+\hline
+1&9\\
+2&7\\
+3&6\\
+4&4\\
+5&3\\
+6&1
+\end{array}
+\]
 
-**ERROR:** RetryError[<Future at 0x7f5b68110550 state=finished raised RateLimitError>]
+Total:
+\[
+1+10+(9+7+6+4+3+1)=41.
+\]
+
+So the correct option is A.
+
+\boxed{A}

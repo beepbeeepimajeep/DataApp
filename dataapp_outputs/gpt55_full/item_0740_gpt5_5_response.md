@@ -1,26 +1,17 @@
-# GPT-5.5 xhigh Response
+Substitute \(x=r\cos t\) and \(y=r\sin t\):
 
-## Prompt
-```
-Find a polar equation of the hyperbola $\left(\frac{x}{8}\right)^2-\left(\frac{y}{9}\right)^2=1$. $r^2=$ [ANS]
-Note: use t for $\theta$.
+\[
+\left(\frac{r\cos t}{8}\right)^2-\left(\frac{r\sin t}{9}\right)^2=1
+\]
 
-Problem type: single-answer.
+\[
+r^2\left(\frac{\cos^2 t}{64}-\frac{\sin^2 t}{81}\right)=1
+\]
 
-There is exactly one final answer. End with: \boxed{answer}
-```
+Solving for \(r^2\):
 
-## Reasoning + Response
+\[
+r^2=\frac{5184}{81\cos^2 t-64\sin^2 t}
+\]
 
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206939.24s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b486fce50 state=finished raised RateLimitError>]
+\boxed{r^2=\frac{5184}{81\cos^2 t-64\sin^2 t}}

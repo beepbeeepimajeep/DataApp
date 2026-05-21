@@ -1,37 +1,31 @@
-# GPT-5.5 xhigh Response
+We need find \(2g(6)\).
 
-## Prompt
-```
-If f(2x) = x + 5 and f(g(6)) = 13, then 2 * g(6) =
+Given \(f(2x)=x+5\). Let \(y=2x\), so \(x=\frac y2\). Then
 
-Options:
-A. 6
-B. 18
-C. 36
-D. 8
-E. 16
-F. 32
-G. 24
-H. 12
-I. 40
-J. 30
+\[
+f(y)=\frac y2+5
+\]
 
-Problem type: multiple choice.
+Since \(f(g(6))=13\),
 
-Solve the problem and identify the correct option letter. End with: \boxed{Letter}
-```
+\[
+\frac{g(6)}2+5=13
+\]
 
-## Reasoning + Response
+\[
+\frac{g(6)}2=8
+\]
 
+\[
+g(6)=16
+\]
 
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206854.94s
-- Request ID: None
+Thus,
 
-**ERROR:** RetryError[<Future at 0x7f5b684bed50 state=finished raised RateLimitError>]
+\[
+2g(6)=32
+\]
+
+This corresponds to option F.
+
+\(\boxed{F}\)

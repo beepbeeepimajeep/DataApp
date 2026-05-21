@@ -1,25 +1,9 @@
-# GPT-5.5 xhigh Response
+A line graph is best for showing how data changes over time.
 
-## Prompt
-```
-Three students collected data for a school project. Anita asked her classmates which season they liked best. Kevin measured and recorded the height of the snow in his backyard every 15 minutes during a 2 hour snowstorm. Rachel recorded the total snowfall in 3 different towns. Who should use a line graph to display their data? [ANS] A. Anita and Rachel only  B. Rachel only  C. Kevin only  D. Kevin and Rachel only
+- Anita’s data is about favorite seasons, so a bar graph would fit.
+- Kevin recorded snow height every 15 minutes over time, so a line graph fits.
+- Rachel compared snowfall in different towns, so a bar graph would fit.
 
-Problem type: single-answer.
+Therefore, Kevin only should use a line graph.
 
-There is exactly one final answer. End with: \boxed{answer}
-```
-
-## Reasoning + Response
-
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206950.44s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b683dc250 state=finished raised RateLimitError>]
+\boxed{C}

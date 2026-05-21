@@ -1,31 +1,13 @@
-# GPT-5.5 xhigh Response
+We need find the two consecutive integers surrounding the unique positive real root.
 
-## Prompt
-```
-Let p(x)=x^{6}-14x^{5}+72x^{4}-78x^{3}-933x^{2}+5372x-9860. The polynomial $p(x)$ has exactly one positive real root. Between what two consecutive integers does it lie?
-The positive root is between [ANS] and [ANS].
+Evaluate near small positive integers using Horner’s method:
 
-Problem type: multi-answer.
+p(4) = -100
 
-This problem requires multiple values. Before the final line, verify:
-- you have produced exactly the required number of answers
-- the order matches the problem's request
-- the final answer uses exactly one \boxed{...} with comma-separated values
+p(5) = 800
 
-End with: \boxed{value1,value2,value3}
-```
+Since p(4) < 0 and p(5) > 0, by the Intermediate Value Theorem there is a root between 4 and 5. The problem states there is exactly one positive real root, so it must lie in this interval.
 
-## Reasoning + Response
+Verification: exactly two answers are needed, in order from lower integer to upper integer.
 
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206789.84s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b685e2850 state=finished raised RateLimitError>]
+\boxed{4,5}

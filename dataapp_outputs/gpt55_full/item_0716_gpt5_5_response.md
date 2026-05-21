@@ -1,25 +1,15 @@
-# GPT-5.5 xhigh Response
+The coefficient of determination is
 
-## Prompt
-```
-Suppose that for a given least-squares regression, the sum of squares for error is 70 and the sum of squares for regression is 95. Find the coefficient of determination. Coefficient of Determination=[ANS]
+\[
+R^2=\frac{SSR}{SST}=\frac{SSR}{SSR+SSE}
+\]
 
-Problem type: single-answer.
+Given \(SSR=95\) and \(SSE=70\),
 
-There is exactly one final answer. End with: \boxed{answer}
-```
+\[
+R^2=\frac{95}{95+70}=\frac{95}{165}=\frac{19}{33}
+\]
 
-## Reasoning + Response
-
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206919.64s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b681300d0 state=finished raised RateLimitError>]
+\[
+\boxed{\frac{19}{33}}
+\]

@@ -1,31 +1,17 @@
-# GPT-5.5 xhigh Response
+We need the linear model and then the birth year when life expectancy reaches 77.
 
-## Prompt
-```
-According to one mathematical model, the average life expenctancy for American men born in 1900 was 55 years. Life expectancy has increased by about 0.2 year for each birth year after 1900. If this trend continues, for which birth year will the average life expentancy be 77 years? a) Write an equation to model the problem. Let $t$ represent the number of years after 1900 and let $n$ represent men's life expectancy at that time. For example $t=12$ and $n=57.4$ in the year 1912. Answer: [ANS]
-b) Solve the equation, then answer the question given above. (Note: You are asked for a year, not a value for $t$. Answer: [ANS]
+Since life expectancy starts at 55 in 1900 and increases by 0.2 per year after 1900:
 
-Problem type: multi-answer.
+a) Equation:  
+\(n=55+0.2t\)
 
-This problem requires multiple values. Before the final line, verify:
-- you have produced exactly the required number of answers
-- the order matches the problem's request
-- the final answer uses exactly one \boxed{...} with comma-separated values
+b) Set \(n=77\):  
+\(77=55+0.2t\)  
+\(22=0.2t\)  
+\(t=110\)
 
-End with: \boxed{value1,value2,value3}
-```
+So the birth year is \(1900+110=2010\).
 
-## Reasoning + Response
+Verification: There are exactly 2 answers, in the requested order: equation first, year second.
 
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779207066.04s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b68444150 state=finished raised RateLimitError>]
+\(\boxed{n=55+0.2t,\ 2010}\)

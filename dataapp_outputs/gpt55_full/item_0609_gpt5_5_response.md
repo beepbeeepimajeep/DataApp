@@ -1,25 +1,19 @@
-# GPT-5.5 xhigh Response
+They travel in perpendicular directions, so use the Pythagorean theorem.
 
-## Prompt
-```
-A convertible and a minivan leave a highway junction at the same time. The convertible travels west at 70 miles per hour and the minivan travels north at 60 miles per hour. Assuming the two vehicles do not deviate off course, how far apart are they after 3 hours? Distance Apart=[ANS]
+After 3 hours:
 
-Problem type: single-answer.
+Convertible distance: \(70 \cdot 3 = 210\) miles  
+Minivan distance: \(60 \cdot 3 = 180\) miles
 
-There is exactly one final answer. End with: \boxed{answer}
-```
+Distance apart:
 
-## Reasoning + Response
+\[
+\sqrt{210^2 + 180^2}
+= \sqrt{44100 + 32400}
+= \sqrt{76500}
+= 30\sqrt{85}
+\]
 
-
-## Metadata
-- Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
-- Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206843.55s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b68263950 state=finished raised RateLimitError>]
+\[
+\boxed{30\sqrt{85}\text{ miles}}
+\]
