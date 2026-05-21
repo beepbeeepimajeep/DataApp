@@ -92,6 +92,43 @@ def normalize_answer(content: str) -> str:
 
     # Clean up whitespace
     content = content.strip()
+
+    # --- Normalizations for comparison consistency ---
+    # 1. Collapse whitespace around commas
+    content = re.sub(r'\s*,\s*', ',', content)
+
+    # 2. Collapse all internal whitespace to single space, then strip
+    content = re.sub(r'\s+', ' ', content).strip()
+
+    # 3. Remove LaTeX spacing commands
+    for cmd in ['\\,', '\\;', '\\:', '\\!', '\\quad', '\\qquad',
+                '\\hspace{1em}', '\\hspace{0.5em}', '\\enspace',
+                '\\thinspace', '\\medspace', '\\thickspace']:
+        content = content.replace(cmd, '')
+
+    # 4. Remove \displaystyle
+    content = content.replace('\\displaystyle', '')
+
+    # 5. Final whitespace cleanup after LaTeX removal
+    content = re.sub(r'\s+', ' ', content).strip()
+
+    return content
+
+
+def normalize_for_comparison(content: str) -> str:
+    """Aggressive normalization used ONLY for answer comparison, never for output."""
+    content = normalize_answer(str(content))
+    # Remove ALL spaces
+    content = content.replace(' ', '')
+    # Uppercase
+    content = content.upper()
+    # Remove trailing periods
+    content = content.rstrip('.')
+    # Remove surrounding parens/brackets if they wrap the whole thing
+    if content.startswith('(') and content.endswith(')'):
+        inner = content[1:-1]
+        if inner.count('(') == inner.count(')'):
+            content = inner
     return content
 
 

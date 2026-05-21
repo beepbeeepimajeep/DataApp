@@ -21,7 +21,7 @@ from pathlib import Path
 from collections import Counter, defaultdict
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from src.extraction import normalize_answer, extract_boxed_answer
+from src.extraction import normalize_answer, extract_boxed_answer, normalize_for_comparison
 
 random.seed(42)
 
@@ -41,9 +41,9 @@ def norm(answer: str) -> str:
     if not answer:
         return ""
     try:
-        return normalize_answer(str(answer).strip())
+        return normalize_for_comparison(str(answer).strip())
     except Exception:
-        return str(answer).strip().lower()
+        return str(answer).strip().replace(' ', '').upper()
 
 
 def answers_match(a: str, b: str) -> bool:
