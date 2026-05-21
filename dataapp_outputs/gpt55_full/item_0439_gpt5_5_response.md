@@ -2,24 +2,25 @@
 
 ## Prompt
 ```
-Add these two fractions: ${-\frac{10}{13}+\frac{6}{13}}$ When needed, use an improper fraction in your answer. Don’t use a mixed number. [ANS]
 
-Problem type: single-answer.
-
-There is exactly one final answer. End with: \boxed{answer}
 ```
 
 ## Reasoning + Response
+Add the numerators since the denominators are the same:
 
+\[
+-\frac{10}{13}+\frac{6}{13}=\frac{-10+6}{13}=-\frac{4}{13}
+\]
+
+\boxed{-\frac{4}{13}}
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 206
+- Output tokens: 115
+- Reasoning tokens: 49
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206708.14s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b68571350 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhxowc7cfnOSIfDsI2yWA520Wnks0
+- Via batch: True

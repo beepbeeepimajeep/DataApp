@@ -2,24 +2,27 @@
 
 ## Prompt
 ```
-A painting is on sale at ${\$560.00}$. Its original price was ${\$700.00}$. What percentage is off its original price? Fill in the blank with a percent. Solution: The painting was [ANS] off its original price.
 
-Problem type: single-answer.
-
-There is exactly one final answer. End with: \boxed{answer}
 ```
 
 ## Reasoning + Response
+We need the discount as a percentage of the original price.
 
+Discount: \(700 - 560 = 140\)
+
+Percentage off: \(\frac{140}{700} \times 100\% = 20\%\)
+
+The painting was \(20\%\) off its original price.
+
+\boxed{20\%}
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 217
+- Output tokens: 123
+- Reasoning tokens: 47
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206809.04s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b6851bb50 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhxlbzKIz01OKEqerwOHYuWrmnvgh
+- Via batch: True

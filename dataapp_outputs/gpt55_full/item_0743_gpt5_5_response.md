@@ -2,25 +2,37 @@
 
 ## Prompt
 ```
-A school purchased a batch of T-shirts from a company. The company charged ${\$9}$ per T-shirt, and gave the school a ${\$80}$ rebate. If the school had a net expense of ${\$3{,}790}$ from the purchase, how many T-shirts did the school buy?
-The school purchased [ANS] T-shirts.
 
-Problem type: single-answer.
-
-There is exactly one final answer. End with: \boxed{answer}
 ```
 
 ## Reasoning + Response
+We need to find the number of T-shirts purchased.
 
+Let \(n\) be the number of T-shirts.
+
+The total cost before the rebate was \(9n\) dollars. After the \(\$80\) rebate, the net expense was \(\$3790\):
+
+\[
+9n - 80 = 3790
+\]
+
+\[
+9n = 3870
+\]
+
+\[
+n = 430
+\]
+
+So the school purchased \(\boxed{430}\) T-shirts.
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 236
+- Output tokens: 159
+- Reasoning tokens: 44
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206940.30s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b4874c2d0 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhyA4rTEZEUD5HkJAA66zJpx701qv
+- Via batch: True

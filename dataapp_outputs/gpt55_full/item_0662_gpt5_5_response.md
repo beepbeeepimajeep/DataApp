@@ -2,24 +2,41 @@
 
 ## Prompt
 ```
-Fabrienne hired a face-painter for a birthday party. The painter charged a flat fee of ${\$90}$, and then charged ${\$4.50}$ per person. In the end, Fabrienne paid a total of ${\$193.50}$. How many people used the face-painter’s service? [ANS] people used the face-painter’s service.
 
-Problem type: single-answer.
-
-There is exactly one final answer. End with: \boxed{answer}
 ```
 
 ## Reasoning + Response
+We need to find the number of people who used the face-painter’s service.
 
+Let \(n\) be the number of people.
+
+\[
+90 + 4.50n = 193.50
+\]
+
+Subtract \(90\):
+
+\[
+4.50n = 103.50
+\]
+
+Divide by \(4.50\):
+
+\[
+n = 23
+\]
+
+\[
+\boxed{23}
+\]
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 241
+- Output tokens: 215
+- Reasoning tokens: 116
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206884.39s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b682e5650 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhxmW5C6YELyq4yIN4PaqefjQPqVs
+- Via batch: True

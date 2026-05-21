@@ -2,24 +2,48 @@
 
 ## Prompt
 ```
-A survey team is trying to estimate the height of a mountain above a level plain. From one point on the plain, they observe that the angle of elevation to the top of the mountain is $30 ^\circ$. From a point 1500 feet closer to the mountain along the plain, they find that the angle of elevation is $34 ^\circ$. How high (in feet) is the mountain? [ANS]
 
-Problem type: single-answer.
-
-There is exactly one final answer. End with: \boxed{answer}
 ```
 
 ## Reasoning + Response
+We need the mountain’s vertical height.
 
+Let \(h\) be the height and let \(d\) be the horizontal distance from the closer point to the point directly below the summit.
+
+From the closer point:
+\[
+\tan 34^\circ=\frac{h}{d}\quad\Rightarrow\quad d=h\cot 34^\circ
+\]
+
+From the farther point, the distance is \(d+1500\), and:
+\[
+\tan 30^\circ=\frac{h}{d+1500}
+\]
+Since \(\cot 30^\circ=\sqrt3\),
+\[
+d+1500=h\sqrt3
+\]
+
+Subtract:
+\[
+1500=h\sqrt3-h\cot34^\circ
+\]
+\[
+1500=h(\sqrt3-\cot34^\circ)
+\]
+\[
+h=\frac{1500}{\sqrt3-\cot34^\circ}\approx 6012.27
+\]
+
+\boxed{6012\text{ feet}}
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 250
+- Output tokens: 2285
+- Reasoning tokens: 2048
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779207060.44s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b486f65d0 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhxo18zubeYq6WTHIL59OCSubbzH6
+- Via batch: True

@@ -2,36 +2,59 @@
 
 ## Prompt
 ```
-$\triangle ABC$ has $AB=3$ , $BC=2007$ , and $CA=2008$ . Point $E$ is on $AC$ such that $\angle ABE=\angle EBC$ . The parallel to $BC$ through $E$ hits $AB$ at $F$ . If $BE$ hits $CF$ at $D$ , then find $\frac{CD}{DF}$ .
 
-Options:
-A. 671
-B. 669.5
-C. 670
-D. 669
-E. 670.75
-F. 670.25
-G. 672
-H. 670.125
-I. 670.5
-J. 668
-
-Problem type: multiple choice.
-
-Solve the problem and identify the correct option letter. End with: \boxed{Letter}
 ```
 
 ## Reasoning + Response
+We need the option corresponding to \(\frac{CD}{DF}\).
 
+By the angle bisector theorem,
+\[
+\frac{AE}{EC}=\frac{AB}{BC}=\frac{3}{2007}=\frac1{669}.
+\]
+So
+\[
+\frac{AE}{AC}=\frac{1}{670}.
+\]
+Let \(t=\frac1{670}\).
+
+Use affine coordinates \(A=(0,0), B=(1,0), C=(0,1)\). Then \(E=(0,t)\). Since \(EF\parallel BC\), we get \(F=(t,0)\).
+
+Let \(D\) lie on \(CF\), so
+\[
+D=C+s(F-C)=(st,1-s),
+\]
+where \(s=\frac{CD}{CF}\). Also \(D\) lies on \(BE\):
+\[
+D=B+r(E-B)=(1-r,rt).
+\]
+Equating coordinates:
+\[
+st=1-r,\qquad 1-s=rt.
+\]
+Using \(r=1-st\):
+\[
+1-s=t(1-st)=t-st^2.
+\]
+Thus
+\[
+s(1-t^2)=1-t \implies s=\frac1{1+t}.
+\]
+Therefore
+\[
+\frac{CD}{DF}=\frac{s}{1-s}=\frac{1}{t}=670.
+\]
+This is option C.
+
+\boxed{C}
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 315
+- Output tokens: 2385
+- Reasoning tokens: 2048
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206977.24s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b681a1550 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhxmLFHMkjfaafYyY9PKfvrStJgPG
+- Via batch: True

@@ -2,30 +2,45 @@
 
 ## Prompt
 ```
-A man invests his savings in two accounts, one paying 6 percent and the other paying 10 percent simple interest per year. He puts twice as much in the lower-yielding account because it is less risky. His annual interest is 572 dollars. How much did he invest at each rate? Your answer is total in the account paying 6 percent interest is [ANS]
-total in the account paying 10 percent interest is [ANS]
 
-Problem type: multi-answer.
-
-This problem requires multiple values. Before the final line, verify:
-- you have produced exactly the required number of answers
-- the order matches the problem's request
-- the final answer uses exactly one \boxed{...} with comma-separated values
-
-End with: \boxed{value1,value2,value3}
 ```
 
 ## Reasoning + Response
+We need the amounts invested at 6% and 10%, in that order.
 
+Let the amount invested at 10% be \(x\).  
+Then the amount invested at 6% is \(2x\).
+
+Annual interest:
+\[
+0.06(2x)+0.10x=572
+\]
+\[
+0.12x+0.10x=572
+\]
+\[
+0.22x=572
+\]
+\[
+x=2600
+\]
+
+So the 10% account has \(\$2600\), and the 6% account has:
+\[
+2x=5200
+\]
+
+Verification: exactly 2 answers are required, and the order is 6% account first, then 10% account.
+
+\(\boxed{5200, 2600}\)
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 300
+- Output tokens: 520
+- Reasoning tokens: 340
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206912.04s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b681a3bd0 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhxmFaWMmCTCh5EaWmzNhjVPzbi74
+- Via batch: True

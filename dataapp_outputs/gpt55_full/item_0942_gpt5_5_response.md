@@ -2,24 +2,43 @@
 
 ## Prompt
 ```
-Solve the equation 5\sqrt{n}=n-6. Solutions (separate by commas): $n=$ [ANS]
 
-Problem type: single-answer.
-
-There is exactly one final answer. End with: \boxed{answer}
 ```
 
 ## Reasoning + Response
+We need solve for real \(n\).
 
+Since \(\sqrt{n}\ge 0\), let \(x=\sqrt{n}\), so \(n=x^2\). Then
+
+\[
+5x=x^2-6
+\]
+
+\[
+x^2-5x-6=0
+\]
+
+\[
+(x-6)(x+1)=0
+\]
+
+Since \(x=\sqrt n\ge 0\), we take \(x=6\). Thus
+
+\[
+n=x^2=36
+\]
+
+\[
+\boxed{36}
+\]
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 191
+- Output tokens: 322
+- Reasoning tokens: 190
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779215996.69s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f8a8c725450 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhy17nKlBQ75P7AzOheLrmpXf8lv9
+- Via batch: True

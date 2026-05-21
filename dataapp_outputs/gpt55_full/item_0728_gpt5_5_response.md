@@ -2,24 +2,31 @@
 
 ## Prompt
 ```
-After a 5\% raise your new salary is \$ 84000. Before the raise your salary was \$ [ANS].
 
-Problem type: single-answer.
-
-There is exactly one final answer. End with: \boxed{answer}
 ```
 
 ## Reasoning + Response
+We need the salary before a 5% raise.
 
+Let the original salary be \(x\). After a 5% raise:
+
+\[
+1.05x = 84000
+\]
+
+\[
+x = \frac{84000}{1.05} = 80000
+\]
+
+\boxed{80000}
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 190
+- Output tokens: 207
+- Reasoning tokens: 131
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206929.34s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b681b0750 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhy8TXVtz4dsMfCkAXW5jCL4alHyC
+- Via batch: True

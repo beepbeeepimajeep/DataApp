@@ -2,38 +2,23 @@
 
 ## Prompt
 ```
-Complete the following formulas:
-$\sin(2C)=$ [ANS]
-$\cos(A+B)=$ [ANS]
-$\tan(2C)=$ [ANS]
-$\sin(A-B)=$ [ANS]
-$\sin(A+B)=$ [ANS]
-$\cos(A-B)=$ [ANS]
-$\tan(x/2)=$ [ANS]
-$\cos(2C)=$ [ANS]
-Be certain to use the specified variables for each formula. Be certain to use the specified variables for each formula.
 
-Problem type: multi-answer.
-
-This problem requires multiple values. Before the final line, verify:
-- you have produced exactly the required number of answers
-- the order matches the problem's request
-- the final answer uses exactly one \boxed{...} with comma-separated values
-
-End with: \boxed{value1,value2,value3}
 ```
 
 ## Reasoning + Response
+We need the standard trig identities in the requested order.
 
+Verification: There are exactly 8 answers, matching the 8 requested formulas in order.
+
+\boxed{2\sin C\cos C,\ \cos A\cos B-\sin A\sin B,\ \frac{2\tan C}{1-\tan^2 C},\ \sin A\cos B-\cos A\sin B,\ \sin A\cos B+\cos A\sin B,\ \cos A\cos B+\sin A\sin B,\ \frac{\sin x}{1+\cos x},\ \cos^2 C-\sin^2 C}
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 313
+- Output tokens: 652
+- Reasoning tokens: 512
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206941.84s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b486fc350 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhyAAEzrL9iB6tRAg0RwDTOQSygkf
+- Via batch: True
