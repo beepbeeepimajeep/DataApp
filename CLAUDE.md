@@ -179,6 +179,20 @@ not every incident.
 
 ---
 
+## FOUR-AGENT SETUP
+
+| Agent | Environment | Role |
+|-------|-------------|------|
+| claude_strategy | Claude.ai | Planning, audit, Chrome MCP |
+| claude_vscode | DSMLP | Competition repo execution, inference |
+| claude_dataApp | DSMLP (you) | DataApp pipeline, SFT dataset construction |
+| claude_thunder | Thunder Compute (separate VS Code on laptop) | SFT v3 training, merge, inference smoke test |
+
+**claude_dataApp handoff point:** `sft_v3_dataset_<timestamp>.jsonl` → consumed by claude_thunder.  
+claude_thunder is completely separate from DSMLP. Do not confuse the two.
+
+---
+
 ## MEMORY
 
 Surface to Rain: "Worth adding to DataApp CLAUDE.md: [what]" and wait
