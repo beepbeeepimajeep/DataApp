@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the requested centers and bounding-box corners, in order.
 
 - Radius 4 sphere touching the xy-plane at the origin: center is (0,0,4).
@@ -9,3 +17,14 @@ We need the requested centers and bounding-box corners, in order.
 Verification: there are exactly 6 coordinate triples, in the requested order.
 
 \boxed{0,0,4,0,0,14,6,6,20,-6,-6,0,-4,-4,10,-4,-4,-12}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 443
+- Output tokens: 2008
+- Reasoning tokens: 1761
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm9KlEyODnZnRpE7XZSiKtZAgAht
+- Via batch: True

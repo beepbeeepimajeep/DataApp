@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the closed form of \(S=\sum_{k=1}^n \cos(ka)\).
 
 Use
@@ -29,3 +37,14 @@ S=\frac{\sin\left(\frac{na}{2}\right)\cos\left(\frac{(n+1)a}{2}\right)}{\sin\lef
 This matches option F.
 
 \boxed{F}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 578
+- Output tokens: 806
+- Reasoning tokens: 512
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7HR7JDA67umroDtuWfJzibiEu7
+- Via batch: True

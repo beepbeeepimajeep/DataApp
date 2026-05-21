@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We are testing whether the population variance is less than 7.
 
 \[
@@ -41,3 +49,14 @@ Verification: 4 answers are provided in the requested order: \(s\), test statist
 \[
 \boxed{1.512,\ 2.286,\ 2.167,\ B}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 401
+- Output tokens: 1853
+- Reasoning tokens: 1536
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmBe6DPhZ539PJuBxnpmBBjQEBnk
+- Via batch: True

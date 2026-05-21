@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the arc length of the parametric curve. For the implied interval \(0 \le t \le 2\),
 
 \[
@@ -28,3 +36,14 @@ This matches option I.
 \[
 \boxed{I}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 262
+- Output tokens: 728
+- Reasoning tokens: 512
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmDQNMMQ7HEXS5L7jbY70reV0jlB
+- Via batch: True

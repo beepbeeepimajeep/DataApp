@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need compare the magnitudes of displacement in \(0\)–\(10\) s and \(10\)–\(20\) s.
 
 Take east as positive. Let the constant acceleration westward be \(-a\), where \(a>0\).
@@ -37,3 +45,14 @@ Therefore, the information is insufficient.
 \[
 \boxed{H}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 410
+- Output tokens: 669
+- Reasoning tokens: 414
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm96fUXBMHUShmREUUingc5dnAlD
+- Via batch: True

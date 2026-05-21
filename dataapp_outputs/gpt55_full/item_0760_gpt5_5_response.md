@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the sum of  
 \[
 \sum_{n=1}^{\infty}\frac{x^{4n-1}}{4n-1}.
@@ -47,3 +55,14 @@ This matches option I.
 \[
 \boxed{I}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 613
+- Output tokens: 837
+- Reasoning tokens: 512
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmSi9PakhYxV7XDnMSQelHH5wtzf
+- Via batch: True

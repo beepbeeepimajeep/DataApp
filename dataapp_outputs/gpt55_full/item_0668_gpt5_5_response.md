@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the largest power of 2 dividing the difference, i.e. its 2-adic valuation.
 
 Using LTE for odd integers \(a,b\) and even \(m\):
@@ -32,3 +40,14 @@ Thus the correct option is G.
 \[
 \boxed{G}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 252
+- Output tokens: 740
+- Reasoning tokens: 512
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmAAlZoCSUTxw5yACMecFTanG89g
+- Via batch: True

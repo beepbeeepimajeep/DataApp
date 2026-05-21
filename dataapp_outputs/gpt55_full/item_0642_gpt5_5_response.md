@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the amplitude, period, and largest value of \(y=7+6\cos(6x)\).
 
 For \(y=D+A\cos(Bx)\):
@@ -9,3 +17,14 @@ For \(y=D+A\cos(Bx)\):
 Verification: There are exactly 3 answers, in the requested order: amplitude, period, largest value.
 
 \boxed{6, \frac{\pi}{3}, 13}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 271
+- Output tokens: 311
+- Reasoning tokens: 163
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7wRDqlC0de2gSv4o64jINX7z98
+- Via batch: True

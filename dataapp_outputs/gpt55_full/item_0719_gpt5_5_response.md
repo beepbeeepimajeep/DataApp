@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the number of distinct 2-colorings of the cube’s 8 vertices, considering rotations equivalent.
 
 Use Burnside’s Lemma over the 24 rotations of the cube.
@@ -25,3 +33,14 @@ So the number of colorings up to rotation is
 Thus the correct option is E.
 
 \boxed{E}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 236
+- Output tokens: 806
+- Reasoning tokens: 512
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmBmsJSyXu5XuMSdvdR61p4JaaID
+- Via batch: True

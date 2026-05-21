@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need determine which board sizes \(n\) can be completely colored.
 Let rows and columns be numbered starting from \(1\). We will characterize all possible \(n\).
 
@@ -32,3 +40,14 @@ Their sum is
 \]
 
 \boxed{1048575}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 286
+- Output tokens: 54004
+- Reasoning tokens: 52736
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmbJVbShIhqaE0QFsnJj5rFIuBh4
+- Via batch: True

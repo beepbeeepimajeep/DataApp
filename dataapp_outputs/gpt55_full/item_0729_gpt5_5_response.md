@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need compute the determinant of \(A^{2012}\).
 
 Matrix \(A\) is block diagonal:
@@ -51,3 +59,14 @@ This corresponds to option G.
 \[
 \boxed{G}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 452
+- Output tokens: 428
+- Reasoning tokens: 174
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmC546xKUn6enyHLNhYlTknPi7rh
+- Via batch: True

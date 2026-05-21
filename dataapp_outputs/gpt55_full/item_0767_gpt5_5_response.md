@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need find the antiderivative and match it to an option.
 
 Let
@@ -42,3 +50,14 @@ t=\sqrt[3]{\frac{x+1}{x-1}}.
 This matches option D.
 
 \boxed{D}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 1272
+- Output tokens: 1897
+- Reasoning tokens: 1536
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm74qPmRFeLS5qMZ1DPUfwiuZIVG
+- Via batch: True

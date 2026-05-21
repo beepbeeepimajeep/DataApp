@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the general solution of the differential equation \(y''+y=\sin 2x\).
 
 The homogeneous equation is
@@ -53,3 +61,14 @@ This corresponds to option J.
 \[
 \boxed{J}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 462
+- Output tokens: 435
+- Reasoning tokens: 177
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmASFhFUq8WiLSah69nWjqHGjj01
+- Via batch: True

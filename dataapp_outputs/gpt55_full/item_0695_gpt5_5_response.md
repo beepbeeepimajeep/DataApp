@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need order the infinitesimals by increasing smallness as \(x \to 0\).
 
 Using Taylor expansions:
@@ -65,3 +73,14 @@ which corresponds to option E.
 \[
 \boxed{E}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 382
+- Output tokens: 1126
+- Reasoning tokens: 777
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmAvVE7bfT93BCUEjHWEMrL7LFop
+- Via batch: True

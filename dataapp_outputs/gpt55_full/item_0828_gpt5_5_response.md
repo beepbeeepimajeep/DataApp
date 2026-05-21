@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the 95% confidence interval for the population mean \(\mu\).
 
 Since \(\sigma\) is unknown and \(n=25\), use the \(t\)-distribution with
@@ -36,3 +44,14 @@ Verification: There are exactly 2 answers, in the requested order: lower bound, 
 \[
 \boxed{99.6, 110.4}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 279
+- Output tokens: 496
+- Reasoning tokens: 288
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm9DZmdf9cbu0lwalXjuNjUvdt8a
+- Via batch: True

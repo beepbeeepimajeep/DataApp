@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the sum of the distinct angle measures created at interior crossings of diagonals.
 
 Label four vertices involved in a crossing as \(A,B,C,D\) in cyclic order. The crossing diagonals are \(AC\) and \(BD\).
@@ -29,3 +37,14 @@ Their sum is
 So the correct option is H.
 
 \boxed{H}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 256
+- Output tokens: 2333
+- Reasoning tokens: 2048
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7RAK1Jl9hgw7rqHJ0KjcylXMbw
+- Via batch: True

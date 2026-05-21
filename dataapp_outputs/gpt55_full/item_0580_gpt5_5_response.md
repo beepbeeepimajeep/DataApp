@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the limit and the corresponding multiple-choice option.
 
 \[
@@ -41,3 +49,14 @@ L=\frac13\cdot 2=\frac23
 So the correct option is D.
 
 \boxed{D}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 262
+- Output tokens: 1890
+- Reasoning tokens: 1536
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm80bVXCdRsv4HW3l3qPyej5JcF9
+- Via batch: True

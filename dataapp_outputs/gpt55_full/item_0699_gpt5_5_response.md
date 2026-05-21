@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the coefficient \(c\) and exponent \(e\) in the form \(c/x^e\).
 
 \[
@@ -14,3 +22,14 @@ Verification: exactly 2 answers are needed, in the order coefficient \(c\), expo
 \[
 \boxed{6, 3}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 261
+- Output tokens: 264
+- Reasoning tokens: 123
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmB8glSSFVfzl3VbACLDAhFN6HLN
+- Via batch: True

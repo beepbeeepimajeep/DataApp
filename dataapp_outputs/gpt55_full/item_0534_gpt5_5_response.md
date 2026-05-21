@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need find \(a,b,c\) from the given general solution.
 
 The homogeneous solution is
@@ -31,3 +39,14 @@ Hence \((a,b,c)=(2,1,4)\), which is option G.
 \[
 \boxed{G}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 492
+- Output tokens: 423
+- Reasoning tokens: 210
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm8cZW9Yl9hxJ21MPQBEIcyp6poU
+- Via batch: True

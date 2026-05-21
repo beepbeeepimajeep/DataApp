@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the total used after 13 years, then the reserve lifetime at the original and reduced growth rates.
 
 Let the next year’s consumption be \(C=8{,}000{,}000\) tons, with growth factor \(1.057\).  
@@ -33,3 +41,14 @@ Verification: There are exactly 3 answers, in the order (a), (b), (c), and the f
 \[
 \boxed{148178452\ \text{tons},\ 41.55\ \text{years},\ 46.97\ \text{years}}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 342
+- Output tokens: 9733
+- Reasoning tokens: 9215
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7DvpWui5mhN5rNSvd3pLRTufgs
+- Via batch: True

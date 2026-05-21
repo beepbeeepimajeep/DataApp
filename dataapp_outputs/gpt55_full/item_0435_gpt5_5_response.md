@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the 99% confidence interval for the population proportion and the correct interpretation.
 
 \[
@@ -29,3 +37,14 @@ The correct interpretation is A: We can be 99% confident that the population per
 Verification: exactly 3 answers are needed, in order: lower bound, upper bound, interpretation choice.
 
 \boxed{0.4457, 0.5368, A}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 356
+- Output tokens: 3092
+- Reasoning tokens: 2822
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7KOW4McNL4OT2zEs11ME1CZSDe
+- Via batch: True

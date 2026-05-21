@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need to count the orientations of the 2025 lines that create no directed cycle among the intersection points.
 
 Let each oriented line have direction vector \(v_i\).
@@ -25,3 +33,14 @@ Therefore the number of ways is
 \[
 \boxed{4050}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 342
+- Output tokens: 9661
+- Reasoning tokens: 9215
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7UI1FnYUX4lvR4Yj0S7POcOWRc
+- Via batch: True

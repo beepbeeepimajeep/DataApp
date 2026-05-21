@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need compute \(CD^4+CE^4\) and match the option.
 
 Place
@@ -66,3 +74,14 @@ s_1^4+s_2^4=(s_1^2+s_2^2)^2-2(s_1s_2)^2=81-18=63.
 So the correct option is F.
 
 \boxed{F}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 334
+- Output tokens: 2497
+- Reasoning tokens: 1873
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7I2XcpMCzPXdURZ1mtCobWVVAK
+- Via batch: True

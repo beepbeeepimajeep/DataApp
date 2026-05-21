@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need count the valid sequences and find the corresponding binomial coefficient’s top number modulo \(1000\).
 
 Since \(a_i-i\) is even, \(a_i\) has the same parity as \(i\). Thus consecutive terms have opposite parity, so equality is impossible; the sequence is actually strictly increasing.
@@ -32,3 +40,14 @@ The correct option is B.
 \[
 \boxed{B}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 290
+- Output tokens: 1338
+- Reasoning tokens: 1024
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmCnXCR3ouLuqCA4oOAs2egrlVBs
+- Via batch: True

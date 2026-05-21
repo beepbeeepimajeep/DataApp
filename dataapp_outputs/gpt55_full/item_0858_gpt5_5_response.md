@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We are testing whether the mean morning-evening height difference is more than 5 mm.
 
 Hypotheses:  
@@ -25,3 +33,14 @@ Since \(2.300>1.691\), reject \(H_0\). There is sufficient data to support the c
 Verification: 4 answers, in order: test statistic, critical value, decision, conclusion.
 
 \(\boxed{2.300,\ 1.691,\ \text{reject }H_0,\ \text{yes}}\)
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 350
+- Output tokens: 1254
+- Reasoning tokens: 1024
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7AnvujHepstsX6cZhfCr3cg4Cy
+- Via batch: True

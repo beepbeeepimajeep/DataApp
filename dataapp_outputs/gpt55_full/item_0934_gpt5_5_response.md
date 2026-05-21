@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need compute \(a(n)\), the number of terms in the simple continued fraction of \(H_n\), for \(n=64,\dots,73\).
 
 Using exact rational arithmetic,
@@ -16,3 +24,14 @@ This matches option D.
 \[
 \boxed{D}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 586
+- Output tokens: 23472
+- Reasoning tokens: 23038
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7JlMK97OI8hyzl4r3t1MqyilPc
+- Via batch: True

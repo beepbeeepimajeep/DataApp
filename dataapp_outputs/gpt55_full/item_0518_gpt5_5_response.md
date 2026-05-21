@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need compute a(x) where a(n) is the bitwise OR table T(i,k)=i OR k read by antidiagonals.
 
 Using 0-based antidiagonal indexing:
@@ -31,3 +39,14 @@ Thus
 This matches option E.
 
 \boxed{E}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 576
+- Output tokens: 1323
+- Reasoning tokens: 1024
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm8P6rIv7WLtp3RdhCehcfkfagAp
+- Via batch: True

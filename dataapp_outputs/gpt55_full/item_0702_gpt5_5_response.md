@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need to add the polynomials and combine like terms.
 
 \[
@@ -17,3 +25,14 @@ Combine like terms:
 \[
 \boxed{-u^4-4u^3+3u^2-6u-8}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 219
+- Output tokens: 301
+- Reasoning tokens: 152
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmDadM79xlNITbQCg14KrmTUFzGc
+- Via batch: True

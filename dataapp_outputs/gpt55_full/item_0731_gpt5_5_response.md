@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need count ordered pairs where both \(a\) and \(b\) are not divisors of \(720\), but \(ab\mid 720^2\).
 
 Factor:
@@ -37,3 +45,14 @@ By inclusion-exclusion, desired count is:
 Option \(J\).
 
 \boxed{J}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 260
+- Output tokens: 1432
+- Reasoning tokens: 1023
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmNIAA553kYbOpiGi0D6FIlVqgFv
+- Via batch: True

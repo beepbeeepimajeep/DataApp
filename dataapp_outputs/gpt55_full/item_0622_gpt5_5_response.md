@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We are testing whether music students have a higher mean Math SAT score.
 
 Hypotheses:  
@@ -26,3 +34,14 @@ Since \(3.854>2.567\), reject \(H_0\). There is sufficient evidence to support t
 \[
 \boxed{3.854,\ 2.567,\ \text{Reject }H_0,\ \text{Yes}}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 537
+- Output tokens: 2307
+- Reasoning tokens: 2048
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmBlTD45M4RV0mHe1OJIB76lGjri
+- Via batch: True

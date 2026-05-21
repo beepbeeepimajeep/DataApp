@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need maximize \(x+3y\) and then match \(m+n\) to an option.
 
 Let \(a=\sqrt{2016}\). Since \(0\le x,y\le a\), write
@@ -59,3 +67,14 @@ This corresponds to option A.
 \[
 \boxed{A}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 278
+- Output tokens: 1323
+- Reasoning tokens: 996
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7UXfCGihQ6Fpl6Cy0yXhcQkTKW
+- Via batch: True

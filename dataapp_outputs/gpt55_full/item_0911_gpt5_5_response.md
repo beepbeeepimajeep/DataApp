@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need count 7-step sequences returning to the start, using at most 2 teleports.
 
 Let \(A\) be the normal adjacency move on the icosahedron, and \(P\) be the teleport to the opposite vertex. Since the antipodal map is a symmetry, \(A\) and \(P\) commute.
@@ -43,3 +51,14 @@ The last three nonzero digits are \(265\), which is option I.
 \[
 \boxed{I}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 344
+- Output tokens: 3488
+- Reasoning tokens: 3072
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmAgfmALI8NgRFbNXPcTg4y9IniC
+- Via batch: True

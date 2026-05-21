@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need fill the one-way ANOVA table for 6 expressions and 36 total observations.
 
 Group means are:
@@ -38,3 +46,14 @@ F=\frac{0.9451}{0.7719}=1.2244
 Verification: 10 answers are given in this order: Expressions df, SS, MS, F; Error df, SS, MS; Total df, SS, MS.
 
 \boxed{5, 4.7256, 0.9451, 1.2244, 30, 23.1567, 0.7719, 35, 27.8822, 0.7966}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 668
+- Output tokens: 5008
+- Reasoning tokens: 4606
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm82YeFwLQXVFMpcNGsFlenwkC0b
+- Via batch: True

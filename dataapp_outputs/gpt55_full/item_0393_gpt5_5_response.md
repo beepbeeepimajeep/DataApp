@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need find the inverse function and the domain of that inverse.
 
 Let
@@ -72,3 +80,14 @@ Verification: exactly 3 answers are given in the requested order: inverse functi
 \[
 \boxed{\frac{1}{10}\arccos\left(\frac{x-6}{16}\right), -10, 22}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 268
+- Output tokens: 1497
+- Reasoning tokens: 1015
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm72gTYK8DF3h7qJ7OgHLztENsDa
+- Via batch: True

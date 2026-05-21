@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need maximize the sum under the constraint on the cosines.
 
 Let \(y_i=\cos x_i\). Then \(y_i\in[-1,1]\) and \(\sum y_i=0\). Also,
@@ -53,3 +61,14 @@ This is achieved by taking three \(y_i=1\) and seven \(y_i=-\frac37\). Therefore
 \[
 \boxed{A}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 314
+- Output tokens: 9785
+- Reasoning tokens: 9214
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmLCeoJM1HikmZWfzujzRSUKjyPT
+- Via batch: True

@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the 95% confidence interval for the population mean, with known standard deviation \(\sigma=17\).
 
 Use
@@ -27,3 +35,14 @@ Rounded to two decimals:
 \[
 \boxed{(76.37,\ 79.63)}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 263
+- Output tokens: 572
+- Reasoning tokens: 411
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm76b0xpv9nUioVUaVAt4nNZtng3
+- Via batch: True

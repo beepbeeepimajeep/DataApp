@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the antiderivative and then match it to the given options.
 
 Let  
@@ -51,3 +59,14 @@ This matches option E.
 \[
 \boxed{E}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 638
+- Output tokens: 2447
+- Reasoning tokens: 2048
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm8fah7yPRPtGEPeu7tONg2yzFuC
+- Via batch: True

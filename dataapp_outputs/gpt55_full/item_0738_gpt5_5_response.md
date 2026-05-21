@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We are classifying each situation as a Type I error, Type II error, or correct decision.
 
 - Type I error: Reject the null hypothesis when it is actually true.
@@ -12,3 +20,14 @@ d. Null is false, but we fail to reject it → Type II error → A
 Verification: There are exactly 4 answers, in the requested order a, b, c, d.
 
 \boxed{A, C, A, A}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 518
+- Output tokens: 497
+- Reasoning tokens: 323
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmNlLpOPUezbeyXUj5KN7tUOVOHJ
+- Via batch: True

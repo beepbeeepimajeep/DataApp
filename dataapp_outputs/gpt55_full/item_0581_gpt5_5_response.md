@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the maximum value of \(y(x)\) on \((0,1]\).
 
 The differential equation is
@@ -71,3 +79,14 @@ This corresponds to option F.
 \[
 \boxed{F}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 452
+- Output tokens: 598
+- Reasoning tokens: 299
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm8JbLUJ0yNYQfe2PShT7Mc0qIsb
+- Via batch: True

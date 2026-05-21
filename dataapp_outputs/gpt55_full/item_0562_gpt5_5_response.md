@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 Interpreting the undefined \(m\) as \(g\), we need the smallest \(f\) such that every interval
 \[
 \left(\frac{g}{2423},\frac{g+1}{2424}\right)
@@ -35,3 +43,14 @@ would require \(f>n\) and \(f<n+1\), impossible for integer \(f\).
 Thus the minimum is \(4847\), which is option H.
 
 \boxed{H}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 299
+- Output tokens: 4163
+- Reasoning tokens: 3734
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7VHvcTMLilcsvSqzacJUTW83kd
+- Via batch: True

@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need evaluate the integral for real \(a\ne 0\).
 
 Use
@@ -37,3 +45,14 @@ Thus the problem as stated has no single answer unless the sign of \(a\) is spec
 \[
 \boxed{\text{A if }a>0,\ \text{D if }a<0}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 319
+- Output tokens: 2420
+- Reasoning tokens: 2049
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm8x4uhEwGfh9NYdnrOx1KL0PKyQ
+- Via batch: True

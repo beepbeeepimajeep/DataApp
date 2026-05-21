@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the positive solution of \(x=3.8\cos x\).
 
 Let
@@ -23,3 +31,14 @@ To 2 decimal places:
 \[
 \boxed{1.24}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 197
+- Output tokens: 2727
+- Reasoning tokens: 2560
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmBoarAPXgCiXupkgP99Q2ZCZzR7
+- Via batch: True

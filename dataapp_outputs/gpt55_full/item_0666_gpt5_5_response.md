@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the exponential sales model and the continuous annual percent growth rate.
 
 Let sales be \(S(t)=76e^{kt}\), where \(t\) is years since 1991.
@@ -33,3 +41,14 @@ Verified: two answers, in order: sales function first, continuous growth rate se
 \[
 \boxed{76e^{\frac{\ln(419/76)}{4}t},\ 42.678\%}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 309
+- Output tokens: 1248
+- Reasoning tokens: 1024
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm9hO0JvDu9TsG2aeeyrKSVWCwSc
+- Via batch: True

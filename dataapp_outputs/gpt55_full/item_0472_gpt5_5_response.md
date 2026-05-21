@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need count pairs \((w,m)\), where \(w\) is days per week and \(m\) is days per month.
 
 Conditions:
@@ -40,3 +48,14 @@ valid month lengths. Thus the total number of choices is
 So the correct option is I.
 
 \boxed{I}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 322
+- Output tokens: 1312
+- Reasoning tokens: 990
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7SKYuPyjvrj1aOyVXJzhXh3uiG
+- Via batch: True

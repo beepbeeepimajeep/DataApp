@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the domain of \(f\circ g\), meaning \(f(g(x))\).
 
 \[
@@ -31,3 +39,14 @@ Verification: exactly two answers are needed, in the order \(a,b\), and the fina
 \[
 \boxed{-7,8}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 264
+- Output tokens: 431
+- Reasoning tokens: 243
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7MH08Dre2rrAkzXgRNw4yJr214
+- Via batch: True

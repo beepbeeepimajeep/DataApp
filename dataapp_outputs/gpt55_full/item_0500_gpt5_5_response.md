@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the error (residual) propagation formulas for Jacobi and Gauss-Seidel.
 
 For  
@@ -54,3 +62,14 @@ This matches option J.
 \[
 \boxed{J}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 2010
+- Output tokens: 1965
+- Reasoning tokens: 1511
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmD5IMR6yC0nL15pg9VsJ5DpxQ09
+- Via batch: True

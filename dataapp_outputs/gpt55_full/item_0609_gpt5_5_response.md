@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 They travel in perpendicular directions, so use the Pythagorean theorem.
 
 After 3 hours:
@@ -17,3 +25,14 @@ Distance apart:
 \[
 \boxed{30\sqrt{85}\text{ miles}}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 228
+- Output tokens: 264
+- Reasoning tokens: 138
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm9iMqkRHLp0wm9oKTzrENOwl4am
+- Via batch: True

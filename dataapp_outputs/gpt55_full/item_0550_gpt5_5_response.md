@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need evaluate the triple integral using the given bounds:
 
 \[
@@ -53,3 +61,14 @@ Thus the correct option is J.
 \[
 \boxed{J}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 322
+- Output tokens: 1401
+- Reasoning tokens: 1024
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7D1fI4ALbNL87zLc91AtIDEvDh
+- Via batch: True

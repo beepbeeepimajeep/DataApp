@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the probability of a Type II error: failing to reject the claim of increase when the true mean is actually 560.
 
 Set up the test:
@@ -32,3 +40,14 @@ Thus,
 P(Type II Error) = P(Z ≤ -1.586) ≈ 0.0563
 
 \boxed{0.0563}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 308
+- Output tokens: 1804
+- Reasoning tokens: 1536
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmEwCKWypecnSN871smyU5iFCgOm
+- Via batch: True

@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need to evaluate the piecewise function at four inputs.
 
 The rule is:
@@ -21,3 +29,14 @@ Evaluate each:
 There are exactly 4 answers, in the requested order: \(f(12), f(-7), f(\pi), f(-7.1)\).
 
 \(\boxed{\sqrt{19}, 2, 2, 2}\)
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 391
+- Output tokens: 355
+- Reasoning tokens: 152
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm8ZwsmjndUhmyltrg8PMIdSgW14
+- Via batch: True

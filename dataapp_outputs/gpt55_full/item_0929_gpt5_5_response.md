@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the pooled variance, then a 95% CI for \(\mu_A-\mu_B\), then the test conclusion.
 
 Given:
@@ -53,3 +61,14 @@ There are 3 requested answers, in order: pooled variance, confidence interval, c
 \[
 \boxed{6.086,\ (-0.72,\ 3.12),\ A}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 755
+- Output tokens: 1477
+- Reasoning tokens: 1024
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmBmOkZggG4sgSvYelkLJDvrm8OM
+- Via batch: True

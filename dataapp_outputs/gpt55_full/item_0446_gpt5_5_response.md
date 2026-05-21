@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the standard error of the estimate and the coefficient of determination.
 
 For the data, \(n=5\).
@@ -44,3 +52,14 @@ Verified: there are exactly two answers, in the order requested: standard error,
 \[
 \boxed{\sqrt{\frac{4519}{1290}}, \frac{156645}{161164}}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 285
+- Output tokens: 1332
+- Reasoning tokens: 1024
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7DIpa1MZ9riR8fb7FaUQ4mrrCi
+- Via batch: True

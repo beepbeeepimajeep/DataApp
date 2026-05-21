@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the quotient and remainder for each division.
 
 1. \(9075 \div 80\):  
@@ -15,3 +23,14 @@ Quotient \(=148\), remainder \(=43\).
 Verification: There are exactly 6 answers: quotient and remainder for each of the 3 divisions, in the order requested.
 
 \boxed{113,35,112,61,148,43}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 293
+- Output tokens: 583
+- Reasoning tokens: 371
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm78fSZz4Yz4RqZUECGgY9WG62yW
+- Via batch: True

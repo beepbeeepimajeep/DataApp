@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the linear model, the 2009 fund balance, and the year the fund becomes empty.
 
 The points are \((3,704000)\) and \((7,532000)\).
@@ -51,3 +59,14 @@ Verification: There are exactly 3 answers, in order: equation, 2009 amount, empt
 \[
 \boxed{y=-43000x+833000,\ \$446000,\ 2019}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 374
+- Output tokens: 5449
+- Reasoning tokens: 5118
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm8IFUOcnx77iReoAHZfcO9NuaSr
+- Via batch: True

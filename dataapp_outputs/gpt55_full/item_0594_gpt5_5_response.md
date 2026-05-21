@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the cumulative distribution function \(F(x)=P(X\le x)\).
 
 Given:
@@ -19,3 +27,14 @@ F(x)=
 This matches option F.
 
 \boxed{F}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 1304
+- Output tokens: 345
+- Reasoning tokens: 201
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm8ROVuNa8iCC6uLqnGKPLJkgpj8
+- Via batch: True

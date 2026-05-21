@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the sphere’s volume from its surface area.
 
 Surface area:  
@@ -15,3 +23,14 @@ Volume:
 As a number, this is approximately:
 
 \boxed{1089.63245142577}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 217
+- Output tokens: 4261
+- Reasoning tokens: 4095
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm73rsIA6UTkhwlLeZ1Rfk7JjZPd
+- Via batch: True

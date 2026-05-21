@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the point estimate, the confidence interval, and two conceptual answers.
 
 a) The point estimate is the sample mean:
@@ -31,3 +39,14 @@ Verified: 5 answers in order: mean, lower CI, upper CI, normality answer, theore
 \[
 \boxed{1255.37,\ 1091.05,\ 1419.68,\ \text{No},\ \text{Central Limit Theorem}}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 494
+- Output tokens: 760
+- Reasoning tokens: 512
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7lYEDRxgv35dzoNBGQjrSOj2L7
+- Via batch: True

@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need count positive integers \(n\le 2010\) such that \(\phi(n)\mid n\).
 
 Let
@@ -52,3 +60,14 @@ Total:
 So the correct option is A.
 
 \boxed{A}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 264
+- Output tokens: 3166
+- Reasoning tokens: 2659
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7yhQ5xGU2LoYhWZ0jEb5nAXTLw
+- Via batch: True

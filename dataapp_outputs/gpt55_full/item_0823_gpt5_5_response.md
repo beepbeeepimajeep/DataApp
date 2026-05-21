@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need identify the first 20 bao-good integers.
 
 First, \(a=1\) is not bao-good, since \(1\mid s^b-l\) always.
@@ -40,3 +48,14 @@ Their sum is
 \[
 \boxed{281}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 308
+- Output tokens: 26325
+- Reasoning tokens: 25327
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm8f8DjUOFIDkk1K7fZeoRj3pytg
+- Via batch: True

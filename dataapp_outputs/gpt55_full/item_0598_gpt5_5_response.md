@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need diagonalize the quadratic form and match it to an option.
 
 Take the non-degenerate substitution
@@ -19,3 +27,14 @@ This matches option G.
 \[
 \boxed{G}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 577
+- Output tokens: 8972
+- Reasoning tokens: 8701
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm8WkmFFn5yQtXkZ8nbdlGYEfXGQ
+- Via batch: True

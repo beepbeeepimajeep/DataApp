@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 A line graph is best for showing how data changes over time.
 
 - Anita’s data is about favorite seasons, so a bar graph would fit.
@@ -7,3 +15,14 @@ A line graph is best for showing how data changes over time.
 Therefore, Kevin only should use a line graph.
 
 \boxed{C}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 256
+- Output tokens: 177
+- Reasoning tokens: 91
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmST1ejAXhXN0Uw5nlJtjgwuMJRj
+- Via batch: True

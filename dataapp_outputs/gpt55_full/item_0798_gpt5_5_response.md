@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the possible value of \(t\), then whether it is REAL or EXTRANEOUS.
 
 \[
@@ -53,3 +61,14 @@ Verification: exactly two answers are required, in order \(t\), then root type.
 \[
 \boxed{\frac{245274949}{62500},\text{ EXTRANEOUS}}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 266
+- Output tokens: 3932
+- Reasoning tokens: 3584
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7Nm0UCya7VZpUWDkaurdx3lnvo
+- Via batch: True

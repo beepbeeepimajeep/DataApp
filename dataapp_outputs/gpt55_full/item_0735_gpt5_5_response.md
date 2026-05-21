@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the five-number summary, IQR, and whether an outlier exists.
 
 Sorted data:  
@@ -22,3 +30,14 @@ Since -29 is below -12.5, there is a potential outlier.
 Required answers in order: Q1, Q2, Q3, Min, Max, IQR, outlier statement.
 
 \boxed{28, 42.5, 55, -29, 82, 27, True}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 332
+- Output tokens: 787
+- Reasoning tokens: 512
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmNbDrhgWluQuOLtEadY8t85T18q
+- Via batch: True

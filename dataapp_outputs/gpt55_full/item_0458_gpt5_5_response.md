@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the maximum number of assistants that can move forever without a non-vertex collision.
 
 Color the cube’s vertices black/white by parity of distance from the starting vertex, with the starting vertex black.
@@ -28,3 +36,14 @@ So \(12\) assistants can move forever safely, and the upper bound is attainable.
 \[
 \boxed{12}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 277
+- Output tokens: 21237
+- Reasoning tokens: 20477
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7HZgHB1DLPnQIPcAJ1W2aa949J
+- Via batch: True

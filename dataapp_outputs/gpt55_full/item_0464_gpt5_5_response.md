@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the density of the lifetime of a parallel system, so the system lifetime is
 
 \[
@@ -27,3 +35,14 @@ This matches option G.
 \[
 \boxed{G}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 1004
+- Output tokens: 458
+- Reasoning tokens: 249
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7OrqOjCVyrtzwtRLCUlAlOa1TD
+- Via batch: True

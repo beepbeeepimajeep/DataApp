@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need maximize \(f(x)=x^3-3x\) subject to
 
 \[
@@ -51,3 +59,14 @@ The correct option is E.
 \[
 \boxed{E}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 269
+- Output tokens: 706
+- Reasoning tokens: 459
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-DhmDPMAuGq1rnGiqpez58qAKQ73oS
+- Via batch: True

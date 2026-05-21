@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the directrix of the locus of the midpoint.
 
 For \(y^2=4ax\), the focus is \((a,0)\).
@@ -45,3 +53,14 @@ Thus the correct option is G.
 \[
 \boxed{G}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 287
+- Output tokens: 573
+- Reasoning tokens: 297
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7pM7vqH3GOJu0riZHx0gV9E8cj
+- Via batch: True

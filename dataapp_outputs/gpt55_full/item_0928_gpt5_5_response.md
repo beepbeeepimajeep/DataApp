@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the Fourier cosine series on \(0 \le x \le \pi\).
 
 For a cosine series,
@@ -56,3 +64,14 @@ This matches option E.
 \[
 \boxed{E}
 \]
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 670
+- Output tokens: 942
+- Reasoning tokens: 512
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm7HZHvmHxOJ7p4miZTFithnGTzs
+- Via batch: True

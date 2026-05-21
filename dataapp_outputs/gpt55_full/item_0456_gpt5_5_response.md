@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need the two-sample t test statistic, the conclusion, and the appropriate caution.
 
 Hypotheses:
@@ -34,3 +42,14 @@ Because the total sample size is \(7+5=12<15\), we should check whether the data
 Verification: answers are in order (a), (b), (c).
 
 \boxed{-7.71,\text{A},\text{B}}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 465
+- Output tokens: 5482
+- Reasoning tokens: 5119
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm887cmrEvkiFYRNzfc8JGlqnO4U
+- Via batch: True

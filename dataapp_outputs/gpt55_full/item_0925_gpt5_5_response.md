@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need count the digit 7 in all ID numbers from 101 through 977.
 
 The last tag is:
@@ -21,3 +29,14 @@ Total number of 7 stickers:
 \]
 
 \(\boxed{276}\)
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 262
+- Output tokens: 1155
+- Reasoning tokens: 936
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm74K6KxSR6MFiqBqQd4LcbTcQ5O
+- Via batch: True

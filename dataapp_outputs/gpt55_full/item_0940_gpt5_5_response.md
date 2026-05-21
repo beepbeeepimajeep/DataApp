@@ -1,3 +1,11 @@
+# GPT-5.5 xhigh Response
+
+## Prompt
+```
+
+```
+
+## Reasoning + Response
 We need compute \(a(n)\), the index of the least prime not dividing \(n\).
 
 Primes by index:
@@ -28,3 +36,14 @@ y\_list=[1,2,1,4,1,2,1,2,1,3]
 This matches option B.
 
 \boxed{B}
+
+## Metadata
+- Model: gpt-5.5
+- Input tokens: 595
+- Output tokens: 820
+- Reasoning tokens: 512
+- Hit token cap: False
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhm74ZDRt9IIPCnnV7bin2YgBvEeZ
+- Via batch: True
