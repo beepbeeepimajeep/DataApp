@@ -2,86 +2,42 @@
 
 ## Prompt
 ```
-Expand the function $f(z) = \frac{1}{z^2 + 1}$ into series at $z = -1$ and $z = \infty$ respectively.
 
-Options:
-A. $$
-\sum_{n=0}^{\infty} \frac{( -\mathrm{i} )^{n}} {( z+\mathrm{i} )^{n+3}}
-$$
-$$
-\sum_{n=0}^{\infty} \left(-1 \right)^{n} \frac{z^2} {z^{2n+2}}.
-$$
-B. $$
-\sum_{n=0}^{\infty} \frac{( 2\mathrm{i} )^{n+1}} {( z+\mathrm{i} )^{n+3}}
-$$
-$$
-\sum_{n=0}^{\infty} \left(-1 \right)^{n+1} \frac{1} {z^{2 \left( n+1 \right)+1}}.
-$$
-C. $$
-\sum_{n=0}^{\infty} \frac{( 2\mathrm{i} )^{n+1}} {( z+\mathrm{i} )^{n+4}}
-$$
-$$
-\sum_{n=0}^{\infty} \left(-1 \right)^{n} \frac{1} {z^{2n+3}}.
-$$
-D. $$
-\sum_{n=0}^{\infty} \frac{( -2 )^{n}} {( z-\mathrm{i} )^{n+2}}
-$$
-$$
-\sum_{n=0}^{\infty} \left(-1 \right)^{n} \frac{1} {z^{n+2}}.
-$$
-E. $$
-\sum_{n=0}^{\infty} \frac{( \mathrm{i} )^{n}} {( z-\mathrm{i} )^{n+3}}
-$$
-$$
-\sum_{n=0}^{\infty} \frac{1} {z^{2n+2}}.
-$$
-F. $$
-\sum_{n=0}^{\infty} \frac{( 2 \mathrm{i} )^{n}} {( z+\mathrm{i} )^{n+2}}
-$$
-$$
-\sum_{n=0}^{\infty} \left(-1 \right)^{n} \frac{1} {z^{2 \left( n+1 \right)}}.
-$$
-G. $$
-\sum_{n=0}^{\infty} \frac{1} {( z+2\mathrm{i} )^{n+2}}
-$$
-$$
-\sum_{n=0}^{\infty} \left(-1 \right)^{n+1} \frac{z} {z^{2n+3}}.
-$$
-H. $$
-\sum_{n=0}^{\infty} \frac{( -\mathrm{i} )^{n+1}} {( z+2\mathrm{i} )^{n+2}}
-$$
-$$
-\sum_{n=0}^{\infty} \left(-1 \right)^{n+1} \frac{1} {z^{2n}}.
-$$
-I. $$
-\sum_{n=0}^{\infty} \frac{( -2\mathrm{i} )^{n}} {( z+\mathrm{i} )^{n+2}}
-$$
-$$
-\sum_{n=0}^{\infty} \left(-1 \right)^{n-1} \frac{1} {z^{2 \left( n \right)}}.
-$$
-J. $$
-\sum_{n=0}^{\infty} \frac{\mathrm{i}^{n}} {( z+2\mathrm{i} )^{n+2}}
-$$
-$$
-\sum_{n=0}^{\infty} \frac{1} {z^{2n+4}}.
-$$
-
-Problem type: multiple choice.
-
-Solve the problem and identify the correct option letter. End with: \boxed{Letter}
 ```
 
 ## Reasoning + Response
+The choices indicate the intended expansion point is \(z=-i\). Let \(w=z+i\). Then
+\[
+z^2+1=(z-i)(z+i)=w(w-2i).
+\]
+For the Laurent expansion in the exterior annulus \(|w|>2\),
+\[
+\frac1{w(w-2i)}
+=\frac1{w^2}\frac1{1-\frac{2i}{w}}
+=\sum_{n=0}^{\infty}\frac{(2i)^n}{w^{n+2}}
+=\sum_{n=0}^{\infty}\frac{(2i)^n}{(z+i)^{n+2}}.
+\]
 
+At infinity,
+\[
+\frac1{z^2+1}
+=\frac1{z^2}\frac1{1+\frac1{z^2}}
+=\sum_{n=0}^{\infty}(-1)^n\frac1{z^{2n+2}}.
+\]
+
+These match option F.
+
+\[
+\boxed{F}
+\]
 
 ## Metadata
 - Model: gpt-5.5
-- Input tokens: 0
-- Output tokens: 0
-- Reasoning tokens: 0
+- Input tokens: 1016
+- Output tokens: 1267
+- Reasoning tokens: 1024
 - Hit token cap: False
-- Finish reason: None
-- Generation time: 1779206629.88s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f5b684456d0 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dhhi2JB6f7vwrpVgeHZOxeGfU76Bv
+- Via batch: True
