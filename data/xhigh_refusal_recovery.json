@@ -1,0 +1,23 @@
+{
+  "version": "v1",
+  "session_date": "2026-05-25",
+  "source": "scripts/rerun_xhigh_refusals.py with modified MCQ suffix",
+  "integrate": {
+    "141": "A",
+    "211": "I",
+    "290": "C",
+    "443": "G",
+    "561": "E",
+    "690": "H",
+    "786": "I",
+    "801": "E",
+    "810": "E",
+    "904": "A",
+    "918": "C"
+  },
+  "excluded_with_reason": {
+    "68":  "free-form multi-numeric, wrong answer",
+    "112": "token cap, no boxed",
+    "259": "still refused (free-form)"
+  }
+}
