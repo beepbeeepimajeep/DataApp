@@ -1,3 +1,9 @@
+## 2026-05-30 Runtime retrieval audit
+
+7,360 untracked files audited. Pushed: data/extractions_compact.csv (943 s/g/o answers), data/teacher_metadata_summary.csv (2,829 rows, 171 gpt4 RateLimitErrors confirmed), data/RUNTIME_RETRIEVAL_MANIFEST.md. Skipped: private.jsonl (intentionally gitignored), .env (secrets, gitignored), venv/ (~99 MB junk). No models, no missing scripts. Commit 39c0a0f.
+
+---
+
 ## 2026-05-30 Raw teacher responses rescue + compact extraction
 
 ### Raw dirs landed
