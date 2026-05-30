@@ -45,6 +45,8 @@ dataapp_outputs/*_response.md
 !dataapp_outputs/*_batch*.jsonl
 # Opus smoke/probe reports may contain raw API output — keep local only
 dataapp_outputs/smoke_tests/
+# Opus production outputs (traces, results CSVs) — keep local only
+dataapp_outputs/opus/
 
 # IDE
 .vscode/

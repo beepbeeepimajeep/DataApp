@@ -193,6 +193,15 @@ claude_thunder is completely separate from DSMLP. Do not confuse the two.
 
 ---
 
+## COMMUNICATION
+
+- Do NOT use AskUserQuestion popups. Ask all questions inline in chat
+  as plain text. (Set by Rain 2026-05-30.)
+- Messages intended for claude_strategy must begin with the literal
+  prefix `[TO_STRATEGY]`. (Set by Rain 2026-05-30.)
+
+---
+
 ## MEMORY
 
 Surface to Rain: "Worth adding to DataApp CLAUDE.md: [what]" and wait
