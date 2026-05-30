@@ -1,23 +1,36 @@
-# gpt5_4 Response
-
-## Prompt
-```
-Among a town’s registered voters, there are $36\%$ Democrats and $33\%$ Republicans. The rest are Independents. If there are $1240$ registered Independent voters in this town, how many total registered voters are there? Solution: This town has [ANS] registered Independent voters.
-
-Problem type: single-answer.
-
-There is exactly one final answer. End with: \boxed{answer}
-```
+# item_0374 — gpt-5.4 retry
 
 ## Reasoning + Response
+We are asked to find the total number of registered voters.
 
+Democrats and Republicans make up
+\[
+36\%+33\%=69\%
+\]
+So Independents make up
+\[
+100\%-69\%=31\%
+\]
+
+If \(31\%\) of the total is \(1240\), then
+\[
+0.31T=1240
+\]
+where \(T\) is the total number of voters.
+
+Solve:
+\[
+T=\frac{1240}{0.31}=\frac{124000}{31}=4000
+\]
+
+So the town has \(\boxed{4000}\) total registered voters.
 
 ## Metadata
 - Model: gpt-5.4
-- Input tokens: 0
-- Output tokens: 0
+- Input tokens: 227
+- Output tokens: 140
 - Hit token cap: False
-- Generation time: 1779207969.34s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f2b053b2cd0 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dl9kTSbZXyWV7hwV2EvnQ3mQfVcuA
+- Via batch: True

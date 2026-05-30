@@ -178,5 +178,11 @@
   ],
   "model": "gpt-5.4",
   "status": "validating",
-  "estimated_cost_usd": 0.4057
+  "estimated_cost_usd": 0.4057,
+  "collected_at": "2026-05-30T08:55:52.261210+00:00",
+  "stats": {
+    "ok": 171,
+    "error": 0,
+    "no_box": 0
+  }
 }

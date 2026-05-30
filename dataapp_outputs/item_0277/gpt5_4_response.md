@@ -1,23 +1,31 @@
-# gpt5_4 Response
-
-## Prompt
-```
-The average salary of a government worker is $\$44{,}232.00$ per year. Given that this is about $14 \%$ percent higher than the yearly salary of a private-sector worker, find the salary of the private-sector worker. Private-Sector Salary: [ANS] (Round your answer to the nearest cent and include units.)
-
-Problem type: single-answer.
-
-There is exactly one final answer. End with: \boxed{answer}
-```
+# item_0277 — gpt-5.4 retry
 
 ## Reasoning + Response
+We are asked to find the private-sector yearly salary if a government worker’s salary, \$44,232.00, is 14% higher.
 
+Let \(p\) be the private-sector salary.
+
+Since the government salary is 14% higher than the private salary,
+\[
+1.14p = 44{,}232
+\]
+
+Solve for \(p\):
+\[
+p=\frac{44{,}232}{1.14}=38{,}800
+\]
+
+So the private-sector worker’s salary is
+\[
+\boxed{\$38{,}800.00\text{ per year}}
+\]
 
 ## Metadata
 - Model: gpt-5.4
-- Input tokens: 0
-- Output tokens: 0
+- Input tokens: 236
+- Output tokens: 134
 - Hit token cap: False
-- Generation time: 1779206614.04s
-- Request ID: None
-
-**ERROR:** RetryError[<Future at 0x7f2b0546a250 state=finished raised RateLimitError>]
+- Finish reason: stop
+- Generation time: 0.00s
+- Request ID: chatcmpl-Dl9jWWUq43IZnw4RaGd8YUUnHezbF
+- Via batch: True
