@@ -1,0 +1,12 @@
+{
+  "iid": 68,
+  "qtype": "multi_free",
+  "input_tokens": 480,
+  "output_tokens": 1880,
+  "reasoning_tokens": 1535,
+  "finish_reason": "stop",
+  "elapsed_s": 32.409958362579346,
+  "error": null,
+  "boxed": "-2.857,\\ 6.986,\\ -1.082,\\ 3.707,\\ -3.707,\\ A,\\ -12.647,\\ 6.933",
+  "valid": true
+}

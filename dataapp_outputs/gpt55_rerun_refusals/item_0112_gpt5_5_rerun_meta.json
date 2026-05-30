@@ -1,0 +1,12 @@
+{
+  "iid": 112,
+  "qtype": "single_free",
+  "input_tokens": 213,
+  "output_tokens": 16000,
+  "reasoning_tokens": 16000,
+  "finish_reason": "length",
+  "elapsed_s": 300.9734516143799,
+  "error": null,
+  "boxed": "",
+  "valid": false
+}

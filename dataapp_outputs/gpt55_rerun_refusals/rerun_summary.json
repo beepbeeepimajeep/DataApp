@@ -1,0 +1,50 @@
+{
+  "runs": [
+    {
+      "ts": "2026-05-25 13:17:09",
+      "mode": "smoke",
+      "results": [
+        {
+          "iid": 290,
+          "qtype": "mcq",
+          "ok": true,
+          "boxed": "C",
+          "out_tok": 1766,
+          "input_tok": 348,
+          "reasoning_tok": 1536,
+          "elapsed_s": 34.924081563949585,
+          "error": null
+        }
+      ],
+      "elapsed_s": 34.92591309547424,
+      "totals": {
+        "input_tokens": 348,
+        "output_tokens": 1766,
+        "reasoning_tokens": 1536
+      }
+    },
+    {
+      "ts": "2026-05-25 14:30:04",
+      "mode": "all",
+      "results": [
+        {
+          "iid": 112,
+          "qtype": "single_free",
+          "ok": false,
+          "boxed": "",
+          "out_tok": 16000,
+          "input_tok": 213,
+          "reasoning_tok": 16000,
+          "elapsed_s": 300.98514676094055,
+          "error": null
+        }
+      ],
+      "elapsed_s": 300.9858150482178,
+      "totals": {
+        "input_tokens": 213,
+        "output_tokens": 16000,
+        "reasoning_tokens": 16000
+      }
+    }
+  ]
+}

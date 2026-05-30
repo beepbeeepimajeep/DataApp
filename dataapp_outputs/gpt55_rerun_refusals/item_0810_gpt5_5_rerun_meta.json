@@ -1,0 +1,12 @@
+{
+  "iid": 810,
+  "qtype": "mcq",
+  "input_tokens": 429,
+  "output_tokens": 2781,
+  "reasoning_tokens": 2560,
+  "finish_reason": "stop",
+  "elapsed_s": 43.31380820274353,
+  "error": null,
+  "boxed": "E",
+  "valid": true
+}
