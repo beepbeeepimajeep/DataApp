@@ -26,6 +26,11 @@ wheels/
 # Secrets
 .env
 .env.local
+
+# Local backups of env files (contain live secrets) — never commit
+.env.bak
+.env.*
+!.env.example
 config.local.yaml
 
 # Data (input/output)
@@ -38,6 +43,8 @@ dataapp_outputs/*_response.md
 !dataapp_outputs/smoke_*
 !dataapp_outputs/cost_log.jsonl
 !dataapp_outputs/*_batch*.jsonl
+# Opus smoke/probe reports may contain raw API output — keep local only
+dataapp_outputs/smoke_tests/
 
 # IDE
 .vscode/

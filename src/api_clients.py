@@ -269,3 +269,90 @@ class SonnetClient:
             return self._call_impl(system, user_messages, temperature, max_tokens)
         except Exception as e:
             return _error_response(str(e), self.model, time.time(), "anthropic")
+
+
+class OpusClient:
+    """Claude Opus 4.7 via Anthropic API (streaming). Ported from SonnetClient.
+
+    LOCKED CONFIG (strategy + Rain, 2026-05-30, "Option 1"):
+      - model = claude-opus-4-7
+      - NO thinking parameter
+      - NO temperature parameter — `temperature` is deprecated for this
+        model and returns HTTP 400 unless thinking is enabled (where it
+        must be 1.0). With no thinking it must be omitted entirely.
+      - max_tokens = 32768 (model max output)
+      - streaming = True — required: non-streamed calls that may exceed
+        10 min are guarded by the SDK at this size.
+
+    Verified live: streamed call with no temperature, no thinking,
+    max_tokens=32768 returns 200 (stop=end_turn). The `temperature` arg in
+    call() is accepted for cross-client signature compatibility but is NOT
+    forwarded to the API.
+    """
+
+    def __init__(self, model: str = "claude-opus-4-7"):
+        self.model = model
+        try:
+            from anthropic import Anthropic
+
+            self.client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY", ""))
+        except ImportError:
+            raise ImportError("anthropic package required. pip install anthropic")
+
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=2, min=2, max=30))
+    def _call_impl(
+        self, system: str, user_messages: list[dict], max_tokens: int
+    ) -> dict:
+        """Internal implementation that raises on failure (for tenacity retry).
+
+        Streams text deltas, then reads usage/stop_reason from final_message.
+        temperature is intentionally NOT sent (deprecated for opus-4-7)."""
+        start = time.time()
+        parts = []
+        with self.client.messages.stream(
+            model=self.model,
+            system=system,
+            messages=user_messages,
+            max_tokens=max_tokens,
+        ) as stream:
+            for delta in stream.text_stream:
+                parts.append(delta)
+            final = stream.get_final_message()
+
+        text = "".join(parts)
+
+        return {
+            "response": text,
+            "input_tokens": final.usage.input_tokens,
+            "output_tokens": final.usage.output_tokens,
+            "hit_token_cap": final.stop_reason == "max_tokens",
+            "finish_reason": final.stop_reason,
+            "generation_time_s": time.time() - start,
+            "model": self.model,
+            "request_id": final.id,
+            "error": None,
+            "route": "anthropic",
+        }
+
+    def call(
+        self, messages: list[dict], temperature: float = None, max_tokens: int = 32768, **kwargs
+    ) -> dict:
+        """
+        Query Claude Opus 4.7 API (streaming) with automatic retries.
+
+        `temperature` is accepted for signature compatibility with the other
+        clients but is NOT forwarded to the API (deprecated for this model).
+        max_tokens defaults to 32768 (model max); streaming is always used.
+
+        Returns:
+            Dict with: response, input_tokens, output_tokens, hit_token_cap,
+            finish_reason, generation_time_s, model, request_id, error, route
+        """
+        # Anthropic requires system message as separate parameter
+        system = next((m["content"] for m in messages if m["role"] == "system"), "")
+        user_messages = [m for m in messages if m["role"] != "system"]
+
+        try:
+            return self._call_impl(system, user_messages, max_tokens)
+        except Exception as e:
+            return _error_response(str(e), self.model, time.time(), "anthropic")
