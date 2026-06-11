@@ -1,0 +1,89 @@
+name: agent-commit
+run-name: "agent-commit: ${{ inputs.branch }} <- ${{ inputs.path }}"
+
+# v2 -- fleet-wide validated write path for agent connectors (ChatGPT/Pipedream dispatch etc).
+# Any path, any agent branch. Direct default-branch writes require allow_main=I-MEAN-MAIN.
+# Rationale + incident history: agentic_build/findings/TOOLING.md (2026-06-11).
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Target branch: ^(chatgpt|gemini|agent)-<slug>. 'main' only with allow_main."
+        required: true
+        type: string
+      path:
+        description: "File path to write"
+        required: true
+        type: string
+      content_b64:
+        description: "Base64-encoded file content"
+        required: true
+        type: string
+      message:
+        description: "Commit message"
+        required: true
+        type: string
+      allow_main:
+        description: "Type I-MEAN-MAIN to permit writing the default branch directly"
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate inputs
+        env:
+          BRANCH: ${{ inputs.branch }}
+          FILEPATH: ${{ inputs.path }}
+          ALLOW_MAIN: ${{ inputs.allow_main }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          if [[ "$BRANCH" =~ ^(chatgpt|gemini|agent)-[A-Za-z0-9._-]+$ ]]; then
+            :
+          elif [[ "$BRANCH" == "$DEFAULT_BRANCH" && "$ALLOW_MAIN" == "I-MEAN-MAIN" ]]; then
+            echo "::warning::Default-branch write explicitly authorized via allow_main."
+          else
+            echo "::error::Branch '$BRANCH' rejected. Use ^(chatgpt|gemini|agent)-<slug>$, or set allow_main=I-MEAN-MAIN for the default branch."
+            exit 1
+          fi
+          if [[ "$FILEPATH" == *..* || "$FILEPATH" == /* ]]; then
+            echo "::error::Path rejected."
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Commit to target branch
+        env:
+          BRANCH: ${{ inputs.branch }}
+          FILEPATH: ${{ inputs.path }}
+          CONTENT_B64: ${{ inputs.content_b64 }}
+          MESSAGE: ${{ inputs.message }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          git config user.name "agent-commit[bot]"
+          git config user.email "agent-commit@users.noreply.github.com"
+          if [[ "$BRANCH" == "$DEFAULT_BRANCH" ]]; then
+            git switch "$DEFAULT_BRANCH"
+          elif git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            git fetch origin "$BRANCH" && git switch "$BRANCH"
+          else
+            git switch -c "$BRANCH" "origin/$DEFAULT_BRANCH"
+          fi
+          mkdir -p "$(dirname "$FILEPATH")"
+          printf '%s' "$CONTENT_B64" | base64 -d > "$FILEPATH"
+          git add "$FILEPATH"
+          git commit -m "$MESSAGE"
+          git push origin "$BRANCH"
+          echo "committed $(git rev-parse HEAD) on branch $BRANCH"
